@@ -1,0 +1,151 @@
+{
+    "type": "object",
+    "properties": {
+        "list_id": {
+            "required": true,
+            "type": "string"
+        },
+        "subscriber_hash": {
+            "required": true,
+            "type": "string"
+        },
+        "skip_merge_validation": {
+            "required": false,
+            "type": "boolean"
+        },
+        "requestBody": {
+            "type": "object",
+            "title": "Add List Members",
+            "description": "Individuals who are currently or have been previously subscribed to this list, including members who have bounced or unsubscribed.",
+            "required": [
+                "email_address",
+                "status_if_new"
+            ],
+            "properties": {
+                "email_address": {
+                    "type": "string",
+                    "title": "Email Address",
+                    "description": "Email address for a subscriber. This value is required only if the email address is not already present on the list."
+                },
+                "status_if_new": {
+                    "type": "string",
+                    "title": "New Member Status",
+                    "description": "Subscriber's status. This value is required only if the email address is not already present on the list.",
+                    "enum": [
+                        "subscribed",
+                        "unsubscribed",
+                        "cleaned",
+                        "pending",
+                        "transactional"
+                    ]
+                },
+                "email_type": {
+                    "type": "string",
+                    "title": "Email Type",
+                    "description": "Type of email this member asked to get ('html' or 'text')."
+                },
+                "status": {
+                    "type": "string",
+                    "title": "Status",
+                    "description": "Subscriber's current status.",
+                    "enum": [
+                        "subscribed",
+                        "unsubscribed",
+                        "cleaned",
+                        "pending",
+                        "transactional"
+                    ]
+                },
+                "merge_fields": {
+                    "type": "object",
+                    "title": "Member Merge Var",
+                    "description": "An individual merge var and value for a member.",
+                    "additionalProperties": {
+                        "description": "This object's keys are merge tags (like FNAME). It's values are the values to be added to the merge field."
+                    }
+                },
+                "interests": {
+                    "type": "object",
+                    "title": "Subscriber Interests",
+                    "description": "The key of this object's properties is the ID of the interest in question.",
+                    "additionalProperties": {
+                        "type": "boolean",
+                        "title": "Interest Value",
+                        "description": "Keys are interest IDs, values are booleans that describe whether the list member is in that group or not."
+                    }
+                },
+                "language": {
+                    "type": "string",
+                    "title": "Language",
+                    "description": "If set/detected, the [subscriber's language](https://mailchimp.com/help/view-and-edit-contact-languages/)."
+                },
+                "vip": {
+                    "type": "boolean",
+                    "title": "VIP",
+                    "description": "[VIP status](https://mailchimp.com/help/designate-and-send-to-vip-contacts/) for subscriber."
+                },
+                "location": {
+                    "type": "object",
+                    "title": "Location",
+                    "description": "Subscriber location information.",
+                    "properties": {
+                        "latitude": {
+                            "type": "number",
+                            "title": "Latitude",
+                            "description": "The location latitude."
+                        },
+                        "longitude": {
+                            "type": "number",
+                            "title": "Longitude",
+                            "description": "The location longitude."
+                        }
+                    }
+                },
+                "marketing_permissions": {
+                    "type": "array",
+                    "title": "Marketing Permissions",
+                    "description": "The marketing permissions for the subscriber.",
+                    "items": {
+                        "type": "object",
+                        "title": "Marketing Permission",
+                        "description": "A single marketing permission a subscriber has either opted-in to or opted-out of.",
+                        "properties": {
+                            "marketing_permission_id": {
+                                "type": "string",
+                                "title": "Marketing Permission ID",
+                                "description": "The id for the marketing permission on the list"
+                            },
+                            "enabled": {
+                                "type": "boolean",
+                                "title": "Enabled",
+                                "description": "If the subscriber has opted-in to the marketing permission."
+                            }
+                        }
+                    }
+                },
+                "ip_signup": {
+                    "type": "string",
+                    "title": "Signup IP",
+                    "description": "IP address the subscriber signed up from."
+                },
+                "timestamp_signup": {
+                    "type": "string",
+                    "title": "Signup Timestamp",
+                    "description": "The date and time the subscriber signed up for the list in ISO 8601 format.",
+                    "format": "date-time"
+                },
+                "ip_opt": {
+                    "type": "string",
+                    "title": "Opt-in IP",
+                    "description": "The IP address the subscriber used to confirm their opt-in status."
+                },
+                "timestamp_opt": {
+                    "type": "string",
+                    "title": "Opt-in Timestamp",
+                    "description": "The date and time the subscriber confirmed their opt-in status in ISO 8601 format.",
+                    "format": "date-time"
+                }
+            }
+        }
+    }
+}

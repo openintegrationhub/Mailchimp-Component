@@ -1,0 +1,24 @@
+{
+    "type": "object",
+    "properties": {
+        "folder_id": {
+            "required": true,
+            "type": "string"
+        },
+        "requestBody": {
+            "type": "object",
+            "title": "Campaign Folder",
+            "description": "A folder used to organize campaigns.",
+            "required": [
+                "name"
+            ],
+            "properties": {
+                "name": {
+                    "type": "string",
+                    "title": "Folder Name",
+                    "description": "Name to associate with the folder."
+                }
+            }
+        }
+    }
+}

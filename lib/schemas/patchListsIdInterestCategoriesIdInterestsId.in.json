@@ -1,0 +1,37 @@
+{
+    "type": "object",
+    "properties": {
+        "list_id": {
+            "required": true,
+            "type": "string"
+        },
+        "interest_category_id": {
+            "required": true,
+            "type": "string"
+        },
+        "interest_id": {
+            "required": true,
+            "type": "string"
+        },
+        "requestBody": {
+            "type": "object",
+            "title": "Interest",
+            "description": "Assign subscribers to interests to group them together. Interests are referred to as 'group names' in the Mailchimp application.",
+            "required": [
+                "name"
+            ],
+            "properties": {
+                "name": {
+                    "type": "string",
+                    "title": "Interest Name",
+                    "description": "The name of the interest. This can be shown publicly on a subscription form."
+                },
+                "display_order": {
+                    "type": "integer",
+                    "title": "Display Order",
+                    "description": "The display order for interests."
+                }
+            }
+        }
+    }
+}

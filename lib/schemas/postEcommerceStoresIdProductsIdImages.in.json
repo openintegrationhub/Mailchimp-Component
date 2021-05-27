@@ -1,0 +1,42 @@
+{
+    "type": "object",
+    "properties": {
+        "store_id": {
+            "required": true,
+            "type": "string"
+        },
+        "product_id": {
+            "required": true,
+            "type": "string"
+        },
+        "requestBody": {
+            "type": "object",
+            "title": "E-commerce Product Image",
+            "description": "Information about a specific product image.",
+            "required": [
+                "id",
+                "url"
+            ],
+            "properties": {
+                "id": {
+                    "type": "string",
+                    "title": "Image Foreign ID",
+                    "description": "A unique identifier for the product image."
+                },
+                "url": {
+                    "type": "string",
+                    "title": "URL",
+                    "description": "The URL for a product image."
+                },
+                "variant_ids": {
+                    "type": "array",
+                    "title": "Product Variants",
+                    "description": "The list of product variants using the image.",
+                    "items": {
+                        "type": "string"
+                    }
+                }
+            }
+        }
+    }
+}

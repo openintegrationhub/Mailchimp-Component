@@ -1,0 +1,47 @@
+{
+    "type": "object",
+    "properties": {
+        "list_id": {
+            "required": true,
+            "type": "string"
+        },
+        "subscriber_hash": {
+            "required": true,
+            "type": "string"
+        },
+        "requestBody": {
+            "type": "object",
+            "title": "Events",
+            "description": "A new event for a specific list member",
+            "required": [
+                "name"
+            ],
+            "properties": {
+                "name": {
+                    "type": "string",
+                    "title": "Event Name",
+                    "description": "The name for this type of event ('purchased', 'visited', etc). Must be 2-30 characters in length"
+                },
+                "properties": {
+                    "type": "object",
+                    "title": "Properties",
+                    "description": "An optional list of properties",
+                    "additionalProperties": {
+                        "type": "string"
+                    }
+                },
+                "is_syncing": {
+                    "type": "boolean",
+                    "title": "Is Syncing",
+                    "description": "Events created with the is_syncing value set to `true` will not trigger automations."
+                },
+                "occurred_at": {
+                    "type": "string",
+                    "title": "Occurred Time",
+                    "description": "The date and time the event occurred in ISO 8601 format.",
+                    "format": "date-time"
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,36 @@
+{
+    "type": "object",
+    "properties": {
+        "list_id": {
+            "required": true,
+            "type": "string"
+        },
+        "segment_id": {
+            "required": true,
+            "type": "string"
+        },
+        "requestBody": {
+            "type": "object",
+            "title": "Members to add/remove to/from a static segment",
+            "description": "Members to add/remove to/from a static segment",
+            "properties": {
+                "members_to_add": {
+                    "type": "array",
+                    "title": "Members to add to the static segment",
+                    "description": "An array of emails to be used for a static segment. Any emails provided that are not present on the list will be ignored. A maximum of 500 members can be sent.",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "members_to_remove": {
+                    "type": "array",
+                    "title": "Members to remove from the static segment",
+                    "description": "An array of emails to be used for a static segment. Any emails provided that are not present on the list will be ignored. A maximum of 500 members can be sent.",
+                    "items": {
+                        "type": "string"
+                    }
+                }
+            }
+        }
+    }
+}

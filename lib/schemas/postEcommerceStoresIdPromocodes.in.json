@@ -1,0 +1,65 @@
+{
+    "type": "object",
+    "properties": {
+        "store_id": {
+            "required": true,
+            "type": "string"
+        },
+        "promo_rule_id": {
+            "required": true,
+            "type": "string"
+        },
+        "requestBody": {
+            "type": "object",
+            "title": "E-commerce Promo Code",
+            "description": "Information about an Ecommerce Store's specific Promo Code.",
+            "required": [
+                "id",
+                "code",
+                "redemption_url"
+            ],
+            "properties": {
+                "id": {
+                    "type": "string",
+                    "title": "Promo Code Foreign ID",
+                    "description": "A unique identifier for the promo code. Restricted to UTF-8 characters with max length 50."
+                },
+                "code": {
+                    "type": "string",
+                    "title": "Promo Code",
+                    "description": "The discount code. Restricted to UTF-8 characters with max length 50.",
+                    "example": "summersale"
+                },
+                "redemption_url": {
+                    "type": "string",
+                    "title": "Redemption Url",
+                    "description": "The url that should be used in the promotion campaign restricted to UTF-8 characters with max length 2000.",
+                    "example": "A url that applies promo code directly at checkout or a url that points to sale page or store url"
+                },
+                "usage_count": {
+                    "type": "integer",
+                    "title": "Promo Code Usage Count",
+                    "description": "Number of times promo code has been used."
+                },
+                "enabled": {
+                    "type": "boolean",
+                    "title": "Enabled",
+                    "description": "Whether the promo code is currently enabled.",
+                    "example": "true"
+                },
+                "created_at_foreign": {
+                    "type": "string",
+                    "format": "date-time",
+                    "title": "Foreign Create Time",
+                    "description": "The date and time the promotion was created in ISO 8601 format."
+                },
+                "updated_at_foreign": {
+                    "type": "string",
+                    "format": "date-time",
+                    "title": "Foreign Update Time",
+                    "description": "The date and time the promotion was updated in ISO 8601 format."
+                }
+            }
+        }
+    }
+}

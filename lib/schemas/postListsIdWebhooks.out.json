@@ -1,0 +1,148 @@
+{
+    "type": "object",
+    "properties": {
+        "id": {
+            "type": "string",
+            "title": "Unique ID",
+            "description": "An string that uniquely identifies this webhook.",
+            "readOnly": true,
+            "example": "5d9a5e3f7b"
+        },
+        "url": {
+            "type": "string",
+            "title": "URL",
+            "description": "A valid URL for the Webhook.",
+            "readOnly": true,
+            "example": "http://yourdomain.com/webhook"
+        },
+        "events": {
+            "type": "object",
+            "title": "Events",
+            "description": "The events that can trigger the webhook and whether they are enabled.",
+            "readOnly": true,
+            "properties": {
+                "subscribe": {
+                    "type": "boolean",
+                    "title": "Subscribed",
+                    "description": "Whether the webhook is triggered when a list subscriber is added.",
+                    "example": true
+                },
+                "unsubscribe": {
+                    "type": "boolean",
+                    "title": "Unsubscribed",
+                    "description": "Whether the webhook is triggered when a list member unsubscribes.",
+                    "example": true
+                },
+                "profile": {
+                    "type": "boolean",
+                    "title": "Profile Updated",
+                    "description": "Whether the webhook is triggered when a subscriber's profile is updated.",
+                    "example": true
+                },
+                "cleaned": {
+                    "type": "boolean",
+                    "title": "Cleaned",
+                    "description": "Whether the webhook is triggered when a subscriber's email address is cleaned from the list.",
+                    "example": true
+                },
+                "upemail": {
+                    "type": "boolean",
+                    "title": "Email Address Updated",
+                    "description": "Whether the webhook is triggered when a subscriber's email address is changed.",
+                    "example": true
+                },
+                "campaign": {
+                    "type": "boolean",
+                    "title": "Campaign Sent",
+                    "description": "Whether the webhook is triggered when a campaign is sent or cancelled.",
+                    "example": true
+                }
+            }
+        },
+        "sources": {
+            "type": "object",
+            "title": "Sources",
+            "description": "The possible sources of any events that can trigger the webhook and whether they are enabled.",
+            "readOnly": true,
+            "properties": {
+                "user": {
+                    "type": "boolean",
+                    "title": "User",
+                    "description": "Whether the webhook is triggered by subscriber-initiated actions.",
+                    "example": true
+                },
+                "admin": {
+                    "type": "boolean",
+                    "title": "Admin",
+                    "description": "Whether the webhook is triggered by admin-initiated actions in the web interface.",
+                    "example": true
+                },
+                "api": {
+                    "type": "boolean",
+                    "title": "API",
+                    "description": "Whether the webhook is triggered by actions initiated via the API.",
+                    "example": true
+                }
+            }
+        },
+        "list_id": {
+            "type": "string",
+            "title": "List ID",
+            "description": "The unique id for the list.",
+            "readOnly": true,
+            "example": "4ca5becb8d"
+        },
+        "_links": {
+            "title": "Links",
+            "description": "A list of link types and descriptions for the API schema documents.",
+            "type": "array",
+            "items": {
+                "type": "object",
+                "title": "Resource Link",
+                "description": "This object represents a link from the resource where it is found to another resource or action that may be performed.",
+                "properties": {
+                    "rel": {
+                        "type": "string",
+                        "title": "Rel",
+                        "description": "As with an HTML 'rel' attribute, this describes the type of link.",
+                        "readOnly": true
+                    },
+                    "href": {
+                        "type": "string",
+                        "title": "Href",
+                        "description": "This property contains a fully-qualified URL that can be called to retrieve the linked resource or perform the linked action.",
+                        "readOnly": true
+                    },
+                    "method": {
+                        "type": "string",
+                        "title": "Method",
+                        "description": "The HTTP method that should be used when accessing the URL defined in 'href'.",
+                        "enum": [
+                            "GET",
+                            "POST",
+                            "PUT",
+                            "PATCH",
+                            "DELETE",
+                            "OPTIONS",
+                            "HEAD"
+                        ],
+                        "readOnly": true
+                    },
+                    "targetSchema": {
+                        "type": "string",
+                        "title": "Target Schema",
+                        "description": "For GETs, this is a URL representing the schema that the response should conform to.",
+                        "readOnly": true
+                    },
+                    "schema": {
+                        "type": "string",
+                        "title": "Schema",
+                        "description": "For HTTP methods that can receive bodies (POST and PUT), this is a URL representing the schema that the body should conform to.",
+                        "readOnly": true
+                    }
+                }
+            },
+            "readOnly": true
+        }
+    }
+}

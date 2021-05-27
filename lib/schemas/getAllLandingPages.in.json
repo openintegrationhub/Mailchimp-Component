@@ -1,0 +1,41 @@
+{
+    "type": "object",
+    "properties": {
+        "sort_dir": {
+            "required": false,
+            "type": "string",
+            "enum": [
+                "ASC",
+                "DESC"
+            ]
+        },
+        "sort_field": {
+            "required": false,
+            "type": "string",
+            "enum": [
+                "created_at",
+                "updated_at"
+            ]
+        },
+        "fields": {
+            "required": false,
+            "type": "array",
+            "items": {
+                "type": "string"
+            }
+        },
+        "exclude_fields": {
+            "required": false,
+            "type": "array",
+            "items": {
+                "type": "string"
+            }
+        },
+        "count": {
+            "required": false,
+            "type": "integer",
+            "maximum": 1000,
+            "default": 10
+        }
+    }
+}

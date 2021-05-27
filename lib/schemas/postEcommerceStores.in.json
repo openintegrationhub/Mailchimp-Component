@@ -1,0 +1,155 @@
+{
+    "type": "object",
+    "properties": {
+        "requestBody": {
+            "type": "object",
+            "title": "E-commerce Store",
+            "description": "An individual store in an account.",
+            "required": [
+                "id",
+                "list_id",
+                "name",
+                "currency_code"
+            ],
+            "properties": {
+                "id": {
+                    "type": "string",
+                    "title": "Store Foreign ID",
+                    "description": "The unique identifier for the store.",
+                    "example": "example_store"
+                },
+                "list_id": {
+                    "type": "string",
+                    "title": "List ID",
+                    "description": "The unique identifier for the list associated with the store. The `list_id` for a specific store cannot change.",
+                    "example": "1a2df69511"
+                },
+                "name": {
+                    "type": "string",
+                    "title": "Store Name",
+                    "description": "The name of the store.",
+                    "example": "Freddie's Cat Hat Emporium"
+                },
+                "platform": {
+                    "type": "string",
+                    "title": "Platform",
+                    "description": "The e-commerce platform of the store."
+                },
+                "domain": {
+                    "type": "string",
+                    "title": "Domain",
+                    "description": "The store domain. This parameter is required for Connected Sites and Google Ads.",
+                    "example": "example.com"
+                },
+                "is_syncing": {
+                    "type": "boolean",
+                    "title": "Is Syncing",
+                    "description": "Whether to disable automations because the store is currently [syncing](https://mailchimp.com/developer/marketing/docs/e-commerce/#pausing-store-automations)."
+                },
+                "email_address": {
+                    "type": "string",
+                    "title": "Email Address",
+                    "description": "The email address for the store.",
+                    "example": "freddie@mailchimp.com"
+                },
+                "currency_code": {
+                    "type": "string",
+                    "title": "Currency",
+                    "description": "The three-letter ISO 4217 code for the currency that the store accepts.",
+                    "example": "USD"
+                },
+                "money_format": {
+                    "type": "string",
+                    "title": "Money Format",
+                    "description": "The currency format for the store. For example: `$`, `£`, etc.",
+                    "example": "$"
+                },
+                "primary_locale": {
+                    "type": "string",
+                    "title": "Primary Locale",
+                    "description": "The primary locale for the store. For example: `en`, `de`, etc.",
+                    "example": "fr"
+                },
+                "timezone": {
+                    "type": "string",
+                    "title": "Timezone",
+                    "description": "The timezone for the store.",
+                    "example": "Eastern"
+                },
+                "phone": {
+                    "type": "string",
+                    "title": "Phone",
+                    "description": "The store phone number.",
+                    "example": "404-444-4444"
+                },
+                "address": {
+                    "type": "object",
+                    "title": "Address",
+                    "description": "The store address.",
+                    "properties": {
+                        "address1": {
+                            "type": "string",
+                            "title": "Address Field 1",
+                            "description": "The store's mailing address.",
+                            "example": "675 Ponce de Leon Ave NE"
+                        },
+                        "address2": {
+                            "type": "string",
+                            "title": "Address Field 2",
+                            "description": "An additional field for the store's mailing address.",
+                            "example": "Suite 5000"
+                        },
+                        "city": {
+                            "type": "string",
+                            "title": "City ",
+                            "description": "The city the store is located in.",
+                            "example": "Atlanta"
+                        },
+                        "province": {
+                            "type": "string",
+                            "title": "Province",
+                            "description": "The store's state name or normalized province.",
+                            "example": "Georgia"
+                        },
+                        "province_code": {
+                            "type": "string",
+                            "title": "Province Code",
+                            "description": "The two-letter code for the store's province or state.",
+                            "example": "GA"
+                        },
+                        "postal_code": {
+                            "type": "string",
+                            "title": "Postal Code",
+                            "description": "The store's postal or zip code.",
+                            "example": "30308"
+                        },
+                        "country": {
+                            "type": "string",
+                            "title": "Country Code",
+                            "description": "The store's country.",
+                            "example": "United States"
+                        },
+                        "country_code": {
+                            "type": "string",
+                            "title": "Country Code",
+                            "description": "The two-letter code for to the store's country.",
+                            "example": "US"
+                        },
+                        "longitude": {
+                            "type": "number",
+                            "title": "Longitude",
+                            "description": "The longitude of the store location.",
+                            "example": -75.68903
+                        },
+                        "latitude": {
+                            "type": "number",
+                            "title": "Latitude",
+                            "description": "The latitude of the store location.",
+                            "example": 45.427408
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

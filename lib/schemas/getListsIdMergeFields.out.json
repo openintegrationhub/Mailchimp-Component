@@ -1,0 +1,227 @@
+{
+    "type": "object",
+    "properties": {
+        "merge_fields": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "title": "Merge Field",
+                "description": "A merge field (formerly merge vars) for a specific list. These correspond to merge fields in Mailchimp's lists and subscriber profiles.",
+                "properties": {
+                    "merge_id": {
+                        "type": "integer",
+                        "title": "Merge Field ID",
+                        "description": "An unchanging id for the merge field.",
+                        "readOnly": true
+                    },
+                    "tag": {
+                        "type": "string",
+                        "title": "Merge Field Tag",
+                        "description": "The tag used in Mailchimp campaigns and for the /members endpoint."
+                    },
+                    "name": {
+                        "type": "string",
+                        "title": "Merge Field Name",
+                        "description": "The name of the merge field."
+                    },
+                    "type": {
+                        "type": "string",
+                        "title": "Merge Field Type",
+                        "description": "The type for the merge field.",
+                        "readOnly": true
+                    },
+                    "required": {
+                        "type": "boolean",
+                        "title": "Required",
+                        "description": "The boolean value if the merge field is required."
+                    },
+                    "default_value": {
+                        "type": "string",
+                        "title": "Default Value",
+                        "description": "The default value for the merge field if `null`."
+                    },
+                    "public": {
+                        "type": "boolean",
+                        "title": "Merge Field Public Status",
+                        "description": "Whether the merge field is displayed on the signup form."
+                    },
+                    "display_order": {
+                        "type": "integer",
+                        "title": "Display Order",
+                        "description": "The order that the merge field displays on the list signup form."
+                    },
+                    "options": {
+                        "type": "object",
+                        "title": "Merge Field Options",
+                        "description": "Extra options for some merge field types.",
+                        "properties": {
+                            "default_country": {
+                                "type": "integer",
+                                "title": "Default Country",
+                                "description": "In an address field, the default country code if none supplied."
+                            },
+                            "phone_format": {
+                                "type": "string",
+                                "title": "Phone Type",
+                                "description": "In a phone field, the phone number type: US or International."
+                            },
+                            "date_format": {
+                                "type": "string",
+                                "title": "Date Type",
+                                "description": "In a date or birthday field, the format of the date."
+                            },
+                            "choices": {
+                                "type": "array",
+                                "title": "Choices",
+                                "description": "In a radio or dropdown non-group field, the available options for members to pick from.",
+                                "items": {
+                                    "type": "string"
+                                },
+                                "example": [
+                                    "First Choice",
+                                    "Second Choice",
+                                    "Third Choice"
+                                ]
+                            },
+                            "size": {
+                                "type": "integer",
+                                "title": "Text Field Size",
+                                "description": "In a text field, the default length of the text field.",
+                                "readOnly": true
+                            }
+                        }
+                    },
+                    "help_text": {
+                        "type": "string",
+                        "title": "Merge Field Help Text",
+                        "description": "Extra text to help the subscriber fill out the form."
+                    },
+                    "list_id": {
+                        "type": "string",
+                        "title": "List ID",
+                        "description": "A string that identifies this merge field collections' list.",
+                        "readOnly": true
+                    },
+                    "_links": {
+                        "title": "Links",
+                        "description": "A list of link types and descriptions for the API schema documents.",
+                        "type": "array",
+                        "items": {
+                            "type": "object",
+                            "title": "Resource Link",
+                            "description": "This object represents a link from the resource where it is found to another resource or action that may be performed.",
+                            "properties": {
+                                "rel": {
+                                    "type": "string",
+                                    "title": "Rel",
+                                    "description": "As with an HTML 'rel' attribute, this describes the type of link.",
+                                    "readOnly": true
+                                },
+                                "href": {
+                                    "type": "string",
+                                    "title": "Href",
+                                    "description": "This property contains a fully-qualified URL that can be called to retrieve the linked resource or perform the linked action.",
+                                    "readOnly": true
+                                },
+                                "method": {
+                                    "type": "string",
+                                    "title": "Method",
+                                    "description": "The HTTP method that should be used when accessing the URL defined in 'href'.",
+                                    "enum": [
+                                        "GET",
+                                        "POST",
+                                        "PUT",
+                                        "PATCH",
+                                        "DELETE",
+                                        "OPTIONS",
+                                        "HEAD"
+                                    ],
+                                    "readOnly": true
+                                },
+                                "targetSchema": {
+                                    "type": "string",
+                                    "title": "Target Schema",
+                                    "description": "For GETs, this is a URL representing the schema that the response should conform to.",
+                                    "readOnly": true
+                                },
+                                "schema": {
+                                    "type": "string",
+                                    "title": "Schema",
+                                    "description": "For HTTP methods that can receive bodies (POST and PUT), this is a URL representing the schema that the body should conform to.",
+                                    "readOnly": true
+                                }
+                            }
+                        },
+                        "readOnly": true
+                    }
+                }
+            },
+            "title": "Merge Fields",
+            "description": "An array of objects, each representing a merge field resource."
+        },
+        "list_id": {
+            "type": "string",
+            "title": "List ID",
+            "description": "The list id.",
+            "readOnly": true
+        },
+        "total_items": {
+            "type": "integer",
+            "title": "Item Count",
+            "description": "The total number of items matching the query regardless of pagination.",
+            "readOnly": true
+        },
+        "_links": {
+            "title": "Links",
+            "description": "A list of link types and descriptions for the API schema documents.",
+            "type": "array",
+            "items": {
+                "type": "object",
+                "title": "Resource Link",
+                "description": "This object represents a link from the resource where it is found to another resource or action that may be performed.",
+                "properties": {
+                    "rel": {
+                        "type": "string",
+                        "title": "Rel",
+                        "description": "As with an HTML 'rel' attribute, this describes the type of link.",
+                        "readOnly": true
+                    },
+                    "href": {
+                        "type": "string",
+                        "title": "Href",
+                        "description": "This property contains a fully-qualified URL that can be called to retrieve the linked resource or perform the linked action.",
+                        "readOnly": true
+                    },
+                    "method": {
+                        "type": "string",
+                        "title": "Method",
+                        "description": "The HTTP method that should be used when accessing the URL defined in 'href'.",
+                        "enum": [
+                            "GET",
+                            "POST",
+                            "PUT",
+                            "PATCH",
+                            "DELETE",
+                            "OPTIONS",
+                            "HEAD"
+                        ],
+                        "readOnly": true
+                    },
+                    "targetSchema": {
+                        "type": "string",
+                        "title": "Target Schema",
+                        "description": "For GETs, this is a URL representing the schema that the response should conform to.",
+                        "readOnly": true
+                    },
+                    "schema": {
+                        "type": "string",
+                        "title": "Schema",
+                        "description": "For HTTP methods that can receive bodies (POST and PUT), this is a URL representing the schema that the body should conform to.",
+                        "readOnly": true
+                    }
+                }
+            },
+            "readOnly": true
+        }
+    }
+}

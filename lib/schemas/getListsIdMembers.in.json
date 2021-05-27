@@ -1,0 +1,116 @@
+{
+    "type": "object",
+    "properties": {
+        "fields": {
+            "required": false,
+            "type": "array",
+            "items": {
+                "type": "string"
+            }
+        },
+        "exclude_fields": {
+            "required": false,
+            "type": "array",
+            "items": {
+                "type": "string"
+            }
+        },
+        "count": {
+            "required": false,
+            "type": "integer",
+            "maximum": 1000,
+            "default": 10
+        },
+        "offset": {
+            "required": false,
+            "type": "integer",
+            "default": 0
+        },
+        "list_id": {
+            "required": true,
+            "type": "string"
+        },
+        "email_type": {
+            "required": false,
+            "type": "string"
+        },
+        "status": {
+            "required": false,
+            "type": "string",
+            "enum": [
+                "subscribed",
+                "unsubscribed",
+                "cleaned",
+                "pending",
+                "transactional",
+                "archived"
+            ]
+        },
+        "since_timestamp_opt": {
+            "required": false,
+            "type": "string"
+        },
+        "before_timestamp_opt": {
+            "required": false,
+            "type": "string"
+        },
+        "since_last_changed": {
+            "required": false,
+            "type": "string"
+        },
+        "before_last_changed": {
+            "required": false,
+            "type": "string"
+        },
+        "unique_email_id": {
+            "required": false,
+            "type": "string"
+        },
+        "vip_only": {
+            "required": false,
+            "type": "boolean"
+        },
+        "interest_category_id": {
+            "required": false,
+            "type": "string"
+        },
+        "interest_ids": {
+            "required": false,
+            "type": "string"
+        },
+        "interest_match": {
+            "required": false,
+            "type": "string",
+            "enum": [
+                "any",
+                "all",
+                "none"
+            ]
+        },
+        "sort_field": {
+            "required": false,
+            "type": "string",
+            "enum": [
+                "timestamp_opt",
+                "timestamp_signup",
+                "last_changed"
+            ]
+        },
+        "sort_dir": {
+            "required": false,
+            "type": "string",
+            "enum": [
+                "ASC",
+                "DESC"
+            ]
+        },
+        "since_last_campaign": {
+            "required": false,
+            "type": "boolean"
+        },
+        "unsubscribed_since": {
+            "required": false,
+            "type": "string"
+        }
+    }
+}

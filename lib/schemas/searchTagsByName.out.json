@@ -1,0 +1,32 @@
+{
+    "type": "object",
+    "properties": {
+        "tags": {
+            "type": "array",
+            "title": "Tags",
+            "description": "A list of matching tags.",
+            "readOnly": true,
+            "items": {
+                "properties": {
+                    "id": {
+                        "type": "integer",
+                        "title": "Tag ID",
+                        "description": "The unique id for the tag.",
+                        "readOnly": true
+                    },
+                    "name": {
+                        "type": "string",
+                        "title": "Tag Name",
+                        "description": "The name of the tag."
+                    }
+                }
+            }
+        },
+        "total_items": {
+            "type": "integer",
+            "title": "Item Count",
+            "description": "The total number of items matching the query regardless of pagination.",
+            "readOnly": true
+        }
+    }
+}

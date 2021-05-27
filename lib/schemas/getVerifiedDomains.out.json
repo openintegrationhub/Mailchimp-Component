@@ -1,0 +1,55 @@
+{
+    "type": "object",
+    "properties": {
+        "domains": {
+            "type": "array",
+            "title": "Domains",
+            "description": "The domains on the account",
+            "readOnly": true,
+            "items": {
+                "type": "object",
+                "title": "Verified Domains",
+                "description": "The verified domains currently on the account.",
+                "properties": {
+                    "domain": {
+                        "type": "string",
+                        "title": "Domain Name",
+                        "description": "The name of this domain.",
+                        "readOnly": true
+                    },
+                    "verified": {
+                        "type": "boolean",
+                        "title": "Verified",
+                        "description": "Whether the domain has been verified for sending.",
+                        "readOnly": true
+                    },
+                    "authenticated": {
+                        "type": "boolean",
+                        "title": "Authenticated",
+                        "description": "Whether domain authentication is enabled for this domain.",
+                        "readOnly": true
+                    },
+                    "verification_email": {
+                        "type": "string",
+                        "title": "Verification Email",
+                        "description": "The e-mail address receiving the two-factor challenge for this domain.",
+                        "readOnly": true
+                    },
+                    "verification_sent": {
+                        "type": "string",
+                        "format": "date-time",
+                        "title": "Verification Challenge Sent",
+                        "description": "The date/time that the two-factor challenge was sent to the verification email.",
+                        "readOnly": true
+                    }
+                }
+            }
+        },
+        "total_items": {
+            "type": "integer",
+            "title": "Item Count",
+            "description": "The total number of items matching the query regardless of pagination.",
+            "readOnly": true
+        }
+    }
+}

@@ -1,0 +1,17 @@
+{
+    "type": "object",
+    "properties": {
+        "list_id": {
+            "required": true,
+            "type": "string"
+        },
+        "subscriber_hash": {
+            "required": true,
+            "type": "string"
+        },
+        "note_id": {
+            "required": true,
+            "type": "string"
+        }
+    }
+}

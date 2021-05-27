@@ -1,0 +1,67 @@
+{
+    "type": "object",
+    "properties": {
+        "requestBody": {
+            "type": "object",
+            "title": "Automation Workflow",
+            "description": "A summary of an individual Automation workflow's settings and content.",
+            "required": [
+                "recipients",
+                "trigger_settings"
+            ],
+            "properties": {
+                "recipients": {
+                    "type": "object",
+                    "title": "List",
+                    "description": "List settings for the Automation.",
+                    "properties": {
+                        "list_id": {
+                            "type": "string",
+                            "title": "List ID",
+                            "description": "The id of the List.",
+                            "example": "1a2df69xxx"
+                        },
+                        "store_id": {
+                            "type": "string",
+                            "title": "Store ID",
+                            "description": "The id of the store.",
+                            "example": "1a2df69xxx"
+                        }
+                    }
+                },
+                "settings": {
+                    "type": "object",
+                    "title": "Automation Campaign Settings",
+                    "description": "The settings for the Automation workflow.",
+                    "properties": {
+                        "from_name": {
+                            "type": "string",
+                            "title": "From Name",
+                            "description": "The 'from' name for the Automation (not an email address)."
+                        },
+                        "reply_to": {
+                            "type": "string",
+                            "title": "Reply To Address",
+                            "description": "The reply-to email address for the Automation."
+                        }
+                    }
+                },
+                "trigger_settings": {
+                    "type": "object",
+                    "title": "Automation Trigger",
+                    "description": "Trigger settings for the Automation.",
+                    "required": [
+                        "workflow_type"
+                    ],
+                    "properties": {
+                        "workflow_type": {
+                            "type": "string",
+                            "title": "Workflow Type",
+                            "description": "The type of Automation workflow. Currently only supports 'abandonedCart'."
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

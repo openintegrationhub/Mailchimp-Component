@@ -1,0 +1,100 @@
+{
+    "type": "object",
+    "properties": {
+        "workflow_id": {
+            "required": true,
+            "type": "string"
+        },
+        "workflow_email_id": {
+            "required": true,
+            "type": "string"
+        },
+        "requestBody": {
+            "type": "object",
+            "title": "Update information about a specific workflow email",
+            "description": "Update information about an individual Automation workflow email.",
+            "properties": {
+                "settings": {
+                    "type": "object",
+                    "title": "Campaign Settings",
+                    "description": "Settings for the campaign including the email subject, from name, and from email address.",
+                    "properties": {
+                        "subject_line": {
+                            "type": "string",
+                            "title": "Campaign Subject Line",
+                            "description": "The subject line for the campaign."
+                        },
+                        "preview_text": {
+                            "type": "string",
+                            "title": "Campaign Preview Text",
+                            "description": "The preview text for the campaign."
+                        },
+                        "title": {
+                            "type": "string",
+                            "title": "Automation Title",
+                            "description": "The title of the Automation."
+                        },
+                        "from_name": {
+                            "type": "string",
+                            "title": "From Name",
+                            "description": "The 'from' name for the Automation (not an email address)."
+                        },
+                        "reply_to": {
+                            "type": "string",
+                            "title": "Reply To Address",
+                            "description": "The reply-to email address for the Automation."
+                        }
+                    }
+                },
+                "delay": {
+                    "type": "object",
+                    "title": "Automation Delay",
+                    "description": "The delay settings for an automation email.",
+                    "required": [
+                        "action"
+                    ],
+                    "properties": {
+                        "amount": {
+                            "type": "integer",
+                            "title": "Delay Amount",
+                            "description": "The delay amount for an automation email.",
+                            "example": 1
+                        },
+                        "type": {
+                            "type": "string",
+                            "enum": [
+                                "now",
+                                "day",
+                                "hour",
+                                "week"
+                            ],
+                            "title": "Delay Type",
+                            "description": "The type of delay for an automation email.",
+                            "example": "day"
+                        },
+                        "direction": {
+                            "type": "string",
+                            "title": "Delay Direction",
+                            "description": "Whether the delay settings describe before or after the delay action of an automation email.",
+                            "enum": [
+                                "after"
+                            ],
+                            "example": "after"
+                        },
+                        "action": {
+                            "type": "string",
+                            "title": "Delay Action",
+                            "description": "The action that triggers the delay of an automation emails.",
+                            "enum": [
+                                "signup",
+                                "ecomm_abandoned_browse",
+                                "ecomm_abandoned_cart"
+                            ],
+                            "example": "signup"
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

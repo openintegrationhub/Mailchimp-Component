@@ -1,0 +1,33 @@
+{
+    "type": "object",
+    "properties": {
+        "requestBody": {
+            "type": "object",
+            "title": "Template Instance",
+            "description": "Information about a specific template.",
+            "required": [
+                "name",
+                "html"
+            ],
+            "properties": {
+                "name": {
+                    "type": "string",
+                    "title": "Template Name",
+                    "description": "The name of the template.",
+                    "example": "Freddie's Jokes"
+                },
+                "folder_id": {
+                    "type": "string",
+                    "title": "Folder ID",
+                    "description": "The id of the folder the template is currently in.",
+                    "example": "a4b830b"
+                },
+                "html": {
+                    "type": "string",
+                    "title": "Template HTML",
+                    "description": "The raw HTML for the template. We  support the Mailchimp [Template Language](https://mailchimp.com/help/getting-started-with-mailchimps-template-language/) in any HTML code passed via the API."
+                }
+            }
+        }
+    }
+}

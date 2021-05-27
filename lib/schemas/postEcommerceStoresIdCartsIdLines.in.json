@@ -1,0 +1,52 @@
+{
+    "type": "object",
+    "properties": {
+        "store_id": {
+            "required": true,
+            "type": "string"
+        },
+        "cart_id": {
+            "required": true,
+            "type": "string"
+        },
+        "requestBody": {
+            "type": "object",
+            "title": "E-commerce Cart Line Item",
+            "description": "Information about a specific cart line item.",
+            "required": [
+                "id",
+                "product_id",
+                "product_variant_id",
+                "quantity",
+                "price"
+            ],
+            "properties": {
+                "id": {
+                    "type": "string",
+                    "title": "Cart Line Item Foreign ID",
+                    "description": "A unique identifier for the cart line item."
+                },
+                "product_id": {
+                    "type": "string",
+                    "title": "Cart Line Product Foreign ID",
+                    "description": "A unique identifier for the product associated with the cart line item."
+                },
+                "product_variant_id": {
+                    "type": "string",
+                    "title": "Cart Line Product Variant Foreign ID",
+                    "description": "A unique identifier for the product variant associated with the cart line item."
+                },
+                "quantity": {
+                    "type": "integer",
+                    "title": "Quantity",
+                    "description": "The quantity of a cart line item."
+                },
+                "price": {
+                    "type": "number",
+                    "title": "Price",
+                    "description": "The price of a cart line item."
+                }
+            }
+        }
+    }
+}

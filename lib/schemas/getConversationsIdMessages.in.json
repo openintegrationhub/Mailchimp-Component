@@ -1,0 +1,41 @@
+{
+    "type": "object",
+    "properties": {
+        "fields": {
+            "required": false,
+            "type": "array",
+            "items": {
+                "type": "string"
+            }
+        },
+        "exclude_fields": {
+            "required": false,
+            "type": "array",
+            "items": {
+                "type": "string"
+            }
+        },
+        "conversation_id": {
+            "required": true,
+            "type": "string"
+        },
+        "is_read": {
+            "required": false,
+            "type": "string",
+            "enum": [
+                "true",
+                "false"
+            ]
+        },
+        "before_timestamp": {
+            "required": false,
+            "type": "string",
+            "format": "date-time"
+        },
+        "since_timestamp": {
+            "required": false,
+            "type": "string",
+            "format": "date-time"
+        }
+    }
+}

@@ -1,0 +1,28 @@
+{
+    "type": "object",
+    "properties": {
+        "requestBody": {
+            "type": "object",
+            "title": "Connected Site",
+            "description": "Information about a specific connected site.",
+            "required": [
+                "foreign_id",
+                "domain"
+            ],
+            "properties": {
+                "foreign_id": {
+                    "type": "string",
+                    "title": "Connected Site Foreign ID",
+                    "description": "The unique identifier for the site.",
+                    "example": "MC001"
+                },
+                "domain": {
+                    "type": "string",
+                    "title": "Domain",
+                    "description": "The connected site domain.",
+                    "example": "example.com"
+                }
+            }
+        }
+    }
+}

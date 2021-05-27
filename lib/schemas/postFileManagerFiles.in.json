@@ -1,0 +1,31 @@
+{
+    "type": "object",
+    "properties": {
+        "requestBody": {
+            "type": "object",
+            "title": "Gallery File",
+            "description": "An individual file listed in the File Manager.",
+            "required": [
+                "name",
+                "file_data"
+            ],
+            "properties": {
+                "folder_id": {
+                    "type": "integer",
+                    "title": "Folder ID",
+                    "description": "The id of the folder."
+                },
+                "name": {
+                    "type": "string",
+                    "title": "File Name",
+                    "description": "The name of the file."
+                },
+                "file_data": {
+                    "type": "string",
+                    "title": "File Data",
+                    "description": "The base64-encoded contents of the file."
+                }
+            }
+        }
+    }
+}

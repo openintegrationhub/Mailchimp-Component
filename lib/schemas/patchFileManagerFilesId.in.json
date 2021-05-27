@@ -1,0 +1,26 @@
+{
+    "type": "object",
+    "properties": {
+        "file_id": {
+            "required": true,
+            "type": "string"
+        },
+        "requestBody": {
+            "type": "object",
+            "title": "Gallery File",
+            "description": "An individual file listed in the File Manager.",
+            "properties": {
+                "folder_id": {
+                    "type": "integer",
+                    "title": "Folder ID",
+                    "description": "The id of the folder. Setting `folder_id` to `0` will remove a file from its current folder."
+                },
+                "name": {
+                    "type": "string",
+                    "title": "File Name",
+                    "description": "The name of the file."
+                }
+            }
+        }
+    }
+}

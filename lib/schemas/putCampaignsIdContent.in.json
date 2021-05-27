@@ -1,0 +1,160 @@
+{
+    "type": "object",
+    "properties": {
+        "campaign_id": {
+            "required": true,
+            "type": "string"
+        },
+        "requestBody": {
+            "type": "object",
+            "title": "Campaign Content",
+            "description": "The HTML and plain-text content for a campaign",
+            "properties": {
+                "plain_text": {
+                    "type": "string",
+                    "title": "Plain Text",
+                    "description": "The plain-text portion of the campaign. If left unspecified, we'll generate this automatically."
+                },
+                "html": {
+                    "type": "string",
+                    "title": "Campaign HTML",
+                    "description": "The raw HTML for the campaign."
+                },
+                "url": {
+                    "type": "string",
+                    "title": "Campaign URL",
+                    "description": "When importing a campaign, the URL where the HTML lives."
+                },
+                "template": {
+                    "type": "object",
+                    "title": "Template Content",
+                    "description": "Use this template to generate the HTML content of the campaign",
+                    "required": [
+                        "id"
+                    ],
+                    "properties": {
+                        "id": {
+                            "type": "integer",
+                            "title": "Template ID",
+                            "description": "The id of the template to use."
+                        },
+                        "sections": {
+                            "type": "object",
+                            "title": "Template Sections",
+                            "description": "Content for the sections of the template. Each key should be the unique [mc:edit area](https://mailchimp.com/help/create-editable-content-areas-with-mailchimps-template-language/) name from the template."
+                        }
+                    }
+                },
+                "archive": {
+                    "type": "object",
+                    "title": "Upload Archive",
+                    "description": "Available when uploading an archive to create campaign content. The archive should include all campaign content and images. [Learn more](https://mailchimp.com/help/import-a-custom-html-template/).",
+                    "required": [
+                        "archive_content"
+                    ],
+                    "properties": {
+                        "archive_content": {
+                            "type": "string",
+                            "title": "Archive Content",
+                            "description": "The base64-encoded representation of the archive file."
+                        },
+                        "archive_type": {
+                            "type": "string",
+                            "enum": [
+                                "zip",
+                                "tar.gz",
+                                "tar.bz2",
+                                "tar",
+                                "tgz",
+                                "tbz"
+                            ],
+                            "title": "Archive Type",
+                            "description": "The type of encoded file. Defaults to zip."
+                        }
+                    }
+                },
+                "variate_contents": {
+                    "type": "array",
+                    "title": "Variate Contents",
+                    "description": "Content options for [Multivariate Campaigns](https://mailchimp.com/help/about-multivariate-campaigns/). Each content option must provide HTML content and may optionally provide plain text. For campaigns not testing content, only one object should be provided.",
+                    "items": {
+                        "type": "object",
+                        "required": [
+                            "content_label"
+                        ],
+                        "properties": {
+                            "content_label": {
+                                "type": "string",
+                                "title": "Content Label",
+                                "description": "The label used to identify the content option."
+                            },
+                            "plain_text": {
+                                "type": "string",
+                                "title": "Plain Text",
+                                "description": "The plain-text portion of the campaign. If left unspecified, we'll generate this automatically."
+                            },
+                            "html": {
+                                "type": "string",
+                                "title": "Campaign HTML",
+                                "description": "The raw HTML for the campaign."
+                            },
+                            "url": {
+                                "type": "string",
+                                "title": "Campaign URL",
+                                "description": "When importing a campaign, the URL for the HTML."
+                            },
+                            "template": {
+                                "type": "object",
+                                "title": "Template Content",
+                                "description": "Use this template to generate the HTML content for the campaign.",
+                                "required": [
+                                    "id"
+                                ],
+                                "properties": {
+                                    "id": {
+                                        "type": "integer",
+                                        "title": "Template ID",
+                                        "description": "The id of the template to use."
+                                    },
+                                    "sections": {
+                                        "type": "object",
+                                        "title": "Template Sections",
+                                        "description": "Content for the sections of the template. Each key should be the unique [mc:edit area](https://mailchimp.com/help/create-editable-content-areas-with-mailchimps-template-language/) name from the template."
+                                    }
+                                }
+                            },
+                            "archive": {
+                                "type": "object",
+                                "title": "Upload Archive",
+                                "description": "Available when uploading an archive to create campaign content. The archive should include all campaign content and images. [Learn more](https://mailchimp.com/help/import-a-custom-html-template/).",
+                                "required": [
+                                    "archive_content"
+                                ],
+                                "properties": {
+                                    "archive_content": {
+                                        "type": "string",
+                                        "title": "Archive Content",
+                                        "description": "The base64-encoded representation of the archive file."
+                                    },
+                                    "archive_type": {
+                                        "type": "string",
+                                        "enum": [
+                                            "zip",
+                                            "tar.gz",
+                                            "tar.bz2",
+                                            "tar",
+                                            "tgz",
+                                            "tbz"
+                                        ],
+                                        "title": "Archive Type",
+                                        "description": "The type of encoded file. Defaults to zip."
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,57 @@
+{
+    "type": "object",
+    "properties": {
+        "list_id": {
+            "required": true,
+            "type": "string"
+        },
+        "subscriber_hash": {
+            "required": true,
+            "type": "string"
+        },
+        "fields": {
+            "required": false,
+            "type": "array",
+            "items": {
+                "type": "string"
+            }
+        },
+        "exclude_fields": {
+            "required": false,
+            "type": "array",
+            "items": {
+                "type": "string"
+            }
+        },
+        "action": {
+            "required": false,
+            "type": "array",
+            "items": {
+                "type": "string"
+            },
+            "enum": [
+                [
+                    "abuse"
+                ],
+                [
+                    "bounce"
+                ],
+                [
+                    "click"
+                ],
+                [
+                    "open"
+                ],
+                [
+                    "sent"
+                ],
+                [
+                    "unsub"
+                ],
+                [
+                    "ecomm"
+                ]
+            ]
+        }
+    }
+}

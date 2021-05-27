@@ -1,0 +1,155 @@
+{
+    "type": "object",
+    "properties": {
+        "store_id": {
+            "type": "string",
+            "title": "Store ID",
+            "description": "The store id."
+        },
+        "product_id": {
+            "type": "string",
+            "title": "Product ID",
+            "description": "The product id."
+        },
+        "images": {
+            "type": "array",
+            "title": "Ecommerce Product Images",
+            "description": "An array of objects, each representing a product image resource.",
+            "items": {
+                "type": "object",
+                "title": "E-commerce Product Image",
+                "description": "Information about a specific product image.",
+                "properties": {
+                    "id": {
+                        "type": "string",
+                        "title": "Image Foreign ID",
+                        "description": "A unique identifier for the product image."
+                    },
+                    "url": {
+                        "type": "string",
+                        "title": "URL",
+                        "description": "The URL for a product image."
+                    },
+                    "variant_ids": {
+                        "type": "array",
+                        "title": "Product Variants",
+                        "description": "The list of product variants using the image.",
+                        "items": {
+                            "type": "string"
+                        }
+                    },
+                    "_links": {
+                        "title": "Links",
+                        "description": "A list of link types and descriptions for the API schema documents.",
+                        "type": "array",
+                        "items": {
+                            "type": "object",
+                            "title": "Resource Link",
+                            "description": "This object represents a link from the resource where it is found to another resource or action that may be performed.",
+                            "properties": {
+                                "rel": {
+                                    "type": "string",
+                                    "title": "Rel",
+                                    "description": "As with an HTML 'rel' attribute, this describes the type of link.",
+                                    "readOnly": true
+                                },
+                                "href": {
+                                    "type": "string",
+                                    "title": "Href",
+                                    "description": "This property contains a fully-qualified URL that can be called to retrieve the linked resource or perform the linked action.",
+                                    "readOnly": true
+                                },
+                                "method": {
+                                    "type": "string",
+                                    "title": "Method",
+                                    "description": "The HTTP method that should be used when accessing the URL defined in 'href'.",
+                                    "enum": [
+                                        "GET",
+                                        "POST",
+                                        "PUT",
+                                        "PATCH",
+                                        "DELETE",
+                                        "OPTIONS",
+                                        "HEAD"
+                                    ],
+                                    "readOnly": true
+                                },
+                                "targetSchema": {
+                                    "type": "string",
+                                    "title": "Target Schema",
+                                    "description": "For GETs, this is a URL representing the schema that the response should conform to.",
+                                    "readOnly": true
+                                },
+                                "schema": {
+                                    "type": "string",
+                                    "title": "Schema",
+                                    "description": "For HTTP methods that can receive bodies (POST and PUT), this is a URL representing the schema that the body should conform to.",
+                                    "readOnly": true
+                                }
+                            }
+                        },
+                        "readOnly": true
+                    }
+                }
+            }
+        },
+        "total_items": {
+            "type": "integer",
+            "title": "Item Count",
+            "description": "The total number of items matching the query regardless of pagination.",
+            "readOnly": true
+        },
+        "_links": {
+            "title": "Links",
+            "description": "A list of link types and descriptions for the API schema documents.",
+            "type": "array",
+            "items": {
+                "type": "object",
+                "title": "Resource Link",
+                "description": "This object represents a link from the resource where it is found to another resource or action that may be performed.",
+                "properties": {
+                    "rel": {
+                        "type": "string",
+                        "title": "Rel",
+                        "description": "As with an HTML 'rel' attribute, this describes the type of link.",
+                        "readOnly": true
+                    },
+                    "href": {
+                        "type": "string",
+                        "title": "Href",
+                        "description": "This property contains a fully-qualified URL that can be called to retrieve the linked resource or perform the linked action.",
+                        "readOnly": true
+                    },
+                    "method": {
+                        "type": "string",
+                        "title": "Method",
+                        "description": "The HTTP method that should be used when accessing the URL defined in 'href'.",
+                        "enum": [
+                            "GET",
+                            "POST",
+                            "PUT",
+                            "PATCH",
+                            "DELETE",
+                            "OPTIONS",
+                            "HEAD"
+                        ],
+                        "readOnly": true
+                    },
+                    "targetSchema": {
+                        "type": "string",
+                        "title": "Target Schema",
+                        "description": "For GETs, this is a URL representing the schema that the response should conform to.",
+                        "readOnly": true
+                    },
+                    "schema": {
+                        "type": "string",
+                        "title": "Schema",
+                        "description": "For HTTP methods that can receive bodies (POST and PUT), this is a URL representing the schema that the body should conform to.",
+                        "readOnly": true
+                    }
+                }
+            },
+            "readOnly": true
+        }
+    }
+}

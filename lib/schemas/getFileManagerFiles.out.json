@@ -1,0 +1,204 @@
+{
+    "type": "object",
+    "properties": {
+        "files": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "title": "Gallery File",
+                "description": "An individual file listed in the File Manager.",
+                "properties": {
+                    "id": {
+                        "type": "integer",
+                        "title": "File ID",
+                        "description": "The unique id of the file.",
+                        "readOnly": true
+                    },
+                    "folder_id": {
+                        "type": "integer",
+                        "title": "Folder ID",
+                        "description": "The id of the folder."
+                    },
+                    "type": {
+                        "enum": [
+                            "image",
+                            "file"
+                        ],
+                        "type": "string",
+                        "title": "File Type",
+                        "description": "The type of file in the File Manager.",
+                        "readOnly": true
+                    },
+                    "name": {
+                        "type": "string",
+                        "title": "File Name",
+                        "description": "The name of the file."
+                    },
+                    "full_size_url": {
+                        "type": "string",
+                        "title": "File URL",
+                        "description": "The url of the full-size file.",
+                        "format": "uri",
+                        "readOnly": true
+                    },
+                    "thumbnail_url": {
+                        "type": "string",
+                        "title": "Thumbnail URL",
+                        "description": "The url of the thumbnail preview.",
+                        "format": "uri",
+                        "readOnly": true
+                    },
+                    "size": {
+                        "type": "integer",
+                        "title": "File Size",
+                        "description": "The size of the file in bytes.",
+                        "readOnly": true
+                    },
+                    "created_at": {
+                        "type": "string",
+                        "title": "Created Date",
+                        "description": "The date and time a file was added to the File Manager in ISO 8601 format.",
+                        "format": "date-time",
+                        "readOnly": true
+                    },
+                    "created_by": {
+                        "type": "string",
+                        "title": "Created By",
+                        "description": "The username of the profile that uploaded the file.",
+                        "readOnly": true
+                    },
+                    "width": {
+                        "type": "integer",
+                        "title": "Image Width",
+                        "description": "The width of the image.",
+                        "readOnly": true
+                    },
+                    "height": {
+                        "type": "integer",
+                        "title": "Image Height",
+                        "description": "The height of an image.",
+                        "readOnly": true
+                    },
+                    "_links": {
+                        "title": "Links",
+                        "description": "A list of link types and descriptions for the API schema documents.",
+                        "type": "array",
+                        "items": {
+                            "type": "object",
+                            "title": "Resource Link",
+                            "description": "This object represents a link from the resource where it is found to another resource or action that may be performed.",
+                            "properties": {
+                                "rel": {
+                                    "type": "string",
+                                    "title": "Rel",
+                                    "description": "As with an HTML 'rel' attribute, this describes the type of link.",
+                                    "readOnly": true
+                                },
+                                "href": {
+                                    "type": "string",
+                                    "title": "Href",
+                                    "description": "This property contains a fully-qualified URL that can be called to retrieve the linked resource or perform the linked action.",
+                                    "readOnly": true
+                                },
+                                "method": {
+                                    "type": "string",
+                                    "title": "Method",
+                                    "description": "The HTTP method that should be used when accessing the URL defined in 'href'.",
+                                    "enum": [
+                                        "GET",
+                                        "POST",
+                                        "PUT",
+                                        "PATCH",
+                                        "DELETE",
+                                        "OPTIONS",
+                                        "HEAD"
+                                    ],
+                                    "readOnly": true
+                                },
+                                "targetSchema": {
+                                    "type": "string",
+                                    "title": "Target Schema",
+                                    "description": "For GETs, this is a URL representing the schema that the response should conform to.",
+                                    "readOnly": true
+                                },
+                                "schema": {
+                                    "type": "string",
+                                    "title": "Schema",
+                                    "description": "For HTTP methods that can receive bodies (POST and PUT), this is a URL representing the schema that the body should conform to.",
+                                    "readOnly": true
+                                }
+                            }
+                        },
+                        "readOnly": true
+                    }
+                }
+            },
+            "title": "Files",
+            "description": " A list of files and images in an account."
+        },
+        "total_file_size": {
+            "type": "number",
+            "title": "Total File Size",
+            "description": "The total size of all File Manager files in bytes.",
+            "readOnly": true
+        },
+        "total_items": {
+            "type": "integer",
+            "title": "Item Count",
+            "description": "The total number of items matching the query regardless of pagination.",
+            "readOnly": true
+        },
+        "_links": {
+            "title": "Links",
+            "description": "A list of link types and descriptions for the API schema documents.",
+            "type": "array",
+            "items": {
+                "type": "object",
+                "title": "Resource Link",
+                "description": "This object represents a link from the resource where it is found to another resource or action that may be performed.",
+                "properties": {
+                    "rel": {
+                        "type": "string",
+                        "title": "Rel",
+                        "description": "As with an HTML 'rel' attribute, this describes the type of link.",
+                        "readOnly": true
+                    },
+                    "href": {
+                        "type": "string",
+                        "title": "Href",
+                        "description": "This property contains a fully-qualified URL that can be called to retrieve the linked resource or perform the linked action.",
+                        "readOnly": true
+                    },
+                    "method": {
+                        "type": "string",
+                        "title": "Method",
+                        "description": "The HTTP method that should be used when accessing the URL defined in 'href'.",
+                        "enum": [
+                            "GET",
+                            "POST",
+                            "PUT",
+                            "PATCH",
+                            "DELETE",
+                            "OPTIONS",
+                            "HEAD"
+                        ],
+                        "readOnly": true
+                    },
+                    "targetSchema": {
+                        "type": "string",
+                        "title": "Target Schema",
+                        "description": "For GETs, this is a URL representing the schema that the response should conform to.",
+                        "readOnly": true
+                    },
+                    "schema": {
+                        "type": "string",
+                        "title": "Schema",
+                        "description": "For HTTP methods that can receive bodies (POST and PUT), this is a URL representing the schema that the body should conform to.",
+                        "readOnly": true
+                    }
+                }
+            },
+            "readOnly": true
+        }
+    }
+}

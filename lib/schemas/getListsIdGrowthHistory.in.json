@@ -1,0 +1,49 @@
+{
+    "type": "object",
+    "properties": {
+        "fields": {
+            "required": false,
+            "type": "array",
+            "items": {
+                "type": "string"
+            }
+        },
+        "exclude_fields": {
+            "required": false,
+            "type": "array",
+            "items": {
+                "type": "string"
+            }
+        },
+        "count": {
+            "required": false,
+            "type": "integer",
+            "maximum": 1000,
+            "default": 10
+        },
+        "offset": {
+            "required": false,
+            "type": "integer",
+            "default": 0
+        },
+        "list_id": {
+            "required": true,
+            "type": "string"
+        },
+        "sort_field": {
+            "required": false,
+            "type": "string",
+            "enum": [
+                "month"
+            ]
+        },
+        "sort_dir": {
+            "required": false,
+            "type": "string",
+            "enum": [
+                "ASC",
+                "DESC"
+            ]
+        }
+    }
+}

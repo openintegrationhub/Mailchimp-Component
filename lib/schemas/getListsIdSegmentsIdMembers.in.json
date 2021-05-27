@@ -1,0 +1,50 @@
+{
+    "type": "object",
+    "properties": {
+        "fields": {
+            "required": false,
+            "type": "array",
+            "items": {
+                "type": "string"
+            }
+        },
+        "exclude_fields": {
+            "required": false,
+            "type": "array",
+            "items": {
+                "type": "string"
+            }
+        },
+        "count": {
+            "required": false,
+            "type": "integer",
+            "maximum": 1000,
+            "default": 10
+        },
+        "offset": {
+            "required": false,
+            "type": "integer",
+            "default": 0
+        },
+        "list_id": {
+            "required": true,
+            "type": "string"
+        },
+        "segment_id": {
+            "required": true,
+            "type": "string"
+        },
+        "include_cleaned": {
+            "required": false,
+            "type": "boolean"
+        },
+        "include_transactional": {
+            "required": false,
+            "type": "boolean"
+        },
+        "include_unsubscribed": {
+            "required": false,
+            "type": "boolean"
+        }
+    }
+}

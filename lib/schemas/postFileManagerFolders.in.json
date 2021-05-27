@@ -1,0 +1,20 @@
+{
+    "type": "object",
+    "properties": {
+        "requestBody": {
+            "type": "object",
+            "title": "Gallery Folder",
+            "description": "An individual folder listed in the File Manager.",
+            "required": [
+                "name"
+            ],
+            "properties": {
+                "name": {
+                    "type": "string",
+                    "title": "Folder Name",
+                    "description": "The name of the folder."
+                }
+            }
+        }
+    }
+}

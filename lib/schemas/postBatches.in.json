@@ -1,0 +1,64 @@
+{
+    "type": "object",
+    "properties": {
+        "requestBody": {
+            "type": "object",
+            "required": [
+                "operations"
+            ],
+            "properties": {
+                "operations": {
+                    "type": "array",
+                    "title": "Operations List",
+                    "description": "An array of objects that describes operations to perform.",
+                    "items": {
+                        "type": "object",
+                        "title": "Operations",
+                        "required": [
+                            "method",
+                            "path"
+                        ],
+                        "properties": {
+                            "method": {
+                                "type": "string",
+                                "title": "HTTP Method",
+                                "description": "The HTTP method to use for the operation.",
+                                "enum": [
+                                    "GET",
+                                    "POST",
+                                    "PUT",
+                                    "PATCH"
+                                ],
+                                "example": "POST"
+                            },
+                            "path": {
+                                "type": "string",
+                                "title": "Path",
+                                "description": "The relative path to use for the operation.",
+                                "example": "/lists"
+                            },
+                            "params": {
+                                "type": "object",
+                                "title": "Query Parameters",
+                                "description": "Any request query parameters. Example parameters: {\"count\":10, \"offset\":0}",
+                                "example": "{\"count\":10,\"offset\":0}"
+                            },
+                            "body": {
+                                "type": "string",
+                                "title": "Body",
+                                "description": "A string containing the JSON body to use with the request.",
+                                "example": "{\"title\":\"Test\"}"
+                            },
+                            "operation_id": {
+                                "type": "string",
+                                "title": "Operation ID",
+                                "description": "An optional client-supplied id returned with the operation results.",
+                                "example": "my-id-123"
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

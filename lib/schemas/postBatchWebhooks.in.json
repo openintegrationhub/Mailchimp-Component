@@ -1,0 +1,21 @@
+{
+    "type": "object",
+    "properties": {
+        "requestBody": {
+            "type": "object",
+            "title": "Batch Webhook",
+            "description": "Add a new Batch Webook.",
+            "required": [
+                "url"
+            ],
+            "properties": {
+                "url": {
+                    "type": "string",
+                    "title": "URL",
+                    "description": "A valid URL for the Webhook.",
+                    "example": "http://yourdomain.com/webhook"
+                }
+            }
+        }
+    }
+}

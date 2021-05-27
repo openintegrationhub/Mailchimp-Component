@@ -1,0 +1,26 @@
+{
+    "type": "object",
+    "properties": {
+        "list_id": {
+            "required": true,
+            "type": "string"
+        },
+        "segment_id": {
+            "required": true,
+            "type": "string"
+        },
+        "requestBody": {
+            "type": "object",
+            "required": [
+                "email_address"
+            ],
+            "properties": {
+                "email_address": {
+                    "type": "string",
+                    "title": "Email Address",
+                    "description": "Email address for a subscriber."
+                }
+            }
+        }
+    }
+}

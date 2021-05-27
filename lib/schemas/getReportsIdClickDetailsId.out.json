@@ -1,0 +1,175 @@
+{
+    "type": "object",
+    "properties": {
+        "id": {
+            "type": "string",
+            "title": "URL ID",
+            "description": "The unique id for the link.",
+            "readOnly": true
+        },
+        "url": {
+            "type": "string",
+            "title": "URL",
+            "description": "The URL for the link in the campaign.",
+            "readOnly": true
+        },
+        "total_clicks": {
+            "type": "integer",
+            "title": "Total Clicks",
+            "description": "The number of total clicks for a link.",
+            "readOnly": true
+        },
+        "click_percentage": {
+            "type": "number",
+            "title": "Click Percentage",
+            "description": "The percentage of total clicks a link generated for a campaign.",
+            "readOnly": true
+        },
+        "unique_clicks": {
+            "type": "integer",
+            "title": "Unique Clicks",
+            "description": "Number of unique clicks for a link.",
+            "readOnly": true
+        },
+        "unique_click_percentage": {
+            "type": "number",
+            "title": "Unique Click Percentage",
+            "description": "The percentage of unique clicks a link generated for a campaign.",
+            "readOnly": true
+        },
+        "last_click": {
+            "type": "string",
+            "title": "Last Click",
+            "description": "The date and time for the last recorded click for a link in ISO 8601 format.",
+            "format": "date-time",
+            "readOnly": true
+        },
+        "ab_split": {
+            "type": "object",
+            "title": "A/B Split",
+            "description": "A breakdown of clicks by different groups of an A/B Split campaign. Does not return information about Multivariate Campaigns.",
+            "properties": {
+                "a": {
+                    "type": "object",
+                    "title": "Group A",
+                    "description": "Stats for Group A.",
+                    "properties": {
+                        "total_clicks_a": {
+                            "type": "integer",
+                            "title": "Total Clicks Group A",
+                            "description": "The total number of clicks for Group A.",
+                            "readOnly": true
+                        },
+                        "click_percentage_a": {
+                            "type": "number",
+                            "title": "Click Percentage Group A",
+                            "description": "The percentage of total clicks for Group A.",
+                            "readOnly": true
+                        },
+                        "unique_clicks_a": {
+                            "type": "integer",
+                            "title": "Unique Clicks Group A",
+                            "description": "The number of unique clicks for Group A.",
+                            "readOnly": true
+                        },
+                        "unique_click_percentage_a": {
+                            "type": "number",
+                            "title": "Unique Click Percentage Group A",
+                            "description": "The percentage of unique clicks for Group A.",
+                            "readOnly": true
+                        }
+                    }
+                },
+                "b": {
+                    "type": "object",
+                    "title": "Group B",
+                    "description": "Stats for Group B.",
+                    "properties": {
+                        "total_clicks_b": {
+                            "type": "integer",
+                            "title": "Total Clicks Group B",
+                            "description": "The total number of clicks for Group B.",
+                            "readOnly": true
+                        },
+                        "click_percentage_b": {
+                            "type": "number",
+                            "title": "Click Percentage Group B",
+                            "description": "The percentage of total clicks for Group B.",
+                            "readOnly": true
+                        },
+                        "unique_clicks_b": {
+                            "type": "integer",
+                            "title": "Unique Clicks Group B",
+                            "description": "The number of unique clicks for Group B.",
+                            "readOnly": true
+                        },
+                        "unique_click_percentage_b": {
+                            "type": "number",
+                            "title": "Unique Click Percentage Group B",
+                            "description": "The percentage of unique clicks for Group B.",
+                            "readOnly": true
+                        }
+                    }
+                }
+            }
+        },
+        "campaign_id": {
+            "type": "string",
+            "title": "Campaign ID",
+            "description": "The campaign id.",
+            "readOnly": true
+        },
+        "_links": {
+            "title": "Links",
+            "description": "A list of link types and descriptions for the API schema documents.",
+            "type": "array",
+            "items": {
+                "type": "object",
+                "title": "Resource Link",
+                "description": "This object represents a link from the resource where it is found to another resource or action that may be performed.",
+                "properties": {
+                    "rel": {
+                        "type": "string",
+                        "title": "Rel",
+                        "description": "As with an HTML 'rel' attribute, this describes the type of link.",
+                        "readOnly": true
+                    },
+                    "href": {
+                        "type": "string",
+                        "title": "Href",
+                        "description": "This property contains a fully-qualified URL that can be called to retrieve the linked resource or perform the linked action.",
+                        "readOnly": true
+                    },
+                    "method": {
+                        "type": "string",
+                        "title": "Method",
+                        "description": "The HTTP method that should be used when accessing the URL defined in 'href'.",
+                        "enum": [
+                            "GET",
+                            "POST",
+                            "PUT",
+                            "PATCH",
+                            "DELETE",
+                            "OPTIONS",
+                            "HEAD"
+                        ],
+                        "readOnly": true
+                    },
+                    "targetSchema": {
+                        "type": "string",
+                        "title": "Target Schema",
+                        "description": "For GETs, this is a URL representing the schema that the response should conform to.",
+                        "readOnly": true
+                    },
+                    "schema": {
+                        "type": "string",
+                        "title": "Schema",
+                        "description": "For HTTP methods that can receive bodies (POST and PUT), this is a URL representing the schema that the body should conform to.",
+                        "readOnly": true
+                    }
+                }
+            },
+            "readOnly": true
+        }
+    }
+}

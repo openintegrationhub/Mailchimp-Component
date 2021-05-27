@@ -1,0 +1,57 @@
+{
+    "type": "object",
+    "properties": {
+        "store_id": {
+            "required": true,
+            "type": "string"
+        },
+        "order_id": {
+            "required": true,
+            "type": "string"
+        },
+        "requestBody": {
+            "type": "object",
+            "title": "E-commerce Order Line Item",
+            "description": "Information about a specific order line.",
+            "required": [
+                "id",
+                "product_id",
+                "product_variant_id",
+                "quantity",
+                "price"
+            ],
+            "properties": {
+                "id": {
+                    "type": "string",
+                    "title": "Order Line Item Foreign ID",
+                    "description": "A unique identifier for the order line item."
+                },
+                "product_id": {
+                    "type": "string",
+                    "title": "Order Line Item Product Foreign ID",
+                    "description": "A unique identifier for the product associated with the order line item."
+                },
+                "product_variant_id": {
+                    "type": "string",
+                    "title": "Order Line Item Product Variant Foreign ID",
+                    "description": "A unique identifier for the product variant associated with the order line item."
+                },
+                "quantity": {
+                    "type": "integer",
+                    "title": "Quantity",
+                    "description": "The quantity of an order line item."
+                },
+                "price": {
+                    "type": "number",
+                    "title": "Price",
+                    "description": "The price of an order line item."
+                },
+                "discount": {
+                    "type": "number",
+                    "title": "Discount",
+                    "description": "The total discount amount applied to this line item."
+                }
+            }
+        }
+    }
+}

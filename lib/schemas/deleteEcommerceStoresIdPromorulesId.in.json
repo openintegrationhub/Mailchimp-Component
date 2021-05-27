@@ -1,0 +1,13 @@
+{
+    "type": "object",
+    "properties": {
+        "store_id": {
+            "required": true,
+            "type": "string"
+        },
+        "promo_rule_id": {
+            "required": true,
+            "type": "string"
+        }
+    }
+}

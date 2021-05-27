@@ -1,0 +1,160 @@
+{
+    "type": "object",
+    "properties": {
+        "domains": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "title": "Email Domain",
+                "description": "A single email domain's performance",
+                "properties": {
+                    "domain": {
+                        "type": "string",
+                        "title": "Domain",
+                        "description": "The name of the domain (gmail.com, hotmail.com, yahoo.com).",
+                        "readOnly": true
+                    },
+                    "emails_sent": {
+                        "type": "integer",
+                        "title": "Total Sent",
+                        "description": "The number of emails sent to that specific domain.",
+                        "readOnly": true
+                    },
+                    "bounces": {
+                        "type": "integer",
+                        "title": "Bounces",
+                        "description": "The number of bounces at a domain.",
+                        "readOnly": true
+                    },
+                    "opens": {
+                        "type": "integer",
+                        "title": "Opens",
+                        "description": "The number of opens for a domain.",
+                        "readOnly": true
+                    },
+                    "clicks": {
+                        "type": "integer",
+                        "title": "Clicks",
+                        "description": "The number of clicks for a domain.",
+                        "readOnly": true
+                    },
+                    "unsubs": {
+                        "type": "integer",
+                        "title": "Unsubscribes",
+                        "description": "The total number of unsubscribes for a domain.",
+                        "readOnly": true
+                    },
+                    "delivered": {
+                        "type": "integer",
+                        "title": "Successful Deliveries",
+                        "description": "The number of successful deliveries for a domain.",
+                        "readOnly": true
+                    },
+                    "emails_pct": {
+                        "type": "number",
+                        "title": "Email Percent",
+                        "description": "The percentage of total emails that went to this domain.",
+                        "readOnly": true
+                    },
+                    "bounces_pct": {
+                        "type": "number",
+                        "title": "Bounces Percent",
+                        "description": "The percentage of total bounces from this domain.",
+                        "readOnly": true
+                    },
+                    "opens_pct": {
+                        "type": "number",
+                        "title": "Opens Percent",
+                        "description": "The percentage of total opens from this domain.",
+                        "readOnly": true
+                    },
+                    "clicks_pct": {
+                        "type": "number",
+                        "title": "Clicks Percent",
+                        "description": "The percentage of total clicks from this domain.",
+                        "readOnly": true
+                    },
+                    "unsubs_pct": {
+                        "type": "number",
+                        "title": "Unsubscribes Percent",
+                        "description": "The percentage of total unsubscribes from this domain.",
+                        "readOnly": true
+                    }
+                }
+            },
+            "title": "Lists",
+            "description": "The top 5 email domains based on total delivered emails.",
+            "readOnly": true
+        },
+        "total_sent": {
+            "type": "integer",
+            "title": "Total Sent",
+            "description": "The total number of emails sent for the campaign.",
+            "readOnly": true
+        },
+        "campaign_id": {
+            "type": "string",
+            "title": "Campaign ID",
+            "description": "The unique id for the campaign.",
+            "readOnly": true
+        },
+        "total_items": {
+            "type": "integer",
+            "title": "Item Count",
+            "description": "The total number of items matching the query regardless of pagination.",
+            "readOnly": true
+        },
+        "_links": {
+            "title": "Links",
+            "description": "A list of link types and descriptions for the API schema documents.",
+            "type": "array",
+            "items": {
+                "type": "object",
+                "title": "Resource Link",
+                "description": "This object represents a link from the resource where it is found to another resource or action that may be performed.",
+                "properties": {
+                    "rel": {
+                        "type": "string",
+                        "title": "Rel",
+                        "description": "As with an HTML 'rel' attribute, this describes the type of link.",
+                        "readOnly": true
+                    },
+                    "href": {
+                        "type": "string",
+                        "title": "Href",
+                        "description": "This property contains a fully-qualified URL that can be called to retrieve the linked resource or perform the linked action.",
+                        "readOnly": true
+                    },
+                    "method": {
+                        "type": "string",
+                        "title": "Method",
+                        "description": "The HTTP method that should be used when accessing the URL defined in 'href'.",
+                        "enum": [
+                            "GET",
+                            "POST",
+                            "PUT",
+                            "PATCH",
+                            "DELETE",
+                            "OPTIONS",
+                            "HEAD"
+                        ],
+                        "readOnly": true
+                    },
+                    "targetSchema": {
+                        "type": "string",
+                        "title": "Target Schema",
+                        "description": "For GETs, this is a URL representing the schema that the response should conform to.",
+                        "readOnly": true
+                    },
+                    "schema": {
+                        "type": "string",
+                        "title": "Schema",
+                        "description": "For HTTP methods that can receive bodies (POST and PUT), this is a URL representing the schema that the body should conform to.",
+                        "readOnly": true
+                    }
+                }
+            },
+            "readOnly": true
+        }
+    }
+}

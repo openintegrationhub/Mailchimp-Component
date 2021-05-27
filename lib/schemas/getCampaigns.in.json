@@ -1,0 +1,100 @@
+{
+    "type": "object",
+    "properties": {
+        "fields": {
+            "required": false,
+            "type": "array",
+            "items": {
+                "type": "string"
+            }
+        },
+        "exclude_fields": {
+            "required": false,
+            "type": "array",
+            "items": {
+                "type": "string"
+            }
+        },
+        "count": {
+            "required": false,
+            "type": "integer",
+            "maximum": 1000,
+            "default": 10
+        },
+        "offset": {
+            "required": false,
+            "type": "integer",
+            "default": 0
+        },
+        "type": {
+            "required": false,
+            "type": "string",
+            "enum": [
+                "regular",
+                "plaintext",
+                "absplit",
+                "rss",
+                "variate"
+            ]
+        },
+        "status": {
+            "required": false,
+            "type": "string",
+            "enum": [
+                "save",
+                "paused",
+                "schedule",
+                "sending",
+                "sent"
+            ]
+        },
+        "before_send_time": {
+            "required": false,
+            "type": "string",
+            "format": "date-time"
+        },
+        "since_send_time": {
+            "required": false,
+            "type": "string",
+            "format": "date-time"
+        },
+        "before_create_time": {
+            "required": false,
+            "type": "string",
+            "format": "date-time"
+        },
+        "since_create_time": {
+            "required": false,
+            "type": "string",
+            "format": "date-time"
+        },
+        "list_id": {
+            "required": false,
+            "type": "string"
+        },
+        "folder_id": {
+            "required": false,
+            "type": "string"
+        },
+        "member_id": {
+            "required": false,
+            "type": "string"
+        },
+        "sort_field": {
+            "required": false,
+            "type": "string",
+            "enum": [
+                "create_time",
+                "send_time"
+            ]
+        },
+        "sort_dir": {
+            "required": false,
+            "type": "string",
+            "enum": [
+                "ASC",
+                "DESC"
+            ]
+        }
+    }
+}

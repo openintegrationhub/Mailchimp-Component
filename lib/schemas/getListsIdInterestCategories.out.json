@@ -1,0 +1,166 @@
+{
+    "type": "object",
+    "properties": {
+        "list_id": {
+            "type": "string",
+            "title": "List ID",
+            "description": "The ID for the list that this category belongs to.",
+            "readOnly": true
+        },
+        "categories": {
+            "type": "array",
+            "title": "Interest Categories",
+            "description": "This array contains individual interest categories.",
+            "items": {
+                "type": "object",
+                "title": "Interest Category",
+                "description": "Interest categories organize interests, which are used to group subscribers based on their preferences. These correspond to Group Titles the application.",
+                "properties": {
+                    "list_id": {
+                        "type": "string",
+                        "title": "List ID",
+                        "description": "The unique list id for the category.",
+                        "readOnly": true
+                    },
+                    "id": {
+                        "type": "string",
+                        "title": "Category ID",
+                        "description": "The id for the interest category.",
+                        "readOnly": true
+                    },
+                    "title": {
+                        "type": "string",
+                        "title": "Name",
+                        "description": "The text description of this category. This field appears on signup forms and is often phrased as a question."
+                    },
+                    "display_order": {
+                        "type": "integer",
+                        "title": "Display Order",
+                        "description": "The order that the categories are displayed in the list. Lower numbers display first."
+                    },
+                    "type": {
+                        "type": "string",
+                        "title": "Display Type",
+                        "description": "Determines how this category’s interests appear on signup forms.",
+                        "enum": [
+                            "checkboxes",
+                            "dropdown",
+                            "radio",
+                            "hidden"
+                        ]
+                    },
+                    "_links": {
+                        "title": "Links",
+                        "description": "A list of link types and descriptions for the API schema documents.",
+                        "type": "array",
+                        "items": {
+                            "type": "object",
+                            "title": "Resource Link",
+                            "description": "This object represents a link from the resource where it is found to another resource or action that may be performed.",
+                            "properties": {
+                                "rel": {
+                                    "type": "string",
+                                    "title": "Rel",
+                                    "description": "As with an HTML 'rel' attribute, this describes the type of link.",
+                                    "readOnly": true
+                                },
+                                "href": {
+                                    "type": "string",
+                                    "title": "Href",
+                                    "description": "This property contains a fully-qualified URL that can be called to retrieve the linked resource or perform the linked action.",
+                                    "readOnly": true
+                                },
+                                "method": {
+                                    "type": "string",
+                                    "title": "Method",
+                                    "description": "The HTTP method that should be used when accessing the URL defined in 'href'.",
+                                    "enum": [
+                                        "GET",
+                                        "POST",
+                                        "PUT",
+                                        "PATCH",
+                                        "DELETE",
+                                        "OPTIONS",
+                                        "HEAD"
+                                    ],
+                                    "readOnly": true
+                                },
+                                "targetSchema": {
+                                    "type": "string",
+                                    "title": "Target Schema",
+                                    "description": "For GETs, this is a URL representing the schema that the response should conform to.",
+                                    "readOnly": true
+                                },
+                                "schema": {
+                                    "type": "string",
+                                    "title": "Schema",
+                                    "description": "For HTTP methods that can receive bodies (POST and PUT), this is a URL representing the schema that the body should conform to.",
+                                    "readOnly": true
+                                }
+                            }
+                        },
+                        "readOnly": true
+                    }
+                }
+            }
+        },
+        "total_items": {
+            "type": "integer",
+            "title": "Item Count",
+            "description": "The total number of items matching the query regardless of pagination.",
+            "readOnly": true
+        },
+        "_links": {
+            "title": "Links",
+            "description": "A list of link types and descriptions for the API schema documents.",
+            "type": "array",
+            "items": {
+                "type": "object",
+                "title": "Resource Link",
+                "description": "This object represents a link from the resource where it is found to another resource or action that may be performed.",
+                "properties": {
+                    "rel": {
+                        "type": "string",
+                        "title": "Rel",
+                        "description": "As with an HTML 'rel' attribute, this describes the type of link.",
+                        "readOnly": true
+                    },
+                    "href": {
+                        "type": "string",
+                        "title": "Href",
+                        "description": "This property contains a fully-qualified URL that can be called to retrieve the linked resource or perform the linked action.",
+                        "readOnly": true
+                    },
+                    "method": {
+                        "type": "string",
+                        "title": "Method",
+                        "description": "The HTTP method that should be used when accessing the URL defined in 'href'.",
+                        "enum": [
+                            "GET",
+                            "POST",
+                            "PUT",
+                            "PATCH",
+                            "DELETE",
+                            "OPTIONS",
+                            "HEAD"
+                        ],
+                        "readOnly": true
+                    },
+                    "targetSchema": {
+                        "type": "string",
+                        "title": "Target Schema",
+                        "description": "For GETs, this is a URL representing the schema that the response should conform to.",
+                        "readOnly": true
+                    },
+                    "schema": {
+                        "type": "string",
+                        "title": "Schema",
+                        "description": "For HTTP methods that can receive bodies (POST and PUT), this is a URL representing the schema that the body should conform to.",
+                        "readOnly": true
+                    }
+                }
+            },
+            "readOnly": true
+        }
+    }
+}

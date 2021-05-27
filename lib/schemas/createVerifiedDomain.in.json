@@ -1,0 +1,20 @@
+{
+    "type": "object",
+    "properties": {
+        "requestBody": {
+            "type": "object",
+            "title": "Verified Domains",
+            "description": "The verified domains currently on the account.",
+            "required": [
+                "verification_email"
+            ],
+            "properties": {
+                "verification_email": {
+                    "type": "string",
+                    "title": "Verification Email",
+                    "description": "The e-mail address at the domain you want to verify. This will receive a two-factor challenge to be used in the verify action."
+                }
+            }
+        }
+    }
+}

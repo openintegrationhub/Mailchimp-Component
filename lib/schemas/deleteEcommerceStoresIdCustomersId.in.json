@@ -1,0 +1,13 @@
+{
+    "type": "object",
+    "properties": {
+        "store_id": {
+            "required": true,
+            "type": "string"
+        },
+        "customer_id": {
+            "required": true,
+            "type": "string"
+        }
+    }
+}

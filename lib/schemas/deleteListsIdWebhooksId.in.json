@@ -1,0 +1,13 @@
+{
+    "type": "object",
+    "properties": {
+        "list_id": {
+            "required": true,
+            "type": "string"
+        },
+        "webhook_id": {
+            "required": true,
+            "type": "string"
+        }
+    }
+}

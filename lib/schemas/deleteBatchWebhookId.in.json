@@ -1,0 +1,9 @@
+{
+    "type": "object",
+    "properties": {
+        "batch_webhook_id": {
+            "required": true,
+            "type": "string"
+        }
+    }
+}

@@ -1,0 +1,13 @@
+{
+    "type": "object",
+    "properties": {
+        "workflow_id": {
+            "required": true,
+            "type": "string"
+        },
+        "workflow_email_id": {
+            "required": true,
+            "type": "string"
+        }
+    }
+}

@@ -1,0 +1,827 @@
+{
+    "type": "object",
+    "properties": {
+        "activity": {
+            "type": "array",
+            "title": "Activity",
+            "description": "An array of objects, each representing a contact's event.",
+            "readOnly": true,
+            "items": {
+                "oneOf": [
+                    {
+                        "type": "object",
+                        "title": "Email Opens",
+                        "description": "Activity feed item representing opening an email.",
+                        "properties": {
+                            "activity_type": {
+                                "type": "string",
+                                "description": "The type of event activity.",
+                                "x-value": "open",
+                                "enum": [
+                                    "open"
+                                ]
+                            },
+                            "created_at_timestamp": {
+                                "type": "string",
+                                "title": "Created At Timestamp",
+                                "format": "date-time",
+                                "description": "The created at timestamp in ISO8601."
+                            },
+                            "campaign_id": {
+                                "type": "string",
+                                "title": "Campaign ID",
+                                "description": "The campaign's unique id."
+                            },
+                            "campaign_title": {
+                                "type": "string",
+                                "title": "Campaign Title",
+                                "description": "The title of the campaign."
+                            }
+                        }
+                    },
+                    {
+                        "type": "object",
+                        "title": "Email Clicks",
+                        "description": "Activity feed item representing having a link clicked by a contact.",
+                        "properties": {
+                            "activity_type": {
+                                "type": "string",
+                                "description": "The type of event activity.",
+                                "x-value": "click",
+                                "enum": [
+                                    "click"
+                                ]
+                            },
+                            "created_at_timestamp": {
+                                "type": "string",
+                                "title": "Created At Timestamp",
+                                "format": "date-time",
+                                "description": "The created at timestamp in ISO8601."
+                            },
+                            "campaign_id": {
+                                "type": "string",
+                                "title": "Campaign ID",
+                                "description": "The campaign's unique id."
+                            },
+                            "campaign_title": {
+                                "type": "string",
+                                "title": "Campaign Title",
+                                "description": "The title of the campaign."
+                            },
+                            "link_clicked": {
+                                "type": "string",
+                                "title": "Link Clicked",
+                                "description": "The URL of the link that was clicked."
+                            }
+                        }
+                    },
+                    {
+                        "type": "object",
+                        "title": "Email Bounced",
+                        "description": "Activity feed item representing an email to this contact bouncing.",
+                        "properties": {
+                            "activity_type": {
+                                "type": "string",
+                                "description": "The type of event activity.",
+                                "x-value": "bounce",
+                                "enum": [
+                                    "bounce"
+                                ]
+                            },
+                            "created_at_timestamp": {
+                                "type": "string",
+                                "title": "Created At Timestamp",
+                                "format": "date-time",
+                                "description": "The created at timestamp in ISO8601."
+                            },
+                            "campaign_id": {
+                                "type": "string",
+                                "title": "Campaign ID",
+                                "description": "The campaign's unique id."
+                            },
+                            "campaign_title": {
+                                "type": "string",
+                                "title": "Campaign Title",
+                                "description": "The title of the campaign."
+                            },
+                            "bounce_type": {
+                                "type": "string",
+                                "title": "Bounce Type",
+                                "description": "The type of bounce.",
+                                "enum": [
+                                    "hard",
+                                    "soft"
+                                ]
+                            },
+                            "bounce_has_open_activity": {
+                                "type": "boolean",
+                                "title": "Bounce Has Open Activity",
+                                "description": "Indicates if the email associated with this bounce also has open activity on the same campaign."
+                            }
+                        }
+                    },
+                    {
+                        "type": "object",
+                        "title": "List Unsubscribed",
+                        "description": "Activity feed item representing this contact unsubscribing from a list.",
+                        "properties": {
+                            "activity_type": {
+                                "type": "string",
+                                "description": "The type of event activity.",
+                                "x-value": "unsub",
+                                "enum": [
+                                    "unsub"
+                                ]
+                            },
+                            "created_at_timestamp": {
+                                "type": "string",
+                                "title": "Created At Timestamp",
+                                "format": "date-time",
+                                "description": "The created at timestamp in ISO8601."
+                            },
+                            "campaign_id": {
+                                "type": "string",
+                                "title": "Campaign ID",
+                                "description": "The campaign's unique id."
+                            },
+                            "campaign_title": {
+                                "type": "string",
+                                "title": "Campaign Text",
+                                "description": "The title of the campaign."
+                            },
+                            "is_admin_unsubscribed": {
+                                "type": "boolean",
+                                "title": "Is Admin Unsubscribed",
+                                "description": "Indicates if an admin unsubscribed a contact."
+                            },
+                            "unsubscribe_reason": {
+                                "type": "string",
+                                "title": "Unsubscribe Reason",
+                                "description": "Indicates the reason that the contact was unsubscribed."
+                            }
+                        }
+                    },
+                    {
+                        "type": "object",
+                        "title": "Email Sent",
+                        "description": "Activity feed item representing having an email sent to the contact.",
+                        "properties": {
+                            "activity_type": {
+                                "type": "string",
+                                "description": "The type of event activity.",
+                                "x-value": "sent",
+                                "enum": [
+                                    "sent"
+                                ]
+                            },
+                            "created_at_timestamp": {
+                                "type": "string",
+                                "title": "Created At Timestamp",
+                                "format": "date-time",
+                                "description": "The created at timestamp in ISO8601."
+                            },
+                            "campaign_id": {
+                                "type": "string",
+                                "title": "Campaign ID",
+                                "description": "The campaign's unique id."
+                            },
+                            "campaign_title": {
+                                "type": "string",
+                                "title": "Campaign Title",
+                                "description": "The title of the campaign."
+                            }
+                        }
+                    },
+                    {
+                        "type": "object",
+                        "title": "Email Conversation",
+                        "description": "Activity feed item representing an individual reply in a conversation.",
+                        "properties": {
+                            "activity_type": {
+                                "type": "string",
+                                "description": "The type of event activity.",
+                                "x-value": "conversation",
+                                "enum": [
+                                    "conversation"
+                                ]
+                            },
+                            "created_at_timestamp": {
+                                "type": "string",
+                                "title": "Created At Timestamp",
+                                "format": "date-time",
+                                "description": "The created at timestamp in ISO8601."
+                            },
+                            "campaign_id": {
+                                "type": "string",
+                                "title": "Campaign ID",
+                                "description": "The campaign's unique id."
+                            },
+                            "campaign_title": {
+                                "type": "string",
+                                "title": "Campaign Title",
+                                "description": "The title of the campaign."
+                            },
+                            "thread_id": {
+                                "type": "string",
+                                "title": "Thread ID",
+                                "description": "The thread's unique id of the conversation referenced in this event."
+                            },
+                            "message_text": {
+                                "type": "string",
+                                "title": "Message Text",
+                                "description": "The body of the message in this conversation."
+                            },
+                            "created_by": {
+                                "type": "string",
+                                "title": "Created By",
+                                "description": "The username of the person who created this event."
+                            },
+                            "is_user": {
+                                "type": "boolean",
+                                "title": "Is User",
+                                "description": "Indicates that the message created by a user (as opposed to a contact)."
+                            },
+                            "has_read": {
+                                "type": "boolean",
+                                "title": "Has Read",
+                                "description": "Indicates that the message has been read."
+                            },
+                            "from_email": {
+                                "type": "string",
+                                "title": "From Email",
+                                "description": "The email of the contact who sent the reply."
+                            },
+                            "avatar_url": {
+                                "type": "string",
+                                "title": "Avatar URL",
+                                "description": "The gravatar URL of the contact who sent the reply."
+                            }
+                        }
+                    },
+                    {
+                        "type": "object",
+                        "title": "Note",
+                        "description": "Activity feed item representing a note on the contact record.",
+                        "properties": {
+                            "activity_type": {
+                                "type": "string",
+                                "description": "The type of event activity.",
+                                "x-value": "note",
+                                "enum": [
+                                    "note"
+                                ]
+                            },
+                            "created_at_timestamp": {
+                                "type": "string",
+                                "title": "Created At Timestamp",
+                                "format": "date-time",
+                                "description": "The created at timestamp in ISO8601."
+                            },
+                            "updated_at_timestamp": {
+                                "type": "string",
+                                "title": "Updated At Timestamp",
+                                "format": "date-time",
+                                "description": "The updated at timestamp in ISO8601."
+                            },
+                            "note_id": {
+                                "type": "string",
+                                "title": "Note ID",
+                                "description": "The note's unique id."
+                            },
+                            "note_text": {
+                                "type": "string",
+                                "title": "Note Text",
+                                "description": "The note's text."
+                            },
+                            "created_by": {
+                                "type": "string",
+                                "title": "Created By",
+                                "description": "The person who created the note."
+                            },
+                            "avatar_url": {
+                                "type": "string",
+                                "title": "Avatar URL",
+                                "description": "The URL of the contact's profile gravatar image."
+                            }
+                        }
+                    },
+                    {
+                        "type": "object",
+                        "title": "Marketing Permission",
+                        "description": "Activity feed item indicating if a marketing permission was added or updated.",
+                        "properties": {
+                            "activity_type": {
+                                "type": "string",
+                                "description": "The type of event activity.",
+                                "x-value": "marketing_permission",
+                                "enum": [
+                                    "marketing_permission"
+                                ]
+                            },
+                            "created_at_timestamp": {
+                                "type": "string",
+                                "title": "Created At Timestamp",
+                                "format": "date-time",
+                                "description": "The created at timestamp in ISO8601."
+                            },
+                            "marketing_permisson_text": {
+                                "type": "string",
+                                "title": "Marketing Permission Text",
+                                "description": "The text describing this marketing permission."
+                            },
+                            "updated_by": {
+                                "type": "string",
+                                "title": "Updated By",
+                                "description": "The name of the contact who updated this permission."
+                            },
+                            "marketing_permission_opted_in": {
+                                "type": "boolean",
+                                "title": "Marketing Permission Opted In",
+                                "description": "Indicates if the marketing permission is enabled or not."
+                            }
+                        }
+                    },
+                    {
+                        "type": "object",
+                        "title": "Postcard Sent",
+                        "description": "Activity feed item representing a time when a contact was sent a particular postcard.",
+                        "properties": {
+                            "activity_type": {
+                                "type": "string",
+                                "description": "The type of event activity.",
+                                "x-value": "postcard_sent",
+                                "enum": [
+                                    "postcard_sent"
+                                ]
+                            },
+                            "created_at_timestamp": {
+                                "type": "string",
+                                "title": "Created At Timestamp",
+                                "format": "date-time",
+                                "description": "The created at timestamp in ISO8601."
+                            },
+                            "outreach_id": {
+                                "type": "string",
+                                "title": "Outreach ID",
+                                "description": "The outreach's unique id."
+                            },
+                            "outreach_title": {
+                                "type": "string",
+                                "title": "Outreach Title",
+                                "description": "The title of the outreach."
+                            }
+                        }
+                    },
+                    {
+                        "type": "object",
+                        "title": "Squatter Signup",
+                        "description": "Activity feed item to representing a contact signing up for the audience from a squatter page.",
+                        "properties": {
+                            "activity_type": {
+                                "type": "string",
+                                "description": "The type of event activity.",
+                                "x-value": "squatter_signup",
+                                "enum": [
+                                    "squatter_signup"
+                                ]
+                            },
+                            "created_at_timestamp": {
+                                "type": "string",
+                                "title": "Created At Timestamp",
+                                "format": "date-time",
+                                "description": "The created at timestamp in ISO8601."
+                            },
+                            "outreach_id": {
+                                "type": "string",
+                                "title": "Outreach ID",
+                                "description": "The outreach's unique id."
+                            },
+                            "outreach_title": {
+                                "type": "string",
+                                "title": "Outreach Title",
+                                "description": "The title of the outreach."
+                            }
+                        }
+                    },
+                    {
+                        "type": "object",
+                        "title": "Website Signup",
+                        "description": "Activity feed item to representing a contact signing up for the contact through a website page.",
+                        "properties": {
+                            "activity_type": {
+                                "type": "string",
+                                "description": "The type of event activity.",
+                                "x-value": "website_signup",
+                                "enum": [
+                                    "website_signup"
+                                ]
+                            },
+                            "created_at_timestamp": {
+                                "type": "string",
+                                "title": "Created At Timestamp",
+                                "format": "date-time",
+                                "description": "The created at timestamp in ISO8601."
+                            },
+                            "outreach_id": {
+                                "type": "string",
+                                "title": "Outreach ID",
+                                "description": "The outreach's unique id."
+                            },
+                            "outreach_title": {
+                                "type": "string",
+                                "title": "Outreach Title",
+                                "description": "The title of the outreach."
+                            }
+                        }
+                    },
+                    {
+                        "type": "object",
+                        "title": "Landing Page Signup",
+                        "description": "Activity feed item to representing a contact signing up for the list via a landing page.",
+                        "properties": {
+                            "activity_type": {
+                                "type": "string",
+                                "description": "The type of event activity.",
+                                "x-value": "landing_page_signup",
+                                "enum": [
+                                    "landing_page_signup"
+                                ]
+                            },
+                            "created_at_timestamp": {
+                                "type": "string",
+                                "title": "Created At Timestamp",
+                                "format": "date-time",
+                                "description": "The created at timestamp in ISO8601."
+                            },
+                            "outreach_id": {
+                                "type": "string",
+                                "title": "Outreach ID",
+                                "description": "The outreach's unique id."
+                            },
+                            "outreach_title": {
+                                "type": "string",
+                                "title": "Outreach Title",
+                                "description": "The title of the outreach."
+                            }
+                        }
+                    },
+                    {
+                        "type": "object",
+                        "title": "Ecommerce Signup",
+                        "description": "Activity feed item to representing a contact signing up for the list via a ecommerce store.",
+                        "properties": {
+                            "activity_type": {
+                                "type": "string",
+                                "description": "The type of event activity.",
+                                "x-value": "ecommerce_signup",
+                                "enum": [
+                                    "ecommerce_signup"
+                                ]
+                            },
+                            "created_at_timestamp": {
+                                "type": "string",
+                                "title": "Created At Timestamp",
+                                "format": "date-time",
+                                "description": "The created at timestamp in ISO8601."
+                            },
+                            "store_name": {
+                                "type": "string",
+                                "title": "Store Name",
+                                "description": "The name of the store."
+                            }
+                        }
+                    },
+                    {
+                        "type": "object",
+                        "title": "Generic Signup",
+                        "description": "Activity feed item that represents a contact signing up for the audience via a generic some generic method (specifically, one we can't link to).",
+                        "properties": {
+                            "activity_type": {
+                                "type": "string",
+                                "description": "The type of event activity.",
+                                "x-value": "generic_signup",
+                                "enum": [
+                                    "generic_signup"
+                                ]
+                            },
+                            "created_at_timestamp": {
+                                "type": "string",
+                                "title": "Created At Timestamp",
+                                "format": "date-time",
+                                "description": "The created at timestamp in ISO8601."
+                            },
+                            "signup_category": {
+                                "type": "string",
+                                "title": "Signup Category",
+                                "description": "How was this user added to the list."
+                            }
+                        }
+                    },
+                    {
+                        "type": "object",
+                        "title": "Ecommerce Order",
+                        "description": "Activity feed item that represents an order.",
+                        "properties": {
+                            "activity_type": {
+                                "type": "string",
+                                "description": "The type of event activity.",
+                                "x-value": "order",
+                                "enum": [
+                                    "order"
+                                ]
+                            },
+                            "created_at_timestamp": {
+                                "type": "string",
+                                "title": "Created At Timestamp",
+                                "format": "date-time",
+                                "description": "The created at timestamp in ISO8601."
+                            },
+                            "outreach_id": {
+                                "type": "string",
+                                "title": "Outreach ID",
+                                "description": "The outreach's unique id."
+                            },
+                            "outreach_type": {
+                                "type": "string",
+                                "title": "Outreach Type",
+                                "description": "The type of outreach that triggered the event."
+                            },
+                            "outreach_title": {
+                                "type": "string",
+                                "title": "Outreach Title",
+                                "description": "The title of the outreach."
+                            },
+                            "order_id": {
+                                "type": "string",
+                                "title": "Order ID",
+                                "description": "The unique order id."
+                            },
+                            "order_total": {
+                                "type": "string",
+                                "title": "Order Total",
+                                "description": "The order total formatted as a string."
+                            },
+                            "order_items": {
+                                "type": "array",
+                                "title": "Order Items",
+                                "description": "An array of items that have been ordered.",
+                                "items": {
+                                    "type": "object",
+                                    "title": "E-commerce Order Line Item",
+                                    "description": "Information about a specific order line.",
+                                    "properties": {
+                                        "id": {
+                                            "type": "string",
+                                            "title": "Order Line Item Foreign ID",
+                                            "description": "A unique identifier for an order line item.",
+                                            "readOnly": true
+                                        },
+                                        "product_id": {
+                                            "type": "string",
+                                            "title": "Order Line Item Product Foreign ID",
+                                            "description": "A unique identifier for the product associated with an order line item."
+                                        },
+                                        "product_title": {
+                                            "type": "string",
+                                            "title": "Order Line Item Product Title",
+                                            "description": "The name of the product for an order line item.",
+                                            "readOnly": true
+                                        },
+                                        "product_variant_id": {
+                                            "type": "string",
+                                            "title": "Order Line Item Product Variant Foreign ID",
+                                            "description": "A unique identifier for the product variant associated with an order line item."
+                                        },
+                                        "product_variant_title": {
+                                            "type": "string",
+                                            "title": "Order Line Item Product Variant Title",
+                                            "description": "The name of the product variant for an order line item.",
+                                            "readOnly": true
+                                        },
+                                        "image_url": {
+                                            "type": "string",
+                                            "title": "Product Image URL",
+                                            "description": "The image URL for a product.",
+                                            "readOnly": true
+                                        },
+                                        "quantity": {
+                                            "type": "integer",
+                                            "title": "Quantity",
+                                            "description": "The order line item quantity."
+                                        },
+                                        "price": {
+                                            "type": "number",
+                                            "title": "Price",
+                                            "description": "The order line item price."
+                                        },
+                                        "discount": {
+                                            "type": "number",
+                                            "title": "Discount",
+                                            "description": "The total discount amount applied to a line item."
+                                        },
+                                        "_links": {
+                                            "title": "Links",
+                                            "description": "A list of link types and descriptions for the API schema documents.",
+                                            "type": "array",
+                                            "items": {
+                                                "type": "object",
+                                                "title": "Resource Link",
+                                                "description": "This object represents a link from the resource where it is found to another resource or action that may be performed.",
+                                                "properties": {
+                                                    "rel": {
+                                                        "type": "string",
+                                                        "title": "Rel",
+                                                        "description": "As with an HTML 'rel' attribute, this describes the type of link.",
+                                                        "readOnly": true
+                                                    },
+                                                    "href": {
+                                                        "type": "string",
+                                                        "title": "Href",
+                                                        "description": "This property contains a fully-qualified URL that can be called to retrieve the linked resource or perform the linked action.",
+                                                        "readOnly": true
+                                                    },
+                                                    "method": {
+                                                        "type": "string",
+                                                        "title": "Method",
+                                                        "description": "The HTTP method that should be used when accessing the URL defined in 'href'.",
+                                                        "enum": [
+                                                            "GET",
+                                                            "POST",
+                                                            "PUT",
+                                                            "PATCH",
+                                                            "DELETE",
+                                                            "OPTIONS",
+                                                            "HEAD"
+                                                        ],
+                                                        "readOnly": true
+                                                    },
+                                                    "targetSchema": {
+                                                        "type": "string",
+                                                        "title": "Target Schema",
+                                                        "description": "For GETs, this is a URL representing the schema that the response should conform to.",
+                                                        "readOnly": true
+                                                    },
+                                                    "schema": {
+                                                        "type": "string",
+                                                        "title": "Schema",
+                                                        "description": "For HTTP methods that can receive bodies (POST and PUT), this is a URL representing the schema that the body should conform to.",
+                                                        "readOnly": true
+                                                    }
+                                                }
+                                            },
+                                            "readOnly": true
+                                        }
+                                    }
+                                }
+                            },
+                            "store_name": {
+                                "type": "string",
+                                "title": "Store Name",
+                                "description": "The name of the store for an order."
+                            },
+                            "order_url": {
+                                "type": "string",
+                                "title": "Order URL",
+                                "description": "The order URL."
+                            }
+                        }
+                    },
+                    {
+                        "type": "object",
+                        "title": "Contact Activity Event",
+                        "description": "Activity feed item that represents a generic event.",
+                        "properties": {
+                            "activity_type": {
+                                "type": "string",
+                                "description": "The type of event activity.",
+                                "x-value": "event",
+                                "enum": [
+                                    "event"
+                                ]
+                            },
+                            "created_at_timestamp": {
+                                "type": "string",
+                                "title": "Created At Timestamp",
+                                "format": "date-time",
+                                "description": "The created at timestamp in ISO8601."
+                            },
+                            "event_name": {
+                                "type": "string",
+                                "title": "Event Name",
+                                "description": "The name of the event."
+                            },
+                            "event_properties": {
+                                "type": "array",
+                                "title": "Event Properties",
+                                "items": {
+                                    "x-skip-validation": true,
+                                    "type": "string"
+                                },
+                                "description": "An arbitrary datastore containing properties for the given event."
+                            }
+                        }
+                    },
+                    {
+                        "type": "object",
+                        "title": "Survey response",
+                        "description": "Represents when a contact completes and submits a survey",
+                        "properties": {
+                            "activity_type": {
+                                "type": "string",
+                                "description": "The type of event activity.",
+                                "x-value": "survey_response",
+                                "enum": [
+                                    "survey_response"
+                                ]
+                            },
+                            "created_at_timestamp": {
+                                "type": "string",
+                                "title": "Created At Timestamp",
+                                "format": "date-time",
+                                "description": "The created at timestamp in ISO8601."
+                            },
+                            "survey_id": {
+                                "type": "string",
+                                "title": "Survey ID",
+                                "description": "The survey's unique id."
+                            },
+                            "survey_title": {
+                                "type": "string",
+                                "title": "Survey Title",
+                                "description": "The title of the survey."
+                            }
+                        }
+                    }
+                ],
+                "discriminator": {
+                    "propertyName": "activity_type",
+                    "type": "string"
+                }
+            }
+        },
+        "email_id": {
+            "type": "string",
+            "title": "Email Hash",
+            "description": "The MD5 hash of the lowercase version of the list member's email address.",
+            "readOnly": true
+        },
+        "list_id": {
+            "type": "string",
+            "title": "List ID",
+            "description": "The list id.",
+            "readOnly": true
+        },
+        "_links": {
+            "title": "Links",
+            "description": "A list of link types and descriptions for the API schema documents.",
+            "type": "array",
+            "items": {
+                "type": "object",
+                "title": "Resource Link",
+                "description": "This object represents a link from the resource where it is found to another resource or action that may be performed.",
+                "properties": {
+                    "rel": {
+                        "type": "string",
+                        "title": "Rel",
+                        "description": "As with an HTML 'rel' attribute, this describes the type of link.",
+                        "readOnly": true
+                    },
+                    "href": {
+                        "type": "string",
+                        "title": "Href",
+                        "description": "This property contains a fully-qualified URL that can be called to retrieve the linked resource or perform the linked action.",
+                        "readOnly": true
+                    },
+                    "method": {
+                        "type": "string",
+                        "title": "Method",
+                        "description": "The HTTP method that should be used when accessing the URL defined in 'href'.",
+                        "enum": [
+                            "GET",
+                            "POST",
+                            "PUT",
+                            "PATCH",
+                            "DELETE",
+                            "OPTIONS",
+                            "HEAD"
+                        ],
+                        "readOnly": true
+                    },
+                    "targetSchema": {
+                        "type": "string",
+                        "title": "Target Schema",
+                        "description": "For GETs, this is a URL representing the schema that the response should conform to.",
+                        "readOnly": true
+                    },
+                    "schema": {
+                        "type": "string",
+                        "title": "Schema",
+                        "description": "For HTTP methods that can receive bodies (POST and PUT), this is a URL representing the schema that the body should conform to.",
+                        "readOnly": true
+                    }
+                }
+            },
+            "readOnly": true
+        }
+    }
+}

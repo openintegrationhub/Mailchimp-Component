@@ -1,0 +1,331 @@
+{
+    "type": "object",
+    "properties": {
+        "id": {
+            "type": "string",
+            "title": "Store Foreign ID",
+            "description": "The unique identifier for the store.",
+            "readOnly": true,
+            "example": "example_store"
+        },
+        "list_id": {
+            "type": "string",
+            "title": "List ID",
+            "description": "The unique identifier for the list that's associated with the store. The `list_id` for a specific store can't change.",
+            "readOnly": true,
+            "example": "1a2df69511"
+        },
+        "name": {
+            "type": "string",
+            "title": "Store Name",
+            "description": "The name of the store.",
+            "example": "Freddie's Cat Hat Emporium"
+        },
+        "platform": {
+            "type": "string",
+            "title": "Platform",
+            "description": "The e-commerce platform of the store."
+        },
+        "domain": {
+            "type": "string",
+            "title": "Domain",
+            "description": "The store domain.  The store domain must be unique within a user account.",
+            "example": "example.com"
+        },
+        "is_syncing": {
+            "type": "boolean",
+            "title": "Is Syncing",
+            "description": "Whether to disable automations because the store is currently [syncing](https://mailchimp.com/developer/marketing/docs/e-commerce/#pausing-store-automations)."
+        },
+        "email_address": {
+            "type": "string",
+            "title": "Email Address",
+            "description": "The email address for the store.",
+            "example": "freddie@mailchimp.com"
+        },
+        "currency_code": {
+            "type": "string",
+            "title": "Currency",
+            "description": "The three-letter ISO 4217 code for the currency that the store accepts.",
+            "example": "USD"
+        },
+        "money_format": {
+            "type": "string",
+            "title": "Money Format",
+            "description": "The currency format for the store. For example: `$`, `£`, etc.",
+            "example": "$"
+        },
+        "primary_locale": {
+            "type": "string",
+            "title": "Primary Locale",
+            "description": "The primary locale for the store. For example: `en`, `de`, etc.",
+            "example": "fr"
+        },
+        "timezone": {
+            "type": "string",
+            "title": "Timezone",
+            "description": "The timezone for the store.",
+            "example": "Eastern"
+        },
+        "phone": {
+            "type": "string",
+            "title": "Phone",
+            "description": "The store phone number.",
+            "example": "404-444-4444"
+        },
+        "address": {
+            "type": "object",
+            "title": "Address",
+            "description": "The store address.",
+            "properties": {
+                "address1": {
+                    "type": "string",
+                    "title": "Address Field 1",
+                    "description": "The store's mailing address.",
+                    "example": "675 Ponce de Leon Ave NE"
+                },
+                "address2": {
+                    "type": "string",
+                    "title": "Address Field 2",
+                    "description": "An additional field for the store's mailing address.",
+                    "example": "Suite 5000"
+                },
+                "city": {
+                    "type": "string",
+                    "title": "City ",
+                    "description": "The city the store is located in.",
+                    "example": "Atlanta"
+                },
+                "province": {
+                    "type": "string",
+                    "title": "Province",
+                    "description": "The store's state name or normalized province.",
+                    "example": "Georgia"
+                },
+                "province_code": {
+                    "type": "string",
+                    "title": "Province Code",
+                    "description": "The two-letter code for the store's province or state.",
+                    "example": "GA"
+                },
+                "postal_code": {
+                    "type": "string",
+                    "title": "Postal Code",
+                    "description": "The store's postal or zip code.",
+                    "example": "30308"
+                },
+                "country": {
+                    "type": "string",
+                    "title": "Country Code",
+                    "description": "The store's country.",
+                    "example": "United States"
+                },
+                "country_code": {
+                    "type": "string",
+                    "title": "Country Code",
+                    "description": "The two-letter code for to the store's country.",
+                    "example": "US"
+                },
+                "longitude": {
+                    "type": "number",
+                    "title": "Longitude",
+                    "description": "The longitude of the store location.",
+                    "example": -75.68903
+                },
+                "latitude": {
+                    "type": "number",
+                    "title": "Latitude",
+                    "description": "The latitude of the store location.",
+                    "example": 45.427408
+                }
+            }
+        },
+        "connected_site": {
+            "type": "object",
+            "title": "Connected Site",
+            "description": "The Connected Site associated with the store.",
+            "readOnly": true,
+            "properties": {
+                "site_foreign_id": {
+                    "type": "string",
+                    "title": "Connected Site Foreign ID",
+                    "description": "The unique identifier for the connected site.",
+                    "readOnly": true,
+                    "example": "a180c384d7db88b if created in-app, MC001 if created via API"
+                },
+                "site_script": {
+                    "type": "object",
+                    "title": "Script",
+                    "description": "The script used to connect your site with Mailchimp.",
+                    "readOnly": true,
+                    "properties": {
+                        "url": {
+                            "type": "string",
+                            "title": "Script URL",
+                            "description": "The URL used for any integrations that offer built-in support for connected sites.",
+                            "readOnly": true,
+                            "example": "https://chimpstatic.com/mcjs-connected/js/users/{user-hash}/{site-hash}.js"
+                        },
+                        "fragment": {
+                            "type": "string",
+                            "title": "Script Fragment",
+                            "description": "A pre-built script that you can copy-and-paste into your site to integrate it with Mailchimp.",
+                            "readOnly": true,
+                            "example": "<script id=\"mcjs\">!function(c,h,i,m,p){m=c.createElement(h),p=c.getElementsByTagName(h)[0],m.async=1,m.src=i,p.parentNode.insertBefore(m,p)}(document,\"script\",\"https://chimpstatic.com/mcjs-connected/js/users/{user-hash}/{site-hash}.js\");</script>"
+                        }
+                    }
+                }
+            }
+        },
+        "automations": {
+            "type": "object",
+            "title": "Automations",
+            "description": "Details for the automations attached to this store.",
+            "readOnly": true,
+            "properties": {
+                "abandoned_cart": {
+                    "type": "object",
+                    "title": "Abandoned Cart Automation",
+                    "description": "abandonedCart automation details.",
+                    "readOnly": true,
+                    "properties": {
+                        "is_supported": {
+                            "type": "boolean",
+                            "title": "Is Supported",
+                            "description": "Whether this store supports the abandonedCart automation.",
+                            "readOnly": true,
+                            "example": false
+                        },
+                        "id": {
+                            "type": "string",
+                            "title": "ID",
+                            "description": "Unique ID of automation parent campaign.",
+                            "readOnly": true,
+                            "example": "355a72bfc3"
+                        },
+                        "status": {
+                            "type": "string",
+                            "title": "Status",
+                            "description": "Status of the abandonedCart automation.",
+                            "enum": [
+                                "save",
+                                "sending",
+                                "paused"
+                            ],
+                            "readOnly": true,
+                            "example": "sending"
+                        }
+                    }
+                },
+                "abandoned_browse": {
+                    "type": "object",
+                    "title": "Abandoned Browse Automation",
+                    "description": "abandonedBrowse automation details. abandonedBrowse is also known as Product Retargeting Email or Retarget Site Visitors on the web.",
+                    "readOnly": true,
+                    "properties": {
+                        "is_supported": {
+                            "type": "boolean",
+                            "title": "Is Supported",
+                            "description": "Whether this store supports the abandonedBrowse automation.",
+                            "readOnly": true,
+                            "example": false
+                        },
+                        "id": {
+                            "type": "string",
+                            "title": "ID",
+                            "description": "Unique ID of automation parent campaign.",
+                            "readOnly": true,
+                            "example": "355a72bfc3"
+                        },
+                        "status": {
+                            "type": "string",
+                            "title": "Status",
+                            "description": "Status of the abandonedBrowse automation.",
+                            "enum": [
+                                "save",
+                                "sending",
+                                "paused"
+                            ],
+                            "readOnly": true,
+                            "example": "sending"
+                        }
+                    }
+                }
+            }
+        },
+        "list_is_active": {
+            "type": "boolean",
+            "title": "List Status",
+            "description": "The status of the list connected to the store, namely if it's deleted or disabled.",
+            "readOnly": true
+        },
+        "created_at": {
+            "type": "string",
+            "title": "Creation Time",
+            "format": "date-time",
+            "description": "The date and time the store was created in ISO 8601 format.",
+            "readOnly": true,
+            "example": "2015-07-15T19:28:00+00:00"
+        },
+        "updated_at": {
+            "type": "string",
+            "title": "Update Time",
+            "format": "date-time",
+            "description": "The date and time the store was last updated in ISO 8601 format.",
+            "readOnly": true,
+            "example": "2015-07-15T19:28:00+00:00"
+        },
+        "_links": {
+            "title": "Links",
+            "description": "A list of link types and descriptions for the API schema documents.",
+            "type": "array",
+            "items": {
+                "type": "object",
+                "title": "Resource Link",
+                "description": "This object represents a link from the resource where it is found to another resource or action that may be performed.",
+                "properties": {
+                    "rel": {
+                        "type": "string",
+                        "title": "Rel",
+                        "description": "As with an HTML 'rel' attribute, this describes the type of link.",
+                        "readOnly": true
+                    },
+                    "href": {
+                        "type": "string",
+                        "title": "Href",
+                        "description": "This property contains a fully-qualified URL that can be called to retrieve the linked resource or perform the linked action.",
+                        "readOnly": true
+                    },
+                    "method": {
+                        "type": "string",
+                        "title": "Method",
+                        "description": "The HTTP method that should be used when accessing the URL defined in 'href'.",
+                        "enum": [
+                            "GET",
+                            "POST",
+                            "PUT",
+                            "PATCH",
+                            "DELETE",
+                            "OPTIONS",
+                            "HEAD"
+                        ],
+                        "readOnly": true
+                    },
+                    "targetSchema": {
+                        "type": "string",
+                        "title": "Target Schema",
+                        "description": "For GETs, this is a URL representing the schema that the response should conform to.",
+                        "readOnly": true
+                    },
+                    "schema": {
+                        "type": "string",
+                        "title": "Schema",
+                        "description": "For HTTP methods that can receive bodies (POST and PUT), this is a URL representing the schema that the body should conform to.",
+                        "readOnly": true
+                    }
+                }
+            },
+            "readOnly": true
+        }
+    }
+}

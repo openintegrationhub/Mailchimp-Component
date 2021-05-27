@@ -1,0 +1,246 @@
+{
+    "type": "object",
+    "properties": {
+        "account_id": {
+            "type": "string",
+            "title": "Account ID",
+            "description": "The Mailchimp account ID.",
+            "readOnly": true
+        },
+        "login_id": {
+            "type": "string",
+            "title": "Login ID",
+            "description": "The ID associated with the user who owns this API key. If you can login to multiple accounts, this ID will be the same for each account.",
+            "readOnly": true
+        },
+        "account_name": {
+            "type": "string",
+            "title": "Account Name",
+            "description": "The name of the account.",
+            "readOnly": true
+        },
+        "email": {
+            "type": "string",
+            "title": "Account Email",
+            "description": "The account email address.",
+            "readOnly": true
+        },
+        "first_name": {
+            "type": "string",
+            "title": "First Name",
+            "description": "The first name tied to the account.",
+            "readOnly": true
+        },
+        "last_name": {
+            "type": "string",
+            "title": "Last Name",
+            "description": "The last name tied to the account.",
+            "readOnly": true
+        },
+        "username": {
+            "type": "string",
+            "title": "User Name",
+            "description": "The username tied to the account.",
+            "readOnly": true,
+            "example": "freddie2000"
+        },
+        "avatar_url": {
+            "type": "string",
+            "title": "Avatar URL",
+            "description": "URL of the avatar for the user.",
+            "readOnly": true
+        },
+        "role": {
+            "type": "string",
+            "title": "Role",
+            "description": "The [user role](https://mailchimp.com/help/manage-user-levels-in-your-account/) for the account.",
+            "readOnly": true
+        },
+        "member_since": {
+            "type": "string",
+            "title": "Account Creation Date",
+            "format": "date-time",
+            "description": "The date and time that the account was created in ISO 8601 format.",
+            "readOnly": true,
+            "example": "2010-01-01T23:59:59+00:00"
+        },
+        "pricing_plan_type": {
+            "type": "string",
+            "title": "Account Pricing Plan",
+            "description": "The type of pricing plan the account is on.",
+            "enum": [
+                "monthly",
+                "pay_as_you_go",
+                "forever_free"
+            ],
+            "readOnly": true
+        },
+        "first_payment": {
+            "type": "string",
+            "title": "First Payment",
+            "format": "date-time",
+            "description": "Date of first payment for monthly plans.",
+            "readOnly": true,
+            "example": "2010-01-01T23:59:59+00:00"
+        },
+        "account_timezone": {
+            "type": "string",
+            "title": "Account Timezone",
+            "description": "The timezone currently set for the account.",
+            "readOnly": true
+        },
+        "account_industry": {
+            "type": "string",
+            "title": "Account Industry",
+            "description": "The user-specified industry associated with the account.",
+            "readOnly": true
+        },
+        "contact": {
+            "type": "object",
+            "title": "Account Contact",
+            "description": "Information about the account contact.",
+            "readOnly": true,
+            "properties": {
+                "company": {
+                    "type": "string",
+                    "title": "Company",
+                    "description": "The company name for the account.",
+                    "readOnly": true
+                },
+                "addr1": {
+                    "type": "string",
+                    "title": "Address Line 1",
+                    "description": "The street address for the account contact.",
+                    "readOnly": true
+                },
+                "addr2": {
+                    "type": "string",
+                    "title": "Address Line 2",
+                    "description": "The street address for the account contact.",
+                    "readOnly": true
+                },
+                "city": {
+                    "type": "string",
+                    "title": "City",
+                    "description": "The city for the account contact.",
+                    "readOnly": true
+                },
+                "state": {
+                    "type": "string",
+                    "title": "State",
+                    "description": "The state for the account contact.",
+                    "readOnly": true
+                },
+                "zip": {
+                    "type": "string",
+                    "title": "Zip Code",
+                    "description": "The zip code for the account contact.",
+                    "readOnly": true
+                },
+                "country": {
+                    "type": "string",
+                    "title": "Country",
+                    "description": "The country for the account contact.",
+                    "readOnly": true
+                }
+            }
+        },
+        "pro_enabled": {
+            "type": "boolean",
+            "title": "Mailchimp Pro",
+            "description": "Legacy - whether the account includes [Mailchimp Pro](https://mailchimp.com/help/about-mailchimp-pro/).",
+            "readOnly": true
+        },
+        "last_login": {
+            "type": "string",
+            "title": "Last Login Date",
+            "description": "The date and time of the last login for this account in ISO 8601 format.",
+            "readOnly": true,
+            "format": "date-time"
+        },
+        "total_subscribers": {
+            "type": "integer",
+            "title": "Total Subscribers",
+            "description": "The total number of subscribers across all lists in the account.",
+            "readOnly": true
+        },
+        "industry_stats": {
+            "type": "object",
+            "title": "Industry Stats",
+            "description": "The [average campaign statistics](https://mailchimp.com/resources/research/email-marketing-benchmarks/?utm_source=mc-api&utm_medium=docs&utm_campaign=apidocs) for all campaigns in the account's specified industry.",
+            "readOnly": true,
+            "properties": {
+                "open_rate": {
+                    "type": "number",
+                    "title": "Open Rate",
+                    "description": "The average unique open rate for all campaigns in the account's specified industry.",
+                    "readOnly": true
+                },
+                "bounce_rate": {
+                    "type": "number",
+                    "title": "Bounce Rate",
+                    "description": "The average bounce rate for all campaigns in the account's specified industry.",
+                    "readOnly": true
+                },
+                "click_rate": {
+                    "type": "number",
+                    "title": "Click Rate",
+                    "description": "The average unique click rate for all campaigns in the account's specified industry.",
+                    "readOnly": true
+                }
+            }
+        },
+        "_links": {
+            "title": "Links",
+            "description": "A list of link types and descriptions for the API schema documents.",
+            "type": "array",
+            "items": {
+                "type": "object",
+                "title": "Resource Link",
+                "description": "This object represents a link from the resource where it is found to another resource or action that may be performed.",
+                "properties": {
+                    "rel": {
+                        "type": "string",
+                        "title": "Rel",
+                        "description": "As with an HTML 'rel' attribute, this describes the type of link.",
+                        "readOnly": true
+                    },
+                    "href": {
+                        "type": "string",
+                        "title": "Href",
+                        "description": "This property contains a fully-qualified URL that can be called to retrieve the linked resource or perform the linked action.",
+                        "readOnly": true
+                    },
+                    "method": {
+                        "type": "string",
+                        "title": "Method",
+                        "description": "The HTTP method that should be used when accessing the URL defined in 'href'.",
+                        "enum": [
+                            "GET",
+                            "POST",
+                            "PUT",
+                            "PATCH",
+                            "DELETE",
+                            "OPTIONS",
+                            "HEAD"
+                        ],
+                        "readOnly": true
+                    },
+                    "targetSchema": {
+                        "type": "string",
+                        "title": "Target Schema",
+                        "description": "For GETs, this is a URL representing the schema that the response should conform to.",
+                        "readOnly": true
+                    },
+                    "schema": {
+                        "type": "string",
+                        "title": "Schema",
+                        "description": "For HTTP methods that can receive bodies (POST and PUT), this is a URL representing the schema that the body should conform to.",
+                        "readOnly": true
+                    }
+                }
+            },
+            "readOnly": true
+        }
+    }
+}

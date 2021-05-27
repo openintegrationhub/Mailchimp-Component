@@ -1,0 +1,422 @@
+{
+    "type": "object",
+    "properties": {
+        "landing_pages": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "title": "Landing Page Report",
+                "description": "A summary of an individual landing page's settings and content.",
+                "properties": {
+                    "id": {
+                        "type": "string",
+                        "title": "Landing Page ID",
+                        "description": "A string that uniquely identifies this landing page.",
+                        "readOnly": true,
+                        "example": "00dfc2e1f0"
+                    },
+                    "name": {
+                        "type": "string",
+                        "title": "Name",
+                        "description": "The name of this landing page the user will see.",
+                        "readOnly": true
+                    },
+                    "title": {
+                        "type": "string",
+                        "title": "Title",
+                        "description": "The name of the landing page the user's customers will see.",
+                        "readOnly": true
+                    },
+                    "url": {
+                        "type": "string",
+                        "title": "Url",
+                        "description": "The landing page url.",
+                        "readOnly": true
+                    },
+                    "published_at": {
+                        "type": "string",
+                        "title": "Published At",
+                        "description": "The time this landing page was published.",
+                        "format": "date-time",
+                        "readOnly": true
+                    },
+                    "unpublished_at": {
+                        "type": "string",
+                        "title": "Unpublished At",
+                        "description": "The time this landing page was unpublished.",
+                        "format": "date-time",
+                        "readOnly": true
+                    },
+                    "status": {
+                        "type": "string",
+                        "title": "Status",
+                        "description": "The status of the landing page.",
+                        "readOnly": true
+                    },
+                    "list_id": {
+                        "type": "string",
+                        "title": "List Id",
+                        "description": "The list id connected to this landing page.",
+                        "readOnly": true
+                    },
+                    "visits": {
+                        "type": "integer",
+                        "title": "Visits",
+                        "description": "The number of visits to this landing pages.",
+                        "readOnly": true
+                    },
+                    "unique_visits": {
+                        "type": "integer",
+                        "title": "Unique Visits",
+                        "description": "The number of unique visits to this landing pages.",
+                        "readOnly": true
+                    },
+                    "subscribes": {
+                        "type": "integer",
+                        "title": "Subscribes",
+                        "description": "The number of subscribes to this landing pages.",
+                        "readOnly": true
+                    },
+                    "clicks": {
+                        "type": "integer",
+                        "title": "Clicks",
+                        "description": "The number of clicks to this landing pages.",
+                        "readOnly": true
+                    },
+                    "conversion_rate": {
+                        "type": "number",
+                        "title": "Conversion rate",
+                        "description": "The percentage of people who visited your landing page and were added to your list.",
+                        "readOnly": true
+                    },
+                    "timeseries": {
+                        "type": "object",
+                        "properties": {
+                            "daily_stats": {
+                                "type": "object",
+                                "title": "Daily clicks and visits data",
+                                "description": "The clicks and visits data from the last seven days.",
+                                "readOnly": true,
+                                "properties": {
+                                    "clicks": {
+                                        "type": "array",
+                                        "title": "Clicks",
+                                        "items": {
+                                            "type": "object",
+                                            "properties": {
+                                                "date": {
+                                                    "type": "string",
+                                                    "title": "Date",
+                                                    "readOnly": true,
+                                                    "example": "2018-04-25"
+                                                },
+                                                "val": {
+                                                    "type": "integer",
+                                                    "title": "Value",
+                                                    "readOnly": true,
+                                                    "example": 13
+                                                }
+                                            }
+                                        }
+                                    },
+                                    "visits": {
+                                        "type": "array",
+                                        "title": "Visits",
+                                        "items": {
+                                            "type": "object",
+                                            "properties": {
+                                                "date": {
+                                                    "type": "string",
+                                                    "title": "Date",
+                                                    "readOnly": true,
+                                                    "example": "2018-04-25"
+                                                },
+                                                "val": {
+                                                    "type": "integer",
+                                                    "title": "Value",
+                                                    "readOnly": true,
+                                                    "example": 11
+                                                }
+                                            }
+                                        }
+                                    },
+                                    "unique_visits": {
+                                        "type": "array",
+                                        "title": "Unique Visits",
+                                        "items": {
+                                            "type": "object",
+                                            "properties": {
+                                                "date": {
+                                                    "type": "string",
+                                                    "title": "Date",
+                                                    "readOnly": true,
+                                                    "example": "2018-04-25"
+                                                },
+                                                "val": {
+                                                    "type": "integer",
+                                                    "title": "Value",
+                                                    "readOnly": true,
+                                                    "example": 1
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            },
+                            "weekly_stats": {
+                                "type": "object",
+                                "title": "Weekly clicks and visits data",
+                                "description": "The clicks and visits data from the last five weeks.",
+                                "readOnly": true,
+                                "properties": {
+                                    "clicks": {
+                                        "type": "array",
+                                        "title": "Clicks",
+                                        "description": "The total number of clicks in a week.",
+                                        "items": {
+                                            "type": "object",
+                                            "properties": {
+                                                "date": {
+                                                    "type": "string",
+                                                    "title": "Date",
+                                                    "readOnly": true,
+                                                    "example": "2018-04-25"
+                                                },
+                                                "val": {
+                                                    "type": "integer",
+                                                    "title": "Value",
+                                                    "readOnly": true,
+                                                    "example": 23
+                                                }
+                                            }
+                                        }
+                                    },
+                                    "visits": {
+                                        "type": "array",
+                                        "title": "Visits",
+                                        "description": "The total number of visits in a week.",
+                                        "items": {
+                                            "type": "object",
+                                            "properties": {
+                                                "date": {
+                                                    "type": "string",
+                                                    "title": "Date",
+                                                    "readOnly": true,
+                                                    "example": "2018-04-25"
+                                                },
+                                                "val": {
+                                                    "type": "integer",
+                                                    "title": "Value",
+                                                    "readOnly": true,
+                                                    "example": 49
+                                                }
+                                            }
+                                        }
+                                    },
+                                    "unique_visits": {
+                                        "type": "array",
+                                        "title": "Unique Visits",
+                                        "items": {
+                                            "type": "object",
+                                            "properties": {
+                                                "date": {
+                                                    "type": "string",
+                                                    "title": "Date",
+                                                    "readOnly": true,
+                                                    "example": "2018-04-25"
+                                                },
+                                                "val": {
+                                                    "type": "integer",
+                                                    "title": "Value",
+                                                    "readOnly": true,
+                                                    "example": 1
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "ecommerce": {
+                        "type": "object",
+                        "properties": {
+                            "total_revenue": {
+                                "type": "number",
+                                "title": "Total Revenue",
+                                "description": "The total revenue of this landing page.",
+                                "readOnly": true
+                            },
+                            "currency_code": {
+                                "type": "string",
+                                "title": "Currency code",
+                                "description": "The user's currency code.",
+                                "readOnly": true
+                            },
+                            "total_orders": {
+                                "type": "integer",
+                                "title": "Total Orders",
+                                "description": "The total number of orders associated with this landing page.",
+                                "readOnly": true
+                            },
+                            "average_order_revenue": {
+                                "type": "number",
+                                "title": "Average Order Revenue",
+                                "description": "The average order revenue of this landing page.",
+                                "readOnly": true
+                            }
+                        }
+                    },
+                    "web_id": {
+                        "type": "integer",
+                        "title": "Landing Page Web ID",
+                        "description": "The ID used in the Mailchimp web application.",
+                        "readOnly": true,
+                        "example": 33345484
+                    },
+                    "list_name": {
+                        "type": "string",
+                        "title": "List Name",
+                        "description": "List Name",
+                        "readOnly": true,
+                        "example": "Test List"
+                    },
+                    "signup_tags": {
+                        "type": "array",
+                        "title": "Signup Tags",
+                        "description": "A list of tags associated to the landing page.",
+                        "readOnly": true,
+                        "items": {
+                            "type": "object",
+                            "title": "Tag",
+                            "properties": {
+                                "tag_id": {
+                                    "type": "integer",
+                                    "title": "Tag ID",
+                                    "description": "The unique id for the tag.",
+                                    "readOnly": true
+                                },
+                                "tag_name": {
+                                    "type": "string",
+                                    "title": "Tag Name",
+                                    "description": "The name of the tag.",
+                                    "readOnly": true
+                                }
+                            }
+                        }
+                    },
+                    "_links": {
+                        "title": "Links",
+                        "description": "A list of link types and descriptions for the API schema documents.",
+                        "type": "array",
+                        "items": {
+                            "type": "object",
+                            "title": "Resource Link",
+                            "description": "This object represents a link from the resource where it is found to another resource or action that may be performed.",
+                            "properties": {
+                                "rel": {
+                                    "type": "string",
+                                    "title": "Rel",
+                                    "description": "As with an HTML 'rel' attribute, this describes the type of link.",
+                                    "readOnly": true
+                                },
+                                "href": {
+                                    "type": "string",
+                                    "title": "Href",
+                                    "description": "This property contains a fully-qualified URL that can be called to retrieve the linked resource or perform the linked action.",
+                                    "readOnly": true
+                                },
+                                "method": {
+                                    "type": "string",
+                                    "title": "Method",
+                                    "description": "The HTTP method that should be used when accessing the URL defined in 'href'.",
+                                    "enum": [
+                                        "GET",
+                                        "POST",
+                                        "PUT",
+                                        "PATCH",
+                                        "DELETE",
+                                        "OPTIONS",
+                                        "HEAD"
+                                    ],
+                                    "readOnly": true
+                                },
+                                "targetSchema": {
+                                    "type": "string",
+                                    "title": "Target Schema",
+                                    "description": "For GETs, this is a URL representing the schema that the response should conform to.",
+                                    "readOnly": true
+                                },
+                                "schema": {
+                                    "type": "string",
+                                    "title": "Schema",
+                                    "description": "For HTTP methods that can receive bodies (POST and PUT), this is a URL representing the schema that the body should conform to.",
+                                    "readOnly": true
+                                }
+                            }
+                        },
+                        "readOnly": true
+                    }
+                }
+            }
+        },
+        "total_items": {
+            "type": "integer",
+            "title": "Item Count",
+            "description": "The total number of items matching the query regardless of pagination.",
+            "readOnly": true
+        },
+        "_links": {
+            "title": "Links",
+            "description": "A list of link types and descriptions for the API schema documents.",
+            "type": "array",
+            "items": {
+                "type": "object",
+                "title": "Resource Link",
+                "description": "This object represents a link from the resource where it is found to another resource or action that may be performed.",
+                "properties": {
+                    "rel": {
+                        "type": "string",
+                        "title": "Rel",
+                        "description": "As with an HTML 'rel' attribute, this describes the type of link.",
+                        "readOnly": true
+                    },
+                    "href": {
+                        "type": "string",
+                        "title": "Href",
+                        "description": "This property contains a fully-qualified URL that can be called to retrieve the linked resource or perform the linked action.",
+                        "readOnly": true
+                    },
+                    "method": {
+                        "type": "string",
+                        "title": "Method",
+                        "description": "The HTTP method that should be used when accessing the URL defined in 'href'.",
+                        "enum": [
+                            "GET",
+                            "POST",
+                            "PUT",
+                            "PATCH",
+                            "DELETE",
+                            "OPTIONS",
+                            "HEAD"
+                        ],
+                        "readOnly": true
+                    },
+                    "targetSchema": {
+                        "type": "string",
+                        "title": "Target Schema",
+                        "description": "For GETs, this is a URL representing the schema that the response should conform to.",
+                        "readOnly": true
+                    },
+                    "schema": {
+                        "type": "string",
+                        "title": "Schema",
+                        "description": "For HTTP methods that can receive bodies (POST and PUT), this is a URL representing the schema that the body should conform to.",
+                        "readOnly": true
+                    }
+                }
+            },
+            "readOnly": true
+        }
+    }
+}

@@ -1,0 +1,66 @@
+{
+    "type": "object",
+    "properties": {
+        "fields": {
+            "required": false,
+            "type": "array",
+            "items": {
+                "type": "string"
+            }
+        },
+        "exclude_fields": {
+            "required": false,
+            "type": "array",
+            "items": {
+                "type": "string"
+            }
+        },
+        "count": {
+            "required": false,
+            "type": "integer",
+            "maximum": 1000,
+            "default": 10
+        },
+        "offset": {
+            "required": false,
+            "type": "integer",
+            "default": 0
+        },
+        "list_id": {
+            "required": true,
+            "type": "string"
+        },
+        "type": {
+            "required": false,
+            "type": "string"
+        },
+        "since_created_at": {
+            "required": false,
+            "type": "string"
+        },
+        "before_created_at": {
+            "required": false,
+            "type": "string"
+        },
+        "include_cleaned": {
+            "required": false,
+            "type": "boolean"
+        },
+        "include_transactional": {
+            "required": false,
+            "type": "boolean"
+        },
+        "include_unsubscribed": {
+            "required": false,
+            "type": "boolean"
+        },
+        "since_updated_at": {
+            "required": false,
+            "type": "string"
+        },
+        "before_updated_at": {
+            "required": false,
+            "type": "string"
+        }
+    }
+}

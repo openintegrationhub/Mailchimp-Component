@@ -1,0 +1,28 @@
+{
+    "type": "object",
+    "properties": {
+        "journey_id": {
+            "required": true,
+            "type": "integer"
+        },
+        "step_id": {
+            "required": true,
+            "type": "integer"
+        },
+        "requestBody": {
+            "type": "object",
+            "title": "Subscriber in Customer Journey's audience",
+            "description": "Information about subscribers in a Customer Journey's audience.",
+            "required": [
+                "email_address"
+            ],
+            "properties": {
+                "email_address": {
+                    "type": "string",
+                    "title": "Email Address",
+                    "description": "The list member's email address."
+                }
+            }
+        }
+    }
+}

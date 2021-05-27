@@ -1,0 +1,121 @@
+{
+    "type": "object",
+    "properties": {
+        "foreign_id": {
+            "type": "string",
+            "title": "Connected Site Foreign ID",
+            "description": "The unique identifier for the site.",
+            "readOnly": true,
+            "example": "a180c384d7db88b if created in-app, MC001 if created via API"
+        },
+        "store_id": {
+            "type": "string",
+            "title": "Store ID",
+            "description": "The unique identifier for the ecommerce store that's associated with the connected site (if any). The store_id for a specific connected site can't change.",
+            "readOnly": true,
+            "example": "MC001"
+        },
+        "platform": {
+            "type": "string",
+            "title": "Connected Site Platform",
+            "description": "The platform of the connected site.",
+            "readOnly": true,
+            "example": "shopify, magento, bigcommerce, woocommerce"
+        },
+        "domain": {
+            "type": "string",
+            "title": "Domain",
+            "description": "The connected site domain.",
+            "readOnly": true,
+            "example": "example.myshopify.com"
+        },
+        "site_script": {
+            "type": "object",
+            "title": "Script",
+            "description": "The script used to connect your site with Mailchimp.",
+            "readOnly": true,
+            "properties": {
+                "url": {
+                    "type": "string",
+                    "title": "Script URL",
+                    "description": "The URL used for any integrations that offer built-in support for connected sites.",
+                    "example": "https://chimpstatic.com/mcjs-connected/js/users/{user-hash}/{site-hash}.js"
+                },
+                "fragment": {
+                    "type": "string",
+                    "title": "Script Fragment",
+                    "description": "A pre-built script that you can copy-and-paste into your site to integrate it with Mailchimp.",
+                    "example": "<script id=\"mcjs\">!function(c,h,i,m,p){m=c.createElement(h),p=c.getElementsByTagName(h)[0],m.async=1,m.src=i,p.parentNode.insertBefore(m,p)}(document,\"script\",\"https://chimpstatic.com/mcjs-connected/js/users/{user-hash}/{site-hash}.js\");</script>"
+                }
+            }
+        },
+        "created_at": {
+            "type": "string",
+            "title": "Creation Time",
+            "format": "date-time",
+            "description": "The date and time the connected site was created in ISO 8601 format.",
+            "readOnly": true,
+            "example": "2015-07-15T19:28:00+00:00"
+        },
+        "updated_at": {
+            "type": "string",
+            "title": "Update Time",
+            "format": "date-time",
+            "description": "The date and time the connected site was last updated in ISO 8601 format.",
+            "readOnly": true,
+            "example": "2015-07-15T19:35:00+00:00"
+        },
+        "_links": {
+            "title": "Links",
+            "description": "A list of link types and descriptions for the API schema documents.",
+            "type": "array",
+            "items": {
+                "type": "object",
+                "title": "Resource Link",
+                "description": "This object represents a link from the resource where it is found to another resource or action that may be performed.",
+                "properties": {
+                    "rel": {
+                        "type": "string",
+                        "title": "Rel",
+                        "description": "As with an HTML 'rel' attribute, this describes the type of link.",
+                        "readOnly": true
+                    },
+                    "href": {
+                        "type": "string",
+                        "title": "Href",
+                        "description": "This property contains a fully-qualified URL that can be called to retrieve the linked resource or perform the linked action.",
+                        "readOnly": true
+                    },
+                    "method": {
+                        "type": "string",
+                        "title": "Method",
+                        "description": "The HTTP method that should be used when accessing the URL defined in 'href'.",
+                        "enum": [
+                            "GET",
+                            "POST",
+                            "PUT",
+                            "PATCH",
+                            "DELETE",
+                            "OPTIONS",
+                            "HEAD"
+                        ],
+                        "readOnly": true
+                    },
+                    "targetSchema": {
+                        "type": "string",
+                        "title": "Target Schema",
+                        "description": "For GETs, this is a URL representing the schema that the response should conform to.",
+                        "readOnly": true
+                    },
+                    "schema": {
+                        "type": "string",
+                        "title": "Schema",
+                        "description": "For HTTP methods that can receive bodies (POST and PUT), this is a URL representing the schema that the body should conform to.",
+                        "readOnly": true
+                    }
+                }
+            },
+            "readOnly": true
+        }
+    }
+}

@@ -1,0 +1,12 @@
+{
+    "type": "object",
+    "properties": {
+        "health_status": {
+            "type": "string",
+            "title": "API health status",
+            "description": "This will return a constant string value if the request is successful. Ex. \"Everything's Chimpy!\"",
+            "readOnly": true,
+            "example": "\"Everything's Chimpy!\""
+        }
+    }
+}

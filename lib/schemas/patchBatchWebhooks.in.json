@@ -1,0 +1,25 @@
+{
+    "type": "object",
+    "properties": {
+        "batch_webhook_id": {
+            "required": true,
+            "type": "string"
+        },
+        "requestBody": {
+            "type": "object",
+            "title": "Batch Webhook",
+            "description": "Update an existing Batch Webook.",
+            "required": [
+                "url"
+            ],
+            "properties": {
+                "url": {
+                    "type": "string",
+                    "title": "URL",
+                    "description": "A valid URL for the Webhook.",
+                    "example": "http://yourdomain.com/webhook"
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,70 @@
+{
+    "type": "object",
+    "properties": {
+        "store_id": {
+            "required": true,
+            "type": "string"
+        },
+        "product_id": {
+            "required": true,
+            "type": "string"
+        },
+        "requestBody": {
+            "type": "object",
+            "title": "E-commerce Product Variant",
+            "description": "Information about a specific product variant.",
+            "required": [
+                "id",
+                "title"
+            ],
+            "properties": {
+                "id": {
+                    "type": "string",
+                    "title": "Product Variant Foreign ID",
+                    "description": "A unique identifier for the product variant."
+                },
+                "title": {
+                    "type": "string",
+                    "title": "Title",
+                    "description": "The title of a product variant.",
+                    "example": "Cat Hat"
+                },
+                "url": {
+                    "type": "string",
+                    "title": "URL",
+                    "description": "The URL for a product variant."
+                },
+                "sku": {
+                    "type": "string",
+                    "title": "SKU",
+                    "description": "The stock keeping unit (SKU) of a product variant."
+                },
+                "price": {
+                    "type": "number",
+                    "title": "Price",
+                    "description": "The price of a product variant."
+                },
+                "inventory_quantity": {
+                    "type": "integer",
+                    "title": "Inventory Quantity",
+                    "description": "The inventory quantity of a product variant."
+                },
+                "image_url": {
+                    "type": "string",
+                    "title": "Image URL",
+                    "description": "The image URL for a product variant."
+                },
+                "backorders": {
+                    "type": "string",
+                    "title": "Backorders",
+                    "description": "The backorders of a product variant."
+                },
+                "visibility": {
+                    "type": "string",
+                    "title": "Visibility",
+                    "description": "The visibility of a product variant."
+                }
+            }
+        }
+    }
+}

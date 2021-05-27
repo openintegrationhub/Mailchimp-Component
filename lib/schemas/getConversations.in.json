@@ -1,0 +1,46 @@
+{
+    "type": "object",
+    "properties": {
+        "fields": {
+            "required": false,
+            "type": "array",
+            "items": {
+                "type": "string"
+            }
+        },
+        "exclude_fields": {
+            "required": false,
+            "type": "array",
+            "items": {
+                "type": "string"
+            }
+        },
+        "count": {
+            "required": false,
+            "type": "integer",
+            "maximum": 1000,
+            "default": 10
+        },
+        "offset": {
+            "required": false,
+            "type": "integer",
+            "default": 0
+        },
+        "has_unread_messages": {
+            "required": false,
+            "type": "string",
+            "enum": [
+                "true",
+                "false"
+            ]
+        },
+        "list_id": {
+            "required": false,
+            "type": "string"
+        },
+        "campaign_id": {
+            "required": false,
+            "type": "string"
+        }
+    }
+}

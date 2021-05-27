@@ -1,0 +1,90 @@
+{
+    "type": "object",
+    "properties": {
+        "list_id": {
+            "required": true,
+            "type": "string"
+        },
+        "requestBody": {
+            "type": "object",
+            "title": "Add Webhook",
+            "description": "Configure a webhook for the given list.",
+            "properties": {
+                "url": {
+                    "type": "string",
+                    "title": "URL",
+                    "description": "A valid URL for the Webhook.",
+                    "example": "http://yourdomain.com/webhook"
+                },
+                "events": {
+                    "type": "object",
+                    "title": "Events",
+                    "description": "The events that can trigger the webhook and whether they are enabled.",
+                    "properties": {
+                        "subscribe": {
+                            "type": "boolean",
+                            "title": "Subscribed",
+                            "description": "Whether the webhook is triggered when a list subscriber is added.",
+                            "example": true
+                        },
+                        "unsubscribe": {
+                            "type": "boolean",
+                            "title": "Unsubscribed",
+                            "description": "Whether the webhook is triggered when a list member unsubscribes.",
+                            "example": true
+                        },
+                        "profile": {
+                            "type": "boolean",
+                            "title": "Profile Updated",
+                            "description": "Whether the webhook is triggered when a subscriber's profile is updated.",
+                            "example": true
+                        },
+                        "cleaned": {
+                            "type": "boolean",
+                            "title": "Cleaned",
+                            "description": "Whether the webhook is triggered when a subscriber's email address is cleaned from the list.",
+                            "example": true
+                        },
+                        "upemail": {
+                            "type": "boolean",
+                            "title": "Email Address Updated",
+                            "description": "Whether the webhook is triggered when a subscriber's email address is changed.",
+                            "example": true
+                        },
+                        "campaign": {
+                            "type": "boolean",
+                            "title": "Campaign Sent",
+                            "description": "Whether the webhook is triggered when a campaign is sent or cancelled.",
+                            "example": true
+                        }
+                    }
+                },
+                "sources": {
+                    "type": "object",
+                    "title": "Sources",
+                    "description": "The possible sources of any events that can trigger the webhook and whether they are enabled.",
+                    "properties": {
+                        "user": {
+                            "type": "boolean",
+                            "title": "User",
+                            "description": "Whether the webhook is triggered by subscriber-initiated actions.",
+                            "example": true
+                        },
+                        "admin": {
+                            "type": "boolean",
+                            "title": "Admin",
+                            "description": "Whether the webhook is triggered by admin-initiated actions in the web interface.",
+                            "example": true
+                        },
+                        "api": {
+                            "type": "boolean",
+                            "title": "API",
+                            "description": "Whether the webhook is triggered by actions initiated via the API.",
+                            "example": true
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

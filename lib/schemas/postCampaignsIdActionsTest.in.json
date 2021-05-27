@@ -1,0 +1,35 @@
+{
+    "type": "object",
+    "properties": {
+        "campaign_id": {
+            "required": true,
+            "type": "string"
+        },
+        "requestBody": {
+            "type": "object",
+            "required": [
+                "test_emails",
+                "send_type"
+            ],
+            "properties": {
+                "test_emails": {
+                    "type": "array",
+                    "title": "Test Emails",
+                    "description": "An array of email addresses to send the test email to.",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "send_type": {
+                    "type": "string",
+                    "enum": [
+                        "html",
+                        "plaintext"
+                    ],
+                    "title": "Type of email to test",
+                    "description": "Choose the type of test email to send."
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,165 @@
+{
+    "type": "object",
+    "properties": {
+        "list_id": {
+            "required": true,
+            "type": "string"
+        },
+        "requestBody": {
+            "type": "object",
+            "title": "Subscriber List",
+            "description": "Information about a specific list.",
+            "required": [
+                "name",
+                "permission_reminder",
+                "email_type_option",
+                "contact",
+                "campaign_defaults"
+            ],
+            "properties": {
+                "name": {
+                    "type": "string",
+                    "title": "List Name",
+                    "description": "The name of the list."
+                },
+                "contact": {
+                    "type": "object",
+                    "title": "List Contact",
+                    "description": "[Contact information displayed in campaign footers](https://mailchimp.com/help/about-campaign-footers/) to comply with international spam laws.",
+                    "required": [
+                        "company",
+                        "address1",
+                        "city",
+                        "state",
+                        "zip",
+                        "country"
+                    ],
+                    "properties": {
+                        "company": {
+                            "type": "string",
+                            "title": "Company Name",
+                            "description": "The company name for the list."
+                        },
+                        "address1": {
+                            "type": "string",
+                            "title": "Address",
+                            "description": "The street address for the list contact."
+                        },
+                        "address2": {
+                            "type": "string",
+                            "title": "Address",
+                            "description": "The street address for the list contact."
+                        },
+                        "city": {
+                            "type": "string",
+                            "title": "City",
+                            "description": "The city for the list contact."
+                        },
+                        "state": {
+                            "type": "string",
+                            "title": "State",
+                            "description": "The state for the list contact."
+                        },
+                        "zip": {
+                            "type": "string",
+                            "title": "Postal Code",
+                            "description": "The postal or zip code for the list contact."
+                        },
+                        "country": {
+                            "type": "string",
+                            "title": "Country Code",
+                            "description": "A two-character ISO3166 country code. Defaults to US if invalid."
+                        },
+                        "phone": {
+                            "type": "string",
+                            "title": "Phone Number",
+                            "description": "The phone number for the list contact."
+                        }
+                    }
+                },
+                "permission_reminder": {
+                    "type": "string",
+                    "title": "Permission Reminder",
+                    "description": "The [permission reminder](https://mailchimp.com/help/edit-the-permission-reminder/) for the list."
+                },
+                "use_archive_bar": {
+                    "type": "boolean",
+                    "title": "Use Archive Bar",
+                    "description": "Whether campaigns for this list use the [Archive Bar](https://mailchimp.com/help/about-email-campaign-archives-and-pages/) in archives by default.",
+                    "default": false
+                },
+                "campaign_defaults": {
+                    "type": "object",
+                    "title": "Campaign Defaults",
+                    "description": "[Default values for campaigns](https://mailchimp.com/help/edit-your-emails-subject-preview-text-from-name-or-from-email-address/) created for this list.",
+                    "required": [
+                        "from_name",
+                        "from_email",
+                        "subject",
+                        "language"
+                    ],
+                    "properties": {
+                        "from_name": {
+                            "type": "string",
+                            "title": "Sender's Name",
+                            "description": "The default from name for campaigns sent to this list."
+                        },
+                        "from_email": {
+                            "type": "string",
+                            "title": "Sender's Email Address",
+                            "description": "The default from email for campaigns sent to this list."
+                        },
+                        "subject": {
+                            "type": "string",
+                            "title": "Subject",
+                            "description": "The default subject line for campaigns sent to this list."
+                        },
+                        "language": {
+                            "type": "string",
+                            "title": "Language",
+                            "description": "The default language for this lists's forms."
+                        }
+                    }
+                },
+                "notify_on_subscribe": {
+                    "type": "string",
+                    "title": "Notify on Subscribe",
+                    "description": "The email address to send [subscribe notifications](https://mailchimp.com/help/change-subscribe-and-unsubscribe-notifications/) to.",
+                    "default": false
+                },
+                "notify_on_unsubscribe": {
+                    "type": "string",
+                    "title": "Notify on Unsubscribe",
+                    "description": "The email address to send [unsubscribe notifications](https://mailchimp.com/help/change-subscribe-and-unsubscribe-notifications/) to.",
+                    "default": false
+                },
+                "email_type_option": {
+                    "type": "boolean",
+                    "title": "Email Type Option",
+                    "description": "Whether the list supports [multiple formats for emails](https://mailchimp.com/help/change-audience-name-defaults/). When set to `true`, subscribers can choose whether they want to receive HTML or plain-text emails. When set to `false`, subscribers will receive HTML emails, with a plain-text alternative backup."
+                },
+                "visibility": {
+                    "type": "string",
+                    "title": "Visibility",
+                    "enum": [
+                        "pub",
+                        "prv"
+                    ],
+                    "description": "Whether this list is public or private."
+                },
+                "double_optin": {
+                    "type": "boolean",
+                    "title": "Double Opt In",
+                    "description": "Whether or not to require the subscriber to confirm subscription via email.",
+                    "default": false
+                },
+                "marketing_permissions": {
+                    "type": "boolean",
+                    "title": "Marketing Permissions",
+                    "description": "Whether or not the list has marketing permissions (eg. GDPR) enabled.",
+                    "default": false
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,58 @@
+{
+    "type": "object",
+    "properties": {
+        "list_id": {
+            "required": true,
+            "type": "string"
+        },
+        "subscriber_hash": {
+            "required": true,
+            "type": "string"
+        },
+        "requestBody": {
+            "type": "object",
+            "title": "Member Tags",
+            "description": "A list of tags assigned to a list member.",
+            "required": [
+                "tags"
+            ],
+            "properties": {
+                "tags": {
+                    "type": "array",
+                    "title": "Tags",
+                    "description": "A list of tags assigned to the list member.",
+                    "items": {
+                        "type": "object",
+                        "title": "Member Tag",
+                        "description": "Add or remove tags on a member by declaring a tag either active or inactive on a member.",
+                        "required": [
+                            "name",
+                            "status"
+                        ],
+                        "properties": {
+                            "name": {
+                                "type": "string",
+                                "title": "Tag Name",
+                                "description": "The name of the tag."
+                            },
+                            "status": {
+                                "type": "string",
+                                "title": "Status",
+                                "description": "The status for the tag on the member, pass in active to add a tag or inactive to remove it.",
+                                "enum": [
+                                    "inactive",
+                                    "active"
+                                ]
+                            }
+                        }
+                    }
+                },
+                "is_syncing": {
+                    "type": "boolean",
+                    "title": "Is Syncing",
+                    "description": "When is_syncing is true, automations based on the tags in the request will not fire"
+                }
+            }
+        }
+    }
+}

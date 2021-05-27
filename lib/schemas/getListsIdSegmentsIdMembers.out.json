@@ -1,0 +1,335 @@
+{
+    "type": "object",
+    "properties": {
+        "members": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "title": "List Members",
+                "description": "Individuals who are currently or have been previously subscribed to this list, including members who have bounced or unsubscribed.",
+                "properties": {
+                    "id": {
+                        "type": "string",
+                        "title": "Email ID",
+                        "description": "The MD5 hash of the lowercase version of the list member's email address.",
+                        "readOnly": true
+                    },
+                    "email_address": {
+                        "type": "string",
+                        "title": "Email Address",
+                        "description": "Email address for a subscriber.",
+                        "readOnly": true
+                    },
+                    "unique_email_id": {
+                        "type": "string",
+                        "title": "Unique Email ID",
+                        "description": "An identifier for the address across all of Mailchimp.",
+                        "readOnly": true
+                    },
+                    "email_type": {
+                        "type": "string",
+                        "title": "Email Type",
+                        "description": "Type of email this member asked to get ('html' or 'text')."
+                    },
+                    "status": {
+                        "type": "string",
+                        "title": "Status",
+                        "description": "Subscriber's current status.",
+                        "enum": [
+                            "subscribed",
+                            "unsubscribed",
+                            "cleaned",
+                            "pending",
+                            "transactional"
+                        ]
+                    },
+                    "merge_fields": {
+                        "type": "object",
+                        "title": "Member Merge Var",
+                        "description": "An individual merge var and value for a member.",
+                        "additionalProperties": {
+                            "description": "This object's keys are merge tags (like FNAME). It's values are the values to be added to the merge field."
+                        }
+                    },
+                    "interests": {
+                        "type": "object",
+                        "title": "Subscriber Interests",
+                        "description": "The key of this object's properties is the ID of the interest in question.",
+                        "additionalProperties": {
+                            "type": "boolean",
+                            "title": "Interest Value",
+                            "description": "Keys are interest IDs, values are booleans that describe whether the list member is in that group or not."
+                        }
+                    },
+                    "stats": {
+                        "type": "object",
+                        "title": "Subscriber Stats",
+                        "description": "Open and click rates for this subscriber.",
+                        "readOnly": true,
+                        "properties": {
+                            "avg_open_rate": {
+                                "type": "number",
+                                "title": "Average Open Rate",
+                                "description": "A subscriber's average open rate.",
+                                "readOnly": true
+                            },
+                            "avg_click_rate": {
+                                "type": "number",
+                                "title": "Average Click Rate",
+                                "description": "A subscriber's average clickthrough rate.",
+                                "readOnly": true
+                            }
+                        }
+                    },
+                    "ip_signup": {
+                        "type": "string",
+                        "title": "Signup IP",
+                        "description": "IP address the subscriber signed up from.",
+                        "readOnly": true
+                    },
+                    "timestamp_signup": {
+                        "type": "string",
+                        "title": "Signup Timestamp",
+                        "description": "The date and time the subscriber signed up for the list in ISO 8601 format.",
+                        "format": "date-time",
+                        "readOnly": true
+                    },
+                    "ip_opt": {
+                        "type": "string",
+                        "title": "Opt-in IP",
+                        "description": "The IP address the subscriber used to confirm their opt-in status.",
+                        "readOnly": true
+                    },
+                    "timestamp_opt": {
+                        "type": "string",
+                        "title": "Opt-in Timestamp",
+                        "description": "The date and time the subscriber confirmed their opt-in status in ISO 8601 format.",
+                        "readOnly": true,
+                        "format": "date-time"
+                    },
+                    "member_rating": {
+                        "type": "integer",
+                        "title": "Member Rating",
+                        "description": "Star rating for this member, between 1 and 5.",
+                        "readOnly": true
+                    },
+                    "last_changed": {
+                        "type": "string",
+                        "title": "Last Changed Date",
+                        "description": "The date and time the member's info was last changed in ISO 8601 format.",
+                        "readOnly": true,
+                        "format": "date-time"
+                    },
+                    "language": {
+                        "type": "string",
+                        "title": "Language",
+                        "description": "If set/detected, the [subscriber's language](https://mailchimp.com/help/view-and-edit-contact-languages/)."
+                    },
+                    "vip": {
+                        "type": "boolean",
+                        "title": "VIP",
+                        "description": "[VIP status](https://mailchimp.com/help/designate-and-send-to-vip-contacts/) for subscriber."
+                    },
+                    "email_client": {
+                        "type": "string",
+                        "title": "Email Client",
+                        "description": "The list member's email client.",
+                        "readOnly": true
+                    },
+                    "location": {
+                        "type": "object",
+                        "title": "Location",
+                        "description": "Subscriber location information.",
+                        "properties": {
+                            "latitude": {
+                                "type": "number",
+                                "title": "Latitude",
+                                "description": "The location latitude."
+                            },
+                            "longitude": {
+                                "type": "number",
+                                "title": "Longitude",
+                                "description": "The location longitude."
+                            },
+                            "gmtoff": {
+                                "type": "integer",
+                                "title": "GMT Offset",
+                                "description": "The time difference in hours from GMT.",
+                                "readOnly": true
+                            },
+                            "dstoff": {
+                                "type": "integer",
+                                "title": "DST Offset",
+                                "description": "The offset for timezones where daylight saving time is observed.",
+                                "readOnly": true
+                            },
+                            "country_code": {
+                                "type": "string",
+                                "title": "Country Code",
+                                "description": "The unique code for the location country.",
+                                "readOnly": true
+                            },
+                            "timezone": {
+                                "type": "string",
+                                "title": "Timezone",
+                                "description": "The timezone for the location.",
+                                "readOnly": true
+                            }
+                        }
+                    },
+                    "last_note": {
+                        "type": "object",
+                        "title": "Notes",
+                        "description": "The most recent Note added about this member.",
+                        "readOnly": true,
+                        "properties": {
+                            "note_id": {
+                                "type": "integer",
+                                "title": "Note ID",
+                                "description": "The note id.",
+                                "readOnly": true
+                            },
+                            "created_at": {
+                                "type": "string",
+                                "title": "Created Time",
+                                "description": "The date and time the note was created in ISO 8601 format.",
+                                "format": "date-time",
+                                "readOnly": true
+                            },
+                            "created_by": {
+                                "type": "string",
+                                "title": "Author",
+                                "description": "The author of the note.",
+                                "readOnly": true
+                            },
+                            "note": {
+                                "type": "string",
+                                "title": "Note",
+                                "description": "The content of the note.",
+                                "readOnly": true
+                            }
+                        }
+                    },
+                    "list_id": {
+                        "type": "string",
+                        "title": "List ID",
+                        "description": "The list id.",
+                        "readOnly": true
+                    },
+                    "_links": {
+                        "title": "Links",
+                        "description": "A list of link types and descriptions for the API schema documents.",
+                        "type": "array",
+                        "items": {
+                            "type": "object",
+                            "title": "Resource Link",
+                            "description": "This object represents a link from the resource where it is found to another resource or action that may be performed.",
+                            "properties": {
+                                "rel": {
+                                    "type": "string",
+                                    "title": "Rel",
+                                    "description": "As with an HTML 'rel' attribute, this describes the type of link.",
+                                    "readOnly": true
+                                },
+                                "href": {
+                                    "type": "string",
+                                    "title": "Href",
+                                    "description": "This property contains a fully-qualified URL that can be called to retrieve the linked resource or perform the linked action.",
+                                    "readOnly": true
+                                },
+                                "method": {
+                                    "type": "string",
+                                    "title": "Method",
+                                    "description": "The HTTP method that should be used when accessing the URL defined in 'href'.",
+                                    "enum": [
+                                        "GET",
+                                        "POST",
+                                        "PUT",
+                                        "PATCH",
+                                        "DELETE",
+                                        "OPTIONS",
+                                        "HEAD"
+                                    ],
+                                    "readOnly": true
+                                },
+                                "targetSchema": {
+                                    "type": "string",
+                                    "title": "Target Schema",
+                                    "description": "For GETs, this is a URL representing the schema that the response should conform to.",
+                                    "readOnly": true
+                                },
+                                "schema": {
+                                    "type": "string",
+                                    "title": "Schema",
+                                    "description": "For HTTP methods that can receive bodies (POST and PUT), this is a URL representing the schema that the body should conform to.",
+                                    "readOnly": true
+                                }
+                            }
+                        },
+                        "readOnly": true
+                    }
+                }
+            },
+            "title": "Members",
+            "description": "An array of objects, each representing a specific list member."
+        },
+        "total_items": {
+            "type": "integer",
+            "title": "Item Count",
+            "description": "The total number of items matching the query regardless of pagination.",
+            "readOnly": true
+        },
+        "_links": {
+            "title": "Links",
+            "description": "A list of link types and descriptions for the API schema documents.",
+            "type": "array",
+            "items": {
+                "type": "object",
+                "title": "Resource Link",
+                "description": "This object represents a link from the resource where it is found to another resource or action that may be performed.",
+                "properties": {
+                    "rel": {
+                        "type": "string",
+                        "title": "Rel",
+                        "description": "As with an HTML 'rel' attribute, this describes the type of link.",
+                        "readOnly": true
+                    },
+                    "href": {
+                        "type": "string",
+                        "title": "Href",
+                        "description": "This property contains a fully-qualified URL that can be called to retrieve the linked resource or perform the linked action.",
+                        "readOnly": true
+                    },
+                    "method": {
+                        "type": "string",
+                        "title": "Method",
+                        "description": "The HTTP method that should be used when accessing the URL defined in 'href'.",
+                        "enum": [
+                            "GET",
+                            "POST",
+                            "PUT",
+                            "PATCH",
+                            "DELETE",
+                            "OPTIONS",
+                            "HEAD"
+                        ],
+                        "readOnly": true
+                    },
+                    "targetSchema": {
+                        "type": "string",
+                        "title": "Target Schema",
+                        "description": "For GETs, this is a URL representing the schema that the response should conform to.",
+                        "readOnly": true
+                    },
+                    "schema": {
+                        "type": "string",
+                        "title": "Schema",
+                        "description": "For HTTP methods that can receive bodies (POST and PUT), this is a URL representing the schema that the body should conform to.",
+                        "readOnly": true
+                    }
+                }
+            },
+            "readOnly": true
+        }
+    }
+}

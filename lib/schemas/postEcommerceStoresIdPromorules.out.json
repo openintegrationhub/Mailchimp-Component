@@ -1,0 +1,131 @@
+{
+    "type": "object",
+    "properties": {
+        "id": {
+            "type": "string",
+            "title": "Promo Rule Foreign ID",
+            "description": "A unique identifier for the promo rule. If Ecommerce platform does not support promo rule, use promo code id as promo rule id. Restricted to UTF-8 characters with max length 50.",
+            "readOnly": true
+        },
+        "title": {
+            "type": "string",
+            "title": "Title",
+            "description": "The title that will show up in promotion campaign. Restricted to UTF-8 characters with max length of 100 bytes.",
+            "example": "50% off Total Order"
+        },
+        "description": {
+            "type": "string",
+            "title": "Description",
+            "description": "The description of a promotion restricted to UTF-8 characters with max length 255.",
+            "example": "Save BIG during our summer sale!"
+        },
+        "starts_at": {
+            "type": "string",
+            "format": "date-time",
+            "title": "Promo Start Time",
+            "description": "The date and time when the promotion is in effect in ISO 8601 format."
+        },
+        "ends_at": {
+            "type": "string",
+            "format": "Promo date-time",
+            "title": "End Time",
+            "description": "The date and time when the promotion ends. Must be after starts_at and in ISO 8601 format."
+        },
+        "amount": {
+            "type": "number",
+            "title": "Amount",
+            "format": "float",
+            "description": "The amount of the promo code discount. If 'type' is 'fixed', the amount is treated as a monetary value. If 'type' is 'percentage', amount must be a decimal value between 0.0 and 1.0, inclusive.",
+            "example": 0.5
+        },
+        "type": {
+            "type": "string",
+            "title": "Type",
+            "description": "Type of discount. For free shipping set type to fixed.",
+            "enum": [
+                "fixed",
+                "percentage"
+            ]
+        },
+        "target": {
+            "type": "string",
+            "title": "Target",
+            "description": "The target that the discount applies to.",
+            "enum": [
+                "per_item",
+                "total",
+                "shipping"
+            ]
+        },
+        "enabled": {
+            "type": "boolean",
+            "title": "Enabled",
+            "description": "Whether the promo rule is currently enabled.",
+            "example": "true"
+        },
+        "created_at_foreign": {
+            "type": "string",
+            "format": "date-time",
+            "title": "Foreign Create Time",
+            "description": "The date and time the promotion was created in ISO 8601 format."
+        },
+        "updated_at_foreign": {
+            "type": "string",
+            "format": "date-time",
+            "title": "Foreign Update Time",
+            "description": "The date and time the promotion was updated in ISO 8601 format."
+        },
+        "_links": {
+            "title": "Links",
+            "description": "A list of link types and descriptions for the API schema documents.",
+            "type": "array",
+            "items": {
+                "type": "object",
+                "title": "Resource Link",
+                "description": "This object represents a link from the resource where it is found to another resource or action that may be performed.",
+                "properties": {
+                    "rel": {
+                        "type": "string",
+                        "title": "Rel",
+                        "description": "As with an HTML 'rel' attribute, this describes the type of link.",
+                        "readOnly": true
+                    },
+                    "href": {
+                        "type": "string",
+                        "title": "Href",
+                        "description": "This property contains a fully-qualified URL that can be called to retrieve the linked resource or perform the linked action.",
+                        "readOnly": true
+                    },
+                    "method": {
+                        "type": "string",
+                        "title": "Method",
+                        "description": "The HTTP method that should be used when accessing the URL defined in 'href'.",
+                        "enum": [
+                            "GET",
+                            "POST",
+                            "PUT",
+                            "PATCH",
+                            "DELETE",
+                            "OPTIONS",
+                            "HEAD"
+                        ],
+                        "readOnly": true
+                    },
+                    "targetSchema": {
+                        "type": "string",
+                        "title": "Target Schema",
+                        "description": "For GETs, this is a URL representing the schema that the response should conform to.",
+                        "readOnly": true
+                    },
+                    "schema": {
+                        "type": "string",
+                        "title": "Schema",
+                        "description": "For HTTP methods that can receive bodies (POST and PUT), this is a URL representing the schema that the body should conform to.",
+                        "readOnly": true
+                    }
+                }
+            },
+            "readOnly": true
+        }
+    }
+}

@@ -1,0 +1,40 @@
+{
+    "type": "object",
+    "properties": {
+        "conversation_id": {
+            "required": true,
+            "type": "string"
+        },
+        "requestBody": {
+            "type": "object",
+            "title": "Conversation Message",
+            "description": "An individual message in a conversation. Conversation tracking is a feature available to paid accounts that lets you view replies to your campaigns in your Mailchimp account.",
+            "required": [
+                "from_email",
+                "read"
+            ],
+            "properties": {
+                "from_email": {
+                    "type": "string",
+                    "title": "From Email",
+                    "description": "A label representing the email of the sender of this message"
+                },
+                "subject": {
+                    "type": "string",
+                    "title": "Subject",
+                    "description": "The subject of this message"
+                },
+                "message": {
+                    "type": "string",
+                    "title": "Message",
+                    "description": "The plain-text content of the message"
+                },
+                "read": {
+                    "type": "boolean",
+                    "title": "Read",
+                    "description": "Whether this message has been marked as read"
+                }
+            }
+        }
+    }
+}

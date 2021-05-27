@@ -1,0 +1,168 @@
+{
+    "type": "object",
+    "properties": {
+        "store_id": {
+            "required": true,
+            "type": "string"
+        },
+        "requestBody": {
+            "type": "object",
+            "title": "E-commerce Product",
+            "description": "Information about a specific product.",
+            "required": [
+                "id",
+                "title",
+                "variants"
+            ],
+            "properties": {
+                "id": {
+                    "type": "string",
+                    "title": "Product Foreign ID",
+                    "description": "A unique identifier for the product."
+                },
+                "title": {
+                    "type": "string",
+                    "title": "Title",
+                    "description": "The title of a product.",
+                    "example": "Cat Hat"
+                },
+                "handle": {
+                    "type": "string",
+                    "title": "Handle",
+                    "description": "The handle of a product.",
+                    "example": "cat-hat"
+                },
+                "url": {
+                    "type": "string",
+                    "title": "Product URL",
+                    "description": "The URL for a product."
+                },
+                "description": {
+                    "type": "string",
+                    "title": "Description",
+                    "description": "The description of a product.",
+                    "example": "This is a cat hat."
+                },
+                "type": {
+                    "type": "string",
+                    "title": "Type",
+                    "description": "The type of product.",
+                    "example": "Accessories"
+                },
+                "vendor": {
+                    "type": "string",
+                    "title": "Vendor",
+                    "description": "The vendor for a product."
+                },
+                "image_url": {
+                    "type": "string",
+                    "title": "Product Image URL",
+                    "description": "The image URL for a product."
+                },
+                "variants": {
+                    "type": "array",
+                    "title": "Product Variants",
+                    "description": "An array of the product's variants. At least one variant is required for each product. A variant can use the same `id` and `title` as the parent product.",
+                    "items": {
+                        "type": "object",
+                        "title": "E-commerce Product Variant",
+                        "description": "Information about a specific product variant.",
+                        "required": [
+                            "id",
+                            "title"
+                        ],
+                        "properties": {
+                            "id": {
+                                "type": "string",
+                                "title": "Product Variant Foreign ID",
+                                "description": "A unique identifier for the product variant."
+                            },
+                            "title": {
+                                "type": "string",
+                                "title": "Title",
+                                "description": "The title of a product variant.",
+                                "example": "Cat Hat"
+                            },
+                            "url": {
+                                "type": "string",
+                                "title": "URL",
+                                "description": "The URL for a product variant."
+                            },
+                            "sku": {
+                                "type": "string",
+                                "title": "SKU",
+                                "description": "The stock keeping unit (SKU) of a product variant."
+                            },
+                            "price": {
+                                "type": "number",
+                                "title": "Price",
+                                "description": "The price of a product variant."
+                            },
+                            "inventory_quantity": {
+                                "type": "integer",
+                                "title": "Inventory Quantity",
+                                "description": "The inventory quantity of a product variant."
+                            },
+                            "image_url": {
+                                "type": "string",
+                                "title": "Image URL",
+                                "description": "The image URL for a product variant."
+                            },
+                            "backorders": {
+                                "type": "string",
+                                "title": "Backorders",
+                                "description": "The backorders of a product variant."
+                            },
+                            "visibility": {
+                                "type": "string",
+                                "title": "Visibility",
+                                "description": "The visibility of a product variant."
+                            }
+                        }
+                    }
+                },
+                "images": {
+                    "type": "array",
+                    "title": "Product Images",
+                    "description": "An array of the product's images.",
+                    "items": {
+                        "type": "object",
+                        "title": "E-commerce Product Image",
+                        "description": "Information about a specific product image.",
+                        "required": [
+                            "id",
+                            "url"
+                        ],
+                        "properties": {
+                            "id": {
+                                "type": "string",
+                                "title": "Image Foreign ID",
+                                "description": "A unique identifier for the product image."
+                            },
+                            "url": {
+                                "type": "string",
+                                "title": "URL",
+                                "description": "The URL for a product image."
+                            },
+                            "variant_ids": {
+                                "type": "array",
+                                "title": "Product Variants",
+                                "description": "The list of product variants using the image.",
+                                "items": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    }
+                },
+                "published_at_foreign": {
+                    "type": "string",
+                    "title": "Foreign Publish Time",
+                    "format": "date-time",
+                    "description": "The date and time the product was published.",
+                    "example": "2015-07-15T19:28:00+00:00"
+                }
+            }
+        }
+    }
+}

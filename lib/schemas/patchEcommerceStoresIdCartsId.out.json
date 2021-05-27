@@ -1,0 +1,383 @@
+{
+    "type": "object",
+    "properties": {
+        "id": {
+            "type": "string",
+            "title": "Cart Foreign ID",
+            "description": "A unique identifier for the cart.",
+            "readOnly": true
+        },
+        "customer": {
+            "type": "object",
+            "title": "E-commerce Customer",
+            "description": "Information about a specific customer.",
+            "properties": {
+                "id": {
+                    "type": "string",
+                    "title": "Customer Foreign ID",
+                    "description": "A unique identifier for the customer.",
+                    "readOnly": true
+                },
+                "email_address": {
+                    "type": "string",
+                    "title": "Email Address",
+                    "description": "The customer's email address.",
+                    "readOnly": true
+                },
+                "opt_in_status": {
+                    "type": "boolean",
+                    "title": "Opt-in Status",
+                    "description": "The customer's opt-in status. This value will never overwrite the opt-in status of a pre-existing Mailchimp list member, but will apply to list members that are added through the e-commerce API endpoints. Customers who don't opt in to your Mailchimp list [will be added as `Transactional` members](https://mailchimp.com/developer/marketing/docs/e-commerce/#customers)."
+                },
+                "company": {
+                    "type": "string",
+                    "title": "Company",
+                    "description": "The customer's company."
+                },
+                "first_name": {
+                    "type": "string",
+                    "title": "First Name",
+                    "description": "The customer's first name."
+                },
+                "last_name": {
+                    "type": "string",
+                    "title": "Last Name",
+                    "description": "The customer's last name."
+                },
+                "orders_count": {
+                    "type": "integer",
+                    "title": "Orders Count",
+                    "description": "The customer's total order count.",
+                    "readOnly": true,
+                    "example": 4
+                },
+                "total_spent": {
+                    "type": "number",
+                    "title": "Total Spent",
+                    "description": "The total amount the customer has spent.",
+                    "readOnly": true,
+                    "example": 100
+                },
+                "address": {
+                    "type": "object",
+                    "title": "Address",
+                    "description": "The customer's address.",
+                    "properties": {
+                        "address1": {
+                            "type": "string",
+                            "title": "Address Field 1",
+                            "description": "The mailing address of the customer.",
+                            "example": "675 Ponce de Leon Ave NE"
+                        },
+                        "address2": {
+                            "type": "string",
+                            "title": "Address Field 2",
+                            "description": "An additional field for the customer's mailing address.",
+                            "example": "Suite 5000"
+                        },
+                        "city": {
+                            "type": "string",
+                            "title": "City ",
+                            "description": "The city the customer is located in.",
+                            "example": "Atlanta"
+                        },
+                        "province": {
+                            "type": "string",
+                            "title": "Province",
+                            "description": "The customer's state name or normalized province.",
+                            "example": "Georgia"
+                        },
+                        "province_code": {
+                            "type": "string",
+                            "title": "Province Code",
+                            "description": "The two-letter code for the customer's province or state.",
+                            "example": "GA"
+                        },
+                        "postal_code": {
+                            "type": "string",
+                            "title": "Postal Code",
+                            "description": "The customer's postal or zip code.",
+                            "example": "30308"
+                        },
+                        "country": {
+                            "type": "string",
+                            "title": "Country Code",
+                            "description": "The customer's country.",
+                            "example": "United States"
+                        },
+                        "country_code": {
+                            "type": "string",
+                            "title": "Country Code",
+                            "description": "The two-letter code for the customer's country.",
+                            "example": "US"
+                        }
+                    }
+                },
+                "created_at": {
+                    "type": "string",
+                    "title": "Creation Time",
+                    "format": "date-time",
+                    "description": "The date and time the customer was created in ISO 8601 format.",
+                    "readOnly": true,
+                    "example": "2015-07-15T19:28:00+00:00"
+                },
+                "updated_at": {
+                    "type": "string",
+                    "title": "Update Time",
+                    "format": "date-time",
+                    "description": "The date and time the customer was last updated in ISO 8601 format.",
+                    "readOnly": true,
+                    "example": "2015-07-15T19:28:00+00:00"
+                },
+                "_links": {
+                    "title": "Links",
+                    "description": "A list of link types and descriptions for the API schema documents.",
+                    "type": "array",
+                    "items": {
+                        "type": "object",
+                        "title": "Resource Link",
+                        "description": "This object represents a link from the resource where it is found to another resource or action that may be performed.",
+                        "properties": {
+                            "rel": {
+                                "type": "string",
+                                "title": "Rel",
+                                "description": "As with an HTML 'rel' attribute, this describes the type of link.",
+                                "readOnly": true
+                            },
+                            "href": {
+                                "type": "string",
+                                "title": "Href",
+                                "description": "This property contains a fully-qualified URL that can be called to retrieve the linked resource or perform the linked action.",
+                                "readOnly": true
+                            },
+                            "method": {
+                                "type": "string",
+                                "title": "Method",
+                                "description": "The HTTP method that should be used when accessing the URL defined in 'href'.",
+                                "enum": [
+                                    "GET",
+                                    "POST",
+                                    "PUT",
+                                    "PATCH",
+                                    "DELETE",
+                                    "OPTIONS",
+                                    "HEAD"
+                                ],
+                                "readOnly": true
+                            },
+                            "targetSchema": {
+                                "type": "string",
+                                "title": "Target Schema",
+                                "description": "For GETs, this is a URL representing the schema that the response should conform to.",
+                                "readOnly": true
+                            },
+                            "schema": {
+                                "type": "string",
+                                "title": "Schema",
+                                "description": "For HTTP methods that can receive bodies (POST and PUT), this is a URL representing the schema that the body should conform to.",
+                                "readOnly": true
+                            }
+                        }
+                    },
+                    "readOnly": true
+                }
+            }
+        },
+        "campaign_id": {
+            "type": "string",
+            "title": "Campaign ID",
+            "description": "A string that uniquely identifies the campaign associated with a cart.",
+            "example": "839488a60b"
+        },
+        "checkout_url": {
+            "type": "string",
+            "title": "Checkout URL",
+            "description": "The URL for the cart. This parameter is required for [Abandoned Cart](https://mailchimp.com/help/create-an-abandoned-cart-email/) automations."
+        },
+        "currency_code": {
+            "type": "string",
+            "title": "Currency Code",
+            "description": "The three-letter ISO 4217 code for the currency that the cart uses."
+        },
+        "order_total": {
+            "type": "number",
+            "title": "Order Total",
+            "description": "The order total for the cart."
+        },
+        "tax_total": {
+            "type": "number",
+            "title": "Tax Total",
+            "description": "The total tax for the cart."
+        },
+        "lines": {
+            "type": "array",
+            "title": "Cart Line Items",
+            "description": "An array of the cart's line items.",
+            "items": {
+                "type": "object",
+                "title": "E-commerce Cart Line Item",
+                "description": "Information about a specific cart line item.",
+                "properties": {
+                    "id": {
+                        "type": "string",
+                        "title": "Cart Line Item Foreign ID",
+                        "description": "A unique identifier for the cart line item.",
+                        "readOnly": true
+                    },
+                    "product_id": {
+                        "type": "string",
+                        "title": "Cart Line Product Foreign ID",
+                        "description": "A unique identifier for the product associated with the cart line item."
+                    },
+                    "product_title": {
+                        "type": "string",
+                        "title": "Cart Line Product Title",
+                        "description": "The name of the product for the cart line item.",
+                        "readOnly": true
+                    },
+                    "product_variant_id": {
+                        "type": "string",
+                        "title": "Cart Line Product Variant Foreign ID",
+                        "description": "A unique identifier for the product variant associated with the cart line item."
+                    },
+                    "product_variant_title": {
+                        "type": "string",
+                        "title": "Cart Line Product Variant Title",
+                        "description": "The name of the product variant for the cart line item.",
+                        "readOnly": true
+                    },
+                    "quantity": {
+                        "type": "integer",
+                        "title": "Quantity",
+                        "description": "The quantity of a cart line item."
+                    },
+                    "price": {
+                        "type": "number",
+                        "title": "Price",
+                        "description": "The price of a cart line item."
+                    },
+                    "_links": {
+                        "title": "Links",
+                        "description": "A list of link types and descriptions for the API schema documents.",
+                        "type": "array",
+                        "items": {
+                            "type": "object",
+                            "title": "Resource Link",
+                            "description": "This object represents a link from the resource where it is found to another resource or action that may be performed.",
+                            "properties": {
+                                "rel": {
+                                    "type": "string",
+                                    "title": "Rel",
+                                    "description": "As with an HTML 'rel' attribute, this describes the type of link.",
+                                    "readOnly": true
+                                },
+                                "href": {
+                                    "type": "string",
+                                    "title": "Href",
+                                    "description": "This property contains a fully-qualified URL that can be called to retrieve the linked resource or perform the linked action.",
+                                    "readOnly": true
+                                },
+                                "method": {
+                                    "type": "string",
+                                    "title": "Method",
+                                    "description": "The HTTP method that should be used when accessing the URL defined in 'href'.",
+                                    "enum": [
+                                        "GET",
+                                        "POST",
+                                        "PUT",
+                                        "PATCH",
+                                        "DELETE",
+                                        "OPTIONS",
+                                        "HEAD"
+                                    ],
+                                    "readOnly": true
+                                },
+                                "targetSchema": {
+                                    "type": "string",
+                                    "title": "Target Schema",
+                                    "description": "For GETs, this is a URL representing the schema that the response should conform to.",
+                                    "readOnly": true
+                                },
+                                "schema": {
+                                    "type": "string",
+                                    "title": "Schema",
+                                    "description": "For HTTP methods that can receive bodies (POST and PUT), this is a URL representing the schema that the body should conform to.",
+                                    "readOnly": true
+                                }
+                            }
+                        },
+                        "readOnly": true
+                    }
+                }
+            }
+        },
+        "created_at": {
+            "type": "string",
+            "title": "Creation Time",
+            "format": "date-time",
+            "description": "The date and time the cart was created in ISO 8601 format.",
+            "readOnly": true,
+            "example": "2015-07-15T19:28:00+00:00"
+        },
+        "updated_at": {
+            "type": "string",
+            "title": "Update Time",
+            "format": "date-time",
+            "description": "The date and time the cart was last updated in ISO 8601 format.",
+            "readOnly": true,
+            "example": "2015-07-15T19:28:00+00:00"
+        },
+        "_links": {
+            "title": "Links",
+            "description": "A list of link types and descriptions for the API schema documents.",
+            "type": "array",
+            "items": {
+                "type": "object",
+                "title": "Resource Link",
+                "description": "This object represents a link from the resource where it is found to another resource or action that may be performed.",
+                "properties": {
+                    "rel": {
+                        "type": "string",
+                        "title": "Rel",
+                        "description": "As with an HTML 'rel' attribute, this describes the type of link.",
+                        "readOnly": true
+                    },
+                    "href": {
+                        "type": "string",
+                        "title": "Href",
+                        "description": "This property contains a fully-qualified URL that can be called to retrieve the linked resource or perform the linked action.",
+                        "readOnly": true
+                    },
+                    "method": {
+                        "type": "string",
+                        "title": "Method",
+                        "description": "The HTTP method that should be used when accessing the URL defined in 'href'.",
+                        "enum": [
+                            "GET",
+                            "POST",
+                            "PUT",
+                            "PATCH",
+                            "DELETE",
+                            "OPTIONS",
+                            "HEAD"
+                        ],
+                        "readOnly": true
+                    },
+                    "targetSchema": {
+                        "type": "string",
+                        "title": "Target Schema",
+                        "description": "For GETs, this is a URL representing the schema that the response should conform to.",
+                        "readOnly": true
+                    },
+                    "schema": {
+                        "type": "string",
+                        "title": "Schema",
+                        "description": "For HTTP methods that can receive bodies (POST and PUT), this is a URL representing the schema that the body should conform to.",
+                        "readOnly": true
+                    }
+                }
+            },
+            "readOnly": true
+        }
+    }
+}

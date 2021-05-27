@@ -1,0 +1,29 @@
+{
+    "type": "object",
+    "properties": {
+        "list_id": {
+            "required": true,
+            "type": "string"
+        },
+        "subscriber_hash": {
+            "required": true,
+            "type": "string"
+        },
+        "note_id": {
+            "required": true,
+            "type": "string"
+        },
+        "requestBody": {
+            "type": "object",
+            "title": "Member Notes",
+            "description": "A specific note for a specific member.",
+            "properties": {
+                "note": {
+                    "type": "string",
+                    "title": "Note",
+                    "description": "The content of the note. Note length is limited to 1,000 characters."
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,325 @@
+{
+    "type": "object",
+    "properties": {
+        "signup_forms": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "title": "Signup Form",
+                "description": "List signup form.",
+                "properties": {
+                    "header": {
+                        "type": "object",
+                        "title": "Signup form header options",
+                        "description": "Options for customizing your signup form header.",
+                        "properties": {
+                            "image_url": {
+                                "type": "string",
+                                "title": "Header Image URL",
+                                "description": "Header image URL.",
+                                "example": "http://gallery.mailchimp.com/332310cb9a420a9e7fea2858a/images/2491208c-9458-4834-a708-fef4ee736472.png"
+                            },
+                            "text": {
+                                "type": "string",
+                                "title": "Header Text",
+                                "description": "Header text.",
+                                "example": "Header Text goes here"
+                            },
+                            "image_width": {
+                                "type": "string",
+                                "title": "Image width",
+                                "description": "Image width, in pixels.",
+                                "example": "800"
+                            },
+                            "image_height": {
+                                "type": "string",
+                                "title": "Image height",
+                                "description": "Image height, in pixels.",
+                                "example": "200"
+                            },
+                            "image_alt": {
+                                "type": "string",
+                                "title": "Image Alt",
+                                "description": "Alt text for the image.",
+                                "example": "This is an image"
+                            },
+                            "image_link": {
+                                "type": "string",
+                                "title": "Image Link",
+                                "description": "The URL that the header image will link to.",
+                                "example": "gotothisimage.com"
+                            },
+                            "image_align": {
+                                "type": "string",
+                                "title": "Image align",
+                                "description": "Image alignment.",
+                                "enum": [
+                                    "none",
+                                    "left",
+                                    "center",
+                                    "right"
+                                ],
+                                "example": "center"
+                            },
+                            "image_border_width": {
+                                "type": "string",
+                                "title": "Image border width",
+                                "description": "Image border width.",
+                                "example": "2"
+                            },
+                            "image_border_style": {
+                                "type": "string",
+                                "title": "Image border style",
+                                "description": "Image border style.",
+                                "enum": [
+                                    "none",
+                                    "solid",
+                                    "dotted",
+                                    "dashed",
+                                    "double",
+                                    "groove",
+                                    "outset",
+                                    "inset",
+                                    "ridge"
+                                ],
+                                "example": "solid"
+                            },
+                            "image_border_color": {
+                                "type": "string",
+                                "title": "Image border color",
+                                "description": "Image border color.",
+                                "example": "#896d6d"
+                            },
+                            "image_target": {
+                                "type": "string",
+                                "title": "Image target",
+                                "description": "Image link target.",
+                                "enum": [
+                                    "_blank",
+                                    "null"
+                                ],
+                                "example": "_blank"
+                            }
+                        }
+                    },
+                    "contents": {
+                        "type": "array",
+                        "items": {
+                            "type": "object",
+                            "title": "Collection of Content for List Signup Forms",
+                            "description": "Collection of Content for List Signup Forms.",
+                            "properties": {
+                                "section": {
+                                    "type": "string",
+                                    "title": "Content Section Name",
+                                    "description": "The content section name.",
+                                    "enum": [
+                                        "signup_message",
+                                        "unsub_message",
+                                        "signup_thank_you_title"
+                                    ],
+                                    "example": "signup_message"
+                                },
+                                "value": {
+                                    "type": "string",
+                                    "title": "Content Section Value",
+                                    "description": "The content section text.",
+                                    "example": "Signup message goes here"
+                                }
+                            }
+                        },
+                        "title": "Signup form body content",
+                        "description": "The signup form body content."
+                    },
+                    "styles": {
+                        "type": "array",
+                        "items": {
+                            "type": "object",
+                            "title": "Collection of Element style for List Signup Forms",
+                            "description": "Collection of Element style for List Signup Forms.",
+                            "properties": {
+                                "selector": {
+                                    "type": "string",
+                                    "title": "Selector",
+                                    "description": "A string that identifies the element selector.",
+                                    "enum": [
+                                        "page_background",
+                                        "page_header",
+                                        "page_outer_wrapper",
+                                        "body_background",
+                                        "body_link_style",
+                                        "forms_buttons",
+                                        "forms_buttons_hovered",
+                                        "forms_field_label",
+                                        "forms_field_text",
+                                        "forms_required",
+                                        "forms_required_legend",
+                                        "forms_help_text",
+                                        "forms_errors",
+                                        "monkey_rewards_badge"
+                                    ],
+                                    "example": "page_background"
+                                },
+                                "options": {
+                                    "type": "array",
+                                    "title": "Options",
+                                    "description": "A collection of options for a selector.",
+                                    "items": {
+                                        "type": "object",
+                                        "title": "An option for Signup Form Styles",
+                                        "description": "An option for Signup Form Styles.",
+                                        "properties": {
+                                            "property": {
+                                                "type": "string",
+                                                "title": "Property",
+                                                "description": "A string that identifies the property.",
+                                                "example": "background-color"
+                                            },
+                                            "value": {
+                                                "type": "string",
+                                                "title": "Value",
+                                                "description": "A string that identifies value of the property.",
+                                                "example": "#111111"
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        },
+                        "title": "Signup Form element style",
+                        "description": "An array of objects, each representing an element style for the signup form."
+                    },
+                    "signup_form_url": {
+                        "type": "string",
+                        "title": "Signup form URL",
+                        "description": "Signup form URL."
+                    },
+                    "list_id": {
+                        "type": "string",
+                        "title": "List ID",
+                        "description": "The signup form's list id.",
+                        "readOnly": true,
+                        "example": "4ca5becb8d"
+                    },
+                    "_links": {
+                        "title": "Links",
+                        "description": "A list of link types and descriptions for the API schema documents.",
+                        "type": "array",
+                        "items": {
+                            "type": "object",
+                            "title": "Resource Link",
+                            "description": "This object represents a link from the resource where it is found to another resource or action that may be performed.",
+                            "properties": {
+                                "rel": {
+                                    "type": "string",
+                                    "title": "Rel",
+                                    "description": "As with an HTML 'rel' attribute, this describes the type of link.",
+                                    "readOnly": true
+                                },
+                                "href": {
+                                    "type": "string",
+                                    "title": "Href",
+                                    "description": "This property contains a fully-qualified URL that can be called to retrieve the linked resource or perform the linked action.",
+                                    "readOnly": true
+                                },
+                                "method": {
+                                    "type": "string",
+                                    "title": "Method",
+                                    "description": "The HTTP method that should be used when accessing the URL defined in 'href'.",
+                                    "enum": [
+                                        "GET",
+                                        "POST",
+                                        "PUT",
+                                        "PATCH",
+                                        "DELETE",
+                                        "OPTIONS",
+                                        "HEAD"
+                                    ],
+                                    "readOnly": true
+                                },
+                                "targetSchema": {
+                                    "type": "string",
+                                    "title": "Target Schema",
+                                    "description": "For GETs, this is a URL representing the schema that the response should conform to.",
+                                    "readOnly": true
+                                },
+                                "schema": {
+                                    "type": "string",
+                                    "title": "Schema",
+                                    "description": "For HTTP methods that can receive bodies (POST and PUT), this is a URL representing the schema that the body should conform to.",
+                                    "readOnly": true
+                                }
+                            }
+                        },
+                        "readOnly": true
+                    }
+                }
+            },
+            "title": "List Signup Form",
+            "description": "List signup form."
+        },
+        "list_id": {
+            "type": "string",
+            "title": "List ID",
+            "description": "The list id."
+        },
+        "total_items": {
+            "type": "integer",
+            "title": "Item Count",
+            "description": "The total number of items matching the query regardless of pagination.",
+            "readOnly": true
+        },
+        "_links": {
+            "title": "Links",
+            "description": "A list of link types and descriptions for the API schema documents.",
+            "type": "array",
+            "items": {
+                "type": "object",
+                "title": "Resource Link",
+                "description": "This object represents a link from the resource where it is found to another resource or action that may be performed.",
+                "properties": {
+                    "rel": {
+                        "type": "string",
+                        "title": "Rel",
+                        "description": "As with an HTML 'rel' attribute, this describes the type of link.",
+                        "readOnly": true
+                    },
+                    "href": {
+                        "type": "string",
+                        "title": "Href",
+                        "description": "This property contains a fully-qualified URL that can be called to retrieve the linked resource or perform the linked action.",
+                        "readOnly": true
+                    },
+                    "method": {
+                        "type": "string",
+                        "title": "Method",
+                        "description": "The HTTP method that should be used when accessing the URL defined in 'href'.",
+                        "enum": [
+                            "GET",
+                            "POST",
+                            "PUT",
+                            "PATCH",
+                            "DELETE",
+                            "OPTIONS",
+                            "HEAD"
+                        ],
+                        "readOnly": true
+                    },
+                    "targetSchema": {
+                        "type": "string",
+                        "title": "Target Schema",
+                        "description": "For GETs, this is a URL representing the schema that the response should conform to.",
+                        "readOnly": true
+                    },
+                    "schema": {
+                        "type": "string",
+                        "title": "Schema",
+                        "description": "For HTTP methods that can receive bodies (POST and PUT), this is a URL representing the schema that the body should conform to.",
+                        "readOnly": true
+                    }
+                }
+            },
+            "readOnly": true
+        }
+    }
+}

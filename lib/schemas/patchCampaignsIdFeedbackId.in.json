@@ -1,0 +1,35 @@
+{
+    "type": "object",
+    "properties": {
+        "campaign_id": {
+            "required": true,
+            "type": "string"
+        },
+        "feedback_id": {
+            "required": true,
+            "type": "string"
+        },
+        "requestBody": {
+            "type": "object",
+            "title": "Campaign Feedback",
+            "description": "A specific feedback message from a specific campaign.",
+            "properties": {
+                "block_id": {
+                    "type": "integer",
+                    "title": "Block ID",
+                    "description": "The block id for the editable block that the feedback addresses."
+                },
+                "message": {
+                    "type": "string",
+                    "title": "Message",
+                    "description": "The content of the feedback."
+                },
+                "is_complete": {
+                    "type": "boolean",
+                    "title": "Complete",
+                    "description": "The status of feedback."
+                }
+            }
+        }
+    }
+}

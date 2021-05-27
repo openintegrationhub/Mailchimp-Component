@@ -1,0 +1,49 @@
+{
+    "type": "object",
+    "properties": {
+        "campaign_id": {
+            "required": true,
+            "type": "string"
+        },
+        "requestBody": {
+            "type": "object",
+            "required": [
+                "schedule_time"
+            ],
+            "properties": {
+                "schedule_time": {
+                    "type": "string",
+                    "title": "Schedule Time",
+                    "format": "date-time",
+                    "description": "The UTC date and time to schedule the campaign for delivery in ISO 8601 format. Campaigns may only be scheduled to send on the quarter-hour (:00, :15, :30, :45)."
+                },
+                "timewarp": {
+                    "type": "boolean",
+                    "title": "Timewarp",
+                    "description": "Choose whether the campaign should use [Timewarp](https://mailchimp.com/help/use-timewarp/) when sending. Campaigns scheduled with Timewarp are localized based on the recipients' time zones. For example, a Timewarp campaign with a `schedule_time` of 13:00 will be sent to each recipient at 1:00pm in their local time. Cannot be set to `true` for campaigns using [Batch Delivery](https://mailchimp.com/help/schedule-batch-delivery/)."
+                },
+                "batch_delivery": {
+                    "type": "object",
+                    "title": "Batch Delivery",
+                    "description": "Choose whether the campaign should use [Batch Delivery](https://mailchimp.com/help/schedule-batch-delivery/). Cannot be set to `true` for campaigns using [Timewarp](https://mailchimp.com/help/use-timewarp/).",
+                    "required": [
+                        "batch_delay",
+                        "batch_count"
+                    ],
+                    "properties": {
+                        "batch_delay": {
+                            "type": "integer",
+                            "title": "Batch Delay",
+                            "description": "The delay, in minutes, between batches."
+                        },
+                        "batch_count": {
+                            "type": "integer",
+                            "title": "Batch Count",
+                            "description": "The number of batches for the campaign send."
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
