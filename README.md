@@ -2,7 +2,7 @@
 # <p align="center" width="100%"> Mailchimp Marketing API OIH Connector </p>
 
 ## Description
-
+[![Generic badge](https://img.shields.io/badge/Status-NotTested!-lightgrey.svg)](https://shields.io/)
 A generated OIH connector for the Mailchimp Marketing API API (version 3.0.43).
 
 Generated from: https://api.mailchimp.com/schema/3.0/Swagger.json?expand<br/>
