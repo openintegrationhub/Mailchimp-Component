@@ -707,7 +707,7 @@
         "getReportsIdAdvice": {
             "main": "./lib/triggers/getReportsIdAdvice.js",
             "title": "List campaign feedback",
-            "description": "Get feedback based on a campaign's statistics. Advice feedback is based on campaign stats like opens, clicks, unsubscribes, bounces, and more.",
+            "description": "Get feedback based on a campaign's statistics. ",
             "fields": {
                 "verbose": {
                     "viewClass": "CheckBoxView",
@@ -1729,7 +1729,7 @@
         "postCampaignsIdActionsCancelSend": {
             "main": "./lib/actions/postCampaignsIdActionsCancelSend.js",
             "title": "Cancel campaign",
-            "description": "Cancel a Regular or Plain-Text Campaign after you send, before all of your recipients receive it. This feature is included with Mailchimp Pro.",
+            "description": "Cancel a Regular or Plain-Text Campaign after you send, before all of your recipients receive it.",
             "fields": {
                 "verbose": {
                     "viewClass": "CheckBoxView",
@@ -1759,7 +1759,7 @@
         "postCampaignsIdActionsSend": {
             "main": "./lib/actions/postCampaignsIdActionsSend.js",
             "title": "Send campaign",
-            "description": "Send a Mailchimp campaign. For RSS Campaigns, the campaign will send according to its schedule. All other campaigns will send immediately.",
+            "description": "Send a Mailchimp campaign. For RSS Campaigns, the campaign will send according to its schedule.",
             "fields": {
                 "verbose": {
                     "viewClass": "CheckBoxView",
@@ -1774,7 +1774,7 @@
         "postCampaignsIdActionsSchedule": {
             "main": "./lib/actions/postCampaignsIdActionsSchedule.js",
             "title": "Schedule campaign",
-            "description": "Schedule a campaign for delivery. If you're using Multivariate Campaigns to test send times or sending RSS Campaigns, use the send action instead.",
+            "description": "Schedule a campaign for delivery.",
             "fields": {
                 "verbose": {
                     "viewClass": "CheckBoxView",
@@ -2044,7 +2044,7 @@
         "postCustomerJourneysJourneysIdStepsIdActionsTrigger": {
             "main": "./lib/actions/postCustomerJourneysJourneysIdStepsIdActionsTrigger.js",
             "title": "Customer Journeys API trigger for a contact",
-            "description": "A step trigger in a Customer Journey. To use it, create a starting point or step from the Customer Journey builder in the app using the Customer Journeys API condition.",
+            "description": "A step trigger in a Customer Journey.",
             "fields": {
                 "verbose": {
                     "viewClass": "CheckBoxView",
@@ -2194,7 +2194,7 @@
         "getListsId": {
             "main": "./lib/actions/getListsId.js",
             "title": "Get list info",
-            "description": "Get information about a specific list in your Mailchimp account. Results include list members who have signed up but haven't confirmed their subscription yet and unsubscribed or cleaned.",
+            "description": "Get information about a specific list in your Mailchimp account. ",
             "fields": {
                 "verbose": {
                     "viewClass": "CheckBoxView",
@@ -2224,7 +2224,7 @@
         "deleteListsId": {
             "main": "./lib/actions/deleteListsId.js",
             "title": "Delete list",
-            "description": "Delete a list from your Mailchimp account. If you delete a list, you'll lose the list history--including subscriber activity, unsubscribes, complaints, and bounces. ",
+            "description": "Delete a list from your Mailchimp account. ",
             "fields": {
                 "verbose": {
                     "viewClass": "CheckBoxView",
@@ -2674,7 +2674,7 @@
         "postListsIdMembersHashActionsDeletePermanent": {
             "main": "./lib/actions/postListsIdMembersHashActionsDeletePermanent.js",
             "title": "Delete list member",
-            "description": "Delete all personally identifiable information related to a list member, and remove them from a list. This will make it impossible to re-import the list member.",
+            "description": "Delete all personally identifiable information related to a list member, and remove them from a list.",
             "fields": {
                 "verbose": {
                     "viewClass": "CheckBoxView",
