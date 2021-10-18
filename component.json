@@ -44,21 +44,6 @@
                 "out": "./lib/schemas/getRoot.out.json"
             }
         },
-        "getActivityFeedChimpChatter": {
-            "main": "./lib/triggers/getActivityFeedChimpChatter.js",
-            "title": "Get latest chimp chatter",
-            "description": "Return the Chimp Chatter for this account ordered by most recent.",
-            "fields": {
-                "verbose": {
-                    "viewClass": "CheckBoxView",
-                    "label": "Debug this step (log more data)"
-                }
-            },
-            "metadata": {
-                "in": "./lib/schemas/getActivityFeedChimpChatter.in.json",
-                "out": "./lib/schemas/getActivityFeedChimpChatter.out.json"
-            }
-        },
         "getAuthorizedApps": {
             "main": "./lib/triggers/getAuthorizedApps.js",
             "title": "List authorized apps",
@@ -104,36 +89,6 @@
                 "out": "./lib/schemas/getAutomationsIdEmails.out.json"
             }
         },
-        "getAutomationsIdEmailsIdQueue": {
-            "main": "./lib/triggers/getAutomationsIdEmailsIdQueue.js",
-            "title": "List automated email subscribers",
-            "description": "Get information about a classic automation email queue.",
-            "fields": {
-                "verbose": {
-                    "viewClass": "CheckBoxView",
-                    "label": "Debug this step (log more data)"
-                }
-            },
-            "metadata": {
-                "in": "./lib/schemas/getAutomationsIdEmailsIdQueue.in.json",
-                "out": "./lib/schemas/getAutomationsIdEmailsIdQueue.out.json"
-            }
-        },
-        "getAutomationsIdRemovedSubscribers": {
-            "main": "./lib/triggers/getAutomationsIdRemovedSubscribers.js",
-            "title": "List subscribers removed from workflow",
-            "description": "Get information about subscribers who were removed from a classic automation workflow.",
-            "fields": {
-                "verbose": {
-                    "viewClass": "CheckBoxView",
-                    "label": "Debug this step (log more data)"
-                }
-            },
-            "metadata": {
-                "in": "./lib/schemas/getAutomationsIdRemovedSubscribers.in.json",
-                "out": "./lib/schemas/getAutomationsIdRemovedSubscribers.out.json"
-            }
-        },
         "getBatches": {
             "main": "./lib/triggers/getBatches.js",
             "title": "List batch requests",
@@ -164,36 +119,6 @@
                 "out": "./lib/schemas/getBatchWebhooks.out.json"
             }
         },
-        "getTemplateFolders": {
-            "main": "./lib/triggers/getTemplateFolders.js",
-            "title": "List template folders",
-            "description": "Get all folders used to organize templates.",
-            "fields": {
-                "verbose": {
-                    "viewClass": "CheckBoxView",
-                    "label": "Debug this step (log more data)"
-                }
-            },
-            "metadata": {
-                "in": "./lib/schemas/getTemplateFolders.in.json",
-                "out": "./lib/schemas/getTemplateFolders.out.json"
-            }
-        },
-        "getCampaignFolders": {
-            "main": "./lib/triggers/getCampaignFolders.js",
-            "title": "List campaign folders",
-            "description": "Get all folders used to organize campaigns.",
-            "fields": {
-                "verbose": {
-                    "viewClass": "CheckBoxView",
-                    "label": "Debug this step (log more data)"
-                }
-            },
-            "metadata": {
-                "in": "./lib/schemas/getCampaignFolders.in.json",
-                "out": "./lib/schemas/getCampaignFolders.out.json"
-            }
-        },
         "getCampaigns": {
             "main": "./lib/triggers/getCampaigns.js",
             "title": "List campaigns",
@@ -207,51 +132,6 @@
             "metadata": {
                 "in": "./lib/schemas/getCampaigns.in.json",
                 "out": "./lib/schemas/getCampaigns.out.json"
-            }
-        },
-        "getCampaignsIdContent": {
-            "main": "./lib/triggers/getCampaignsIdContent.js",
-            "title": "Get campaign content",
-            "description": "Get the the HTML and plain-text content for a campaign.",
-            "fields": {
-                "verbose": {
-                    "viewClass": "CheckBoxView",
-                    "label": "Debug this step (log more data)"
-                }
-            },
-            "metadata": {
-                "in": "./lib/schemas/getCampaignsIdContent.in.json",
-                "out": "./lib/schemas/getCampaignsIdContent.out.json"
-            }
-        },
-        "getCampaignsIdFeedback": {
-            "main": "./lib/triggers/getCampaignsIdFeedback.js",
-            "title": "List campaign feedback",
-            "description": "Get team feedback while you're working together on a Mailchimp campaign.",
-            "fields": {
-                "verbose": {
-                    "viewClass": "CheckBoxView",
-                    "label": "Debug this step (log more data)"
-                }
-            },
-            "metadata": {
-                "in": "./lib/schemas/getCampaignsIdFeedback.in.json",
-                "out": "./lib/schemas/getCampaignsIdFeedback.out.json"
-            }
-        },
-        "getCampaignsIdSendChecklist": {
-            "main": "./lib/triggers/getCampaignsIdSendChecklist.js",
-            "title": "Get campaign send checklist",
-            "description": "Review the send checklist for a campaign, and resolve any issues before sending.",
-            "fields": {
-                "verbose": {
-                    "viewClass": "CheckBoxView",
-                    "label": "Debug this step (log more data)"
-                }
-            },
-            "metadata": {
-                "in": "./lib/schemas/getCampaignsIdSendChecklist.in.json",
-                "out": "./lib/schemas/getCampaignsIdSendChecklist.out.json"
             }
         },
         "getConnectedSites": {
@@ -299,36 +179,6 @@
                 "out": "./lib/schemas/getConversationsIdMessages.out.json"
             }
         },
-        "getFileManagerFiles": {
-            "main": "./lib/triggers/getFileManagerFiles.js",
-            "title": "List stored files",
-            "description": "Get a list of available images and files stored in the File Manager for the account.",
-            "fields": {
-                "verbose": {
-                    "viewClass": "CheckBoxView",
-                    "label": "Debug this step (log more data)"
-                }
-            },
-            "metadata": {
-                "in": "./lib/schemas/getFileManagerFiles.in.json",
-                "out": "./lib/schemas/getFileManagerFiles.out.json"
-            }
-        },
-        "getFileManagerFolders": {
-            "main": "./lib/triggers/getFileManagerFolders.js",
-            "title": "List folders",
-            "description": "Get a list of all folders in the File Manager.",
-            "fields": {
-                "verbose": {
-                    "viewClass": "CheckBoxView",
-                    "label": "Debug this step (log more data)"
-                }
-            },
-            "metadata": {
-                "in": "./lib/schemas/getFileManagerFolders.in.json",
-                "out": "./lib/schemas/getFileManagerFolders.out.json"
-            }
-        },
         "getLists": {
             "main": "./lib/triggers/getLists.js",
             "title": "Get lists info",
@@ -359,51 +209,6 @@
                 "out": "./lib/schemas/getListsIdAbuseReports.out.json"
             }
         },
-        "getListsIdActivity": {
-            "main": "./lib/triggers/getListsIdActivity.js",
-            "title": "List recent activity",
-            "description": "Get up to the previous 180 days of daily detailed aggregated activity stats for a list, not including Automation activity.",
-            "fields": {
-                "verbose": {
-                    "viewClass": "CheckBoxView",
-                    "label": "Debug this step (log more data)"
-                }
-            },
-            "metadata": {
-                "in": "./lib/schemas/getListsIdActivity.in.json",
-                "out": "./lib/schemas/getListsIdActivity.out.json"
-            }
-        },
-        "getListsIdClients": {
-            "main": "./lib/triggers/getListsIdClients.js",
-            "title": "List top email clients",
-            "description": "Get a list of the top email clients based on user-agent strings.",
-            "fields": {
-                "verbose": {
-                    "viewClass": "CheckBoxView",
-                    "label": "Debug this step (log more data)"
-                }
-            },
-            "metadata": {
-                "in": "./lib/schemas/getListsIdClients.in.json",
-                "out": "./lib/schemas/getListsIdClients.out.json"
-            }
-        },
-        "getListsIdGrowthHistory": {
-            "main": "./lib/triggers/getListsIdGrowthHistory.js",
-            "title": "List growth history data",
-            "description": "Get a month-by-month summary of a specific list's growth activity.",
-            "fields": {
-                "verbose": {
-                    "viewClass": "CheckBoxView",
-                    "label": "Debug this step (log more data)"
-                }
-            },
-            "metadata": {
-                "in": "./lib/schemas/getListsIdGrowthHistory.in.json",
-                "out": "./lib/schemas/getListsIdGrowthHistory.out.json"
-            }
-        },
         "getListsIdInterestCategories": {
             "main": "./lib/triggers/getListsIdInterestCategories.js",
             "title": "List interest categories",
@@ -417,21 +222,6 @@
             "metadata": {
                 "in": "./lib/schemas/getListsIdInterestCategories.in.json",
                 "out": "./lib/schemas/getListsIdInterestCategories.out.json"
-            }
-        },
-        "getListsIdInterestCategoriesIdInterests": {
-            "main": "./lib/triggers/getListsIdInterestCategoriesIdInterests.js",
-            "title": "List interests in category",
-            "description": "Get a list of this category's interests.",
-            "fields": {
-                "verbose": {
-                    "viewClass": "CheckBoxView",
-                    "label": "Debug this step (log more data)"
-                }
-            },
-            "metadata": {
-                "in": "./lib/schemas/getListsIdInterestCategoriesIdInterests.in.json",
-                "out": "./lib/schemas/getListsIdInterestCategoriesIdInterests.out.json"
             }
         },
         "previewASegment": {
@@ -464,36 +254,6 @@
                 "out": "./lib/schemas/getListsIdSegmentsIdMembers.out.json"
             }
         },
-        "searchTagsByName": {
-            "main": "./lib/triggers/searchTagsByName.js",
-            "title": "Search for tags on a list by name.",
-            "description": "Search for tags on a list by name. If no name is provided, will return all tags on the list.",
-            "fields": {
-                "verbose": {
-                    "viewClass": "CheckBoxView",
-                    "label": "Debug this step (log more data)"
-                }
-            },
-            "metadata": {
-                "in": "./lib/schemas/searchTagsByName.in.json",
-                "out": "./lib/schemas/searchTagsByName.out.json"
-            }
-        },
-        "getListsIdMembers": {
-            "main": "./lib/triggers/getListsIdMembers.js",
-            "title": "List members info",
-            "description": "Get information about members in a specific Mailchimp list.",
-            "fields": {
-                "verbose": {
-                    "viewClass": "CheckBoxView",
-                    "label": "Debug this step (log more data)"
-                }
-            },
-            "metadata": {
-                "in": "./lib/schemas/getListsIdMembers.in.json",
-                "out": "./lib/schemas/getListsIdMembers.out.json"
-            }
-        },
         "getListsIdMembersIdActivity": {
             "main": "./lib/triggers/getListsIdMembersIdActivity.js",
             "title": "View recent activity 50",
@@ -507,36 +267,6 @@
             "metadata": {
                 "in": "./lib/schemas/getListsIdMembersIdActivity.in.json",
                 "out": "./lib/schemas/getListsIdMembersIdActivity.out.json"
-            }
-        },
-        "getListsIdMembersIdActivityFeed": {
-            "main": "./lib/triggers/getListsIdMembersIdActivityFeed.js",
-            "title": "View recent activity 10",
-            "description": "Get the last 10 events of a member's activity on a specific list, including opens, clicks, and unsubscribes.",
-            "fields": {
-                "verbose": {
-                    "viewClass": "CheckBoxView",
-                    "label": "Debug this step (log more data)"
-                }
-            },
-            "metadata": {
-                "in": "./lib/schemas/getListsIdMembersIdActivityFeed.in.json",
-                "out": "./lib/schemas/getListsIdMembersIdActivityFeed.out.json"
-            }
-        },
-        "getListMemberTags": {
-            "main": "./lib/triggers/getListMemberTags.js",
-            "title": "List member tags",
-            "description": "Get the tags on a list member.",
-            "fields": {
-                "verbose": {
-                    "viewClass": "CheckBoxView",
-                    "label": "Debug this step (log more data)"
-                }
-            },
-            "metadata": {
-                "in": "./lib/schemas/getListMemberTags.in.json",
-                "out": "./lib/schemas/getListMemberTags.out.json"
             }
         },
         "getListsIdMembersIdEvents": {
@@ -569,36 +299,6 @@
                 "out": "./lib/schemas/getListsIdMembersIdGoals.out.json"
             }
         },
-        "getListsIdMembersIdNotes": {
-            "main": "./lib/triggers/getListsIdMembersIdNotes.js",
-            "title": "List recent member notes",
-            "description": "Get recent notes for a specific list member.",
-            "fields": {
-                "verbose": {
-                    "viewClass": "CheckBoxView",
-                    "label": "Debug this step (log more data)"
-                }
-            },
-            "metadata": {
-                "in": "./lib/schemas/getListsIdMembersIdNotes.in.json",
-                "out": "./lib/schemas/getListsIdMembersIdNotes.out.json"
-            }
-        },
-        "getListsIdMergeFields": {
-            "main": "./lib/triggers/getListsIdMergeFields.js",
-            "title": "List merge fields",
-            "description": "Get a list of all merge fields (formerly merge vars) for a list.",
-            "fields": {
-                "verbose": {
-                    "viewClass": "CheckBoxView",
-                    "label": "Debug this step (log more data)"
-                }
-            },
-            "metadata": {
-                "in": "./lib/schemas/getListsIdMergeFields.in.json",
-                "out": "./lib/schemas/getListsIdMergeFields.out.json"
-            }
-        },
         "getListsIdWebhooks": {
             "main": "./lib/triggers/getListsIdWebhooks.js",
             "title": "List webhooks",
@@ -612,36 +312,6 @@
             "metadata": {
                 "in": "./lib/schemas/getListsIdWebhooks.in.json",
                 "out": "./lib/schemas/getListsIdWebhooks.out.json"
-            }
-        },
-        "getListsIdSignupForms": {
-            "main": "./lib/triggers/getListsIdSignupForms.js",
-            "title": "List signup forms",
-            "description": "Get signup forms for a specific list.",
-            "fields": {
-                "verbose": {
-                    "viewClass": "CheckBoxView",
-                    "label": "Debug this step (log more data)"
-                }
-            },
-            "metadata": {
-                "in": "./lib/schemas/getListsIdSignupForms.in.json",
-                "out": "./lib/schemas/getListsIdSignupForms.out.json"
-            }
-        },
-        "getListsIdLocations": {
-            "main": "./lib/triggers/getListsIdLocations.js",
-            "title": "List locations",
-            "description": "Get the locations (countries) that the list's subscribers have been tagged to based on geocoding their IP address.",
-            "fields": {
-                "verbose": {
-                    "viewClass": "CheckBoxView",
-                    "label": "Debug this step (log more data)"
-                }
-            },
-            "metadata": {
-                "in": "./lib/schemas/getListsIdLocations.in.json",
-                "out": "./lib/schemas/getListsIdLocations.out.json"
             }
         },
         "getAllLandingPages": {
@@ -687,201 +357,6 @@
             "metadata": {
                 "in": "./lib/schemas/getReports.in.json",
                 "out": "./lib/schemas/getReports.out.json"
-            }
-        },
-        "getReportsIdAbuseReportsId": {
-            "main": "./lib/triggers/getReportsIdAbuseReportsId.js",
-            "title": "List abuse reports",
-            "description": "Get a list of abuse complaints for a specific campaign.",
-            "fields": {
-                "verbose": {
-                    "viewClass": "CheckBoxView",
-                    "label": "Debug this step (log more data)"
-                }
-            },
-            "metadata": {
-                "in": "./lib/schemas/getReportsIdAbuseReportsId.in.json",
-                "out": "./lib/schemas/getReportsIdAbuseReportsId.out.json"
-            }
-        },
-        "getReportsIdAdvice": {
-            "main": "./lib/triggers/getReportsIdAdvice.js",
-            "title": "List campaign feedback",
-            "description": "Get feedback based on a campaign's statistics. ",
-            "fields": {
-                "verbose": {
-                    "viewClass": "CheckBoxView",
-                    "label": "Debug this step (log more data)"
-                }
-            },
-            "metadata": {
-                "in": "./lib/schemas/getReportsIdAdvice.in.json",
-                "out": "./lib/schemas/getReportsIdAdvice.out.json"
-            }
-        },
-        "getReportsIdClickDetails": {
-            "main": "./lib/triggers/getReportsIdClickDetails.js",
-            "title": "List campaign details",
-            "description": "Get information about clicks on specific links in your Mailchimp campaigns.",
-            "fields": {
-                "verbose": {
-                    "viewClass": "CheckBoxView",
-                    "label": "Debug this step (log more data)"
-                }
-            },
-            "metadata": {
-                "in": "./lib/schemas/getReportsIdClickDetails.in.json",
-                "out": "./lib/schemas/getReportsIdClickDetails.out.json"
-            }
-        },
-        "getReportsIdClickDetailsIdMembers": {
-            "main": "./lib/triggers/getReportsIdClickDetailsIdMembers.js",
-            "title": "List clicked link subscribers",
-            "description": "Get information about list members who clicked on a specific link in a campaign.",
-            "fields": {
-                "verbose": {
-                    "viewClass": "CheckBoxView",
-                    "label": "Debug this step (log more data)"
-                }
-            },
-            "metadata": {
-                "in": "./lib/schemas/getReportsIdClickDetailsIdMembers.in.json",
-                "out": "./lib/schemas/getReportsIdClickDetailsIdMembers.out.json"
-            }
-        },
-        "getReportsIdOpenDetails": {
-            "main": "./lib/triggers/getReportsIdOpenDetails.js",
-            "title": "List campaign open details",
-            "description": "Get detailed information about any campaign emails that were opened by a list member.",
-            "fields": {
-                "verbose": {
-                    "viewClass": "CheckBoxView",
-                    "label": "Debug this step (log more data)"
-                }
-            },
-            "metadata": {
-                "in": "./lib/schemas/getReportsIdOpenDetails.in.json",
-                "out": "./lib/schemas/getReportsIdOpenDetails.out.json"
-            }
-        },
-        "getReportsIdDomainPerformance": {
-            "main": "./lib/triggers/getReportsIdDomainPerformance.js",
-            "title": "List domain performance stats",
-            "description": "Get statistics for the top-performing email domains in a campaign.",
-            "fields": {
-                "verbose": {
-                    "viewClass": "CheckBoxView",
-                    "label": "Debug this step (log more data)"
-                }
-            },
-            "metadata": {
-                "in": "./lib/schemas/getReportsIdDomainPerformance.in.json",
-                "out": "./lib/schemas/getReportsIdDomainPerformance.out.json"
-            }
-        },
-        "getReportsIdEepurl": {
-            "main": "./lib/triggers/getReportsIdEepurl.js",
-            "title": "List EepURL activity",
-            "description": "Get a summary of social activity for the campaign, tracked by EepURL.",
-            "fields": {
-                "verbose": {
-                    "viewClass": "CheckBoxView",
-                    "label": "Debug this step (log more data)"
-                }
-            },
-            "metadata": {
-                "in": "./lib/schemas/getReportsIdEepurl.in.json",
-                "out": "./lib/schemas/getReportsIdEepurl.out.json"
-            }
-        },
-        "getReportsIdEmailActivity": {
-            "main": "./lib/triggers/getReportsIdEmailActivity.js",
-            "title": "List email activity",
-            "description": "Get a list of member's subscriber activity in a specific campaign.",
-            "fields": {
-                "verbose": {
-                    "viewClass": "CheckBoxView",
-                    "label": "Debug this step (log more data)"
-                }
-            },
-            "metadata": {
-                "in": "./lib/schemas/getReportsIdEmailActivity.in.json",
-                "out": "./lib/schemas/getReportsIdEmailActivity.out.json"
-            }
-        },
-        "getReportsIdLocations": {
-            "main": "./lib/triggers/getReportsIdLocations.js",
-            "title": "List top open activities",
-            "description": "Get top open locations for a specific campaign.",
-            "fields": {
-                "verbose": {
-                    "viewClass": "CheckBoxView",
-                    "label": "Debug this step (log more data)"
-                }
-            },
-            "metadata": {
-                "in": "./lib/schemas/getReportsIdLocations.in.json",
-                "out": "./lib/schemas/getReportsIdLocations.out.json"
-            }
-        },
-        "getReportsIdSentTo": {
-            "main": "./lib/triggers/getReportsIdSentTo.js",
-            "title": "List campaign recipients",
-            "description": "Get information about campaign recipients.",
-            "fields": {
-                "verbose": {
-                    "viewClass": "CheckBoxView",
-                    "label": "Debug this step (log more data)"
-                }
-            },
-            "metadata": {
-                "in": "./lib/schemas/getReportsIdSentTo.in.json",
-                "out": "./lib/schemas/getReportsIdSentTo.out.json"
-            }
-        },
-        "getReportsIdSubReportsId": {
-            "main": "./lib/triggers/getReportsIdSubReportsId.js",
-            "title": "List child campaign reports",
-            "description": "Get a list of reports with child campaigns for a specific parent campaign.",
-            "fields": {
-                "verbose": {
-                    "viewClass": "CheckBoxView",
-                    "label": "Debug this step (log more data)"
-                }
-            },
-            "metadata": {
-                "in": "./lib/schemas/getReportsIdSubReportsId.in.json",
-                "out": "./lib/schemas/getReportsIdSubReportsId.out.json"
-            }
-        },
-        "getReportsIdUnsubscribed": {
-            "main": "./lib/triggers/getReportsIdUnsubscribed.js",
-            "title": "List unsubscribed members",
-            "description": "Get information about members who have unsubscribed from a specific campaign.",
-            "fields": {
-                "verbose": {
-                    "viewClass": "CheckBoxView",
-                    "label": "Debug this step (log more data)"
-                }
-            },
-            "metadata": {
-                "in": "./lib/schemas/getReportsIdUnsubscribed.in.json",
-                "out": "./lib/schemas/getReportsIdUnsubscribed.out.json"
-            }
-        },
-        "getReportsIdEcommerceProductActivity": {
-            "main": "./lib/triggers/getReportsIdEcommerceProductActivity.js",
-            "title": "List campaign product activity",
-            "description": "Get breakdown of product activity for a campaign",
-            "fields": {
-                "verbose": {
-                    "viewClass": "CheckBoxView",
-                    "label": "Debug this step (log more data)"
-                }
-            },
-            "metadata": {
-                "in": "./lib/schemas/getReportsIdEcommerceProductActivity.in.json",
-                "out": "./lib/schemas/getReportsIdEcommerceProductActivity.out.json"
             }
         },
         "getTemplates": {
@@ -959,81 +434,6 @@
                 "out": "./lib/schemas/getEcommerceStoresIdCarts.out.json"
             }
         },
-        "getEcommerceStoresIdCartsIdLines": {
-            "main": "./lib/triggers/getEcommerceStoresIdCartsIdLines.js",
-            "title": "List cart line items",
-            "description": "Get information about a cart's line items.",
-            "fields": {
-                "verbose": {
-                    "viewClass": "CheckBoxView",
-                    "label": "Debug this step (log more data)"
-                }
-            },
-            "metadata": {
-                "in": "./lib/schemas/getEcommerceStoresIdCartsIdLines.in.json",
-                "out": "./lib/schemas/getEcommerceStoresIdCartsIdLines.out.json"
-            }
-        },
-        "getEcommerceStoresIdCustomers": {
-            "main": "./lib/triggers/getEcommerceStoresIdCustomers.js",
-            "title": "List customers",
-            "description": "Get information about a store's customers.",
-            "fields": {
-                "verbose": {
-                    "viewClass": "CheckBoxView",
-                    "label": "Debug this step (log more data)"
-                }
-            },
-            "metadata": {
-                "in": "./lib/schemas/getEcommerceStoresIdCustomers.in.json",
-                "out": "./lib/schemas/getEcommerceStoresIdCustomers.out.json"
-            }
-        },
-        "getEcommerceStoresIdPromorules": {
-            "main": "./lib/triggers/getEcommerceStoresIdPromorules.js",
-            "title": "List promo rules",
-            "description": "Get information about a store's promo rules.",
-            "fields": {
-                "verbose": {
-                    "viewClass": "CheckBoxView",
-                    "label": "Debug this step (log more data)"
-                }
-            },
-            "metadata": {
-                "in": "./lib/schemas/getEcommerceStoresIdPromorules.in.json",
-                "out": "./lib/schemas/getEcommerceStoresIdPromorules.out.json"
-            }
-        },
-        "getEcommerceStoresIdPromocodes": {
-            "main": "./lib/triggers/getEcommerceStoresIdPromocodes.js",
-            "title": "List promo codes",
-            "description": "Get information about a store's promo codes.",
-            "fields": {
-                "verbose": {
-                    "viewClass": "CheckBoxView",
-                    "label": "Debug this step (log more data)"
-                }
-            },
-            "metadata": {
-                "in": "./lib/schemas/getEcommerceStoresIdPromocodes.in.json",
-                "out": "./lib/schemas/getEcommerceStoresIdPromocodes.out.json"
-            }
-        },
-        "getEcommerceStoresIdOrders": {
-            "main": "./lib/triggers/getEcommerceStoresIdOrders.js",
-            "title": "List orders",
-            "description": "Get information about a store's orders.",
-            "fields": {
-                "verbose": {
-                    "viewClass": "CheckBoxView",
-                    "label": "Debug this step (log more data)"
-                }
-            },
-            "metadata": {
-                "in": "./lib/schemas/getEcommerceStoresIdOrders.in.json",
-                "out": "./lib/schemas/getEcommerceStoresIdOrders.out.json"
-            }
-        },
         "getEcommerceStoresIdOrdersIdLines": {
             "main": "./lib/triggers/getEcommerceStoresIdOrdersIdLines.js",
             "title": "List order line items",
@@ -1092,51 +492,6 @@
             "metadata": {
                 "in": "./lib/schemas/getEcommerceStoresIdProductsIdImages.in.json",
                 "out": "./lib/schemas/getEcommerceStoresIdProductsIdImages.out.json"
-            }
-        },
-        "getSearchCampaigns": {
-            "main": "./lib/triggers/getSearchCampaigns.js",
-            "title": "Search campaigns",
-            "description": "Search all campaigns for the specified query terms.",
-            "fields": {
-                "verbose": {
-                    "viewClass": "CheckBoxView",
-                    "label": "Debug this step (log more data)"
-                }
-            },
-            "metadata": {
-                "in": "./lib/schemas/getSearchCampaigns.in.json",
-                "out": "./lib/schemas/getSearchCampaigns.out.json"
-            }
-        },
-        "getSearchMembers": {
-            "main": "./lib/triggers/getSearchMembers.js",
-            "title": "Search members",
-            "description": "Search for list members. This search can be restricted to a specific list, or can be used to search across all lists in an account.",
-            "fields": {
-                "verbose": {
-                    "viewClass": "CheckBoxView",
-                    "label": "Debug this step (log more data)"
-                }
-            },
-            "metadata": {
-                "in": "./lib/schemas/getSearchMembers.in.json",
-                "out": "./lib/schemas/getSearchMembers.out.json"
-            }
-        },
-        "getPing": {
-            "main": "./lib/triggers/getPing.js",
-            "title": "Ping",
-            "description": "A health check for the API that won't return any account-specific information.",
-            "fields": {
-                "verbose": {
-                    "viewClass": "CheckBoxView",
-                    "label": "Debug this step (log more data)"
-                }
-            },
-            "metadata": {
-                "in": "./lib/schemas/getPing.in.json",
-                "out": "./lib/schemas/getPing.out.json"
             }
         },
         "getAllFacebookAds": {
@@ -1216,21 +571,6 @@
         }
     },
     "actions": {
-        "getAuthorizedAppsId": {
-            "main": "./lib/actions/getAuthorizedAppsId.js",
-            "title": "Get authorized app info",
-            "description": "Get information about a specific authorized application.",
-            "fields": {
-                "verbose": {
-                    "viewClass": "CheckBoxView",
-                    "label": "Debug this step (log more data)"
-                }
-            },
-            "metadata": {
-                "in": "./lib/schemas/getAuthorizedAppsId.in.json",
-                "out": "./lib/schemas/getAuthorizedAppsId.out.json"
-            }
-        },
         "postAutomations": {
             "main": "./lib/actions/postAutomations.js",
             "title": "Add automation",
@@ -1244,21 +584,6 @@
             "metadata": {
                 "in": "./lib/schemas/postAutomations.in.json",
                 "out": "./lib/schemas/postAutomations.out.json"
-            }
-        },
-        "getAutomationsId": {
-            "main": "./lib/actions/getAutomationsId.js",
-            "title": "Get automation info",
-            "description": "Get a summary of an individual classic automation workflow's settings and content. ",
-            "fields": {
-                "verbose": {
-                    "viewClass": "CheckBoxView",
-                    "label": "Debug this step (log more data)"
-                }
-            },
-            "metadata": {
-                "in": "./lib/schemas/getAutomationsId.in.json",
-                "out": "./lib/schemas/getAutomationsId.out.json"
             }
         },
         "postAutomationsIdActionsPauseAllEmails": {
@@ -1306,36 +631,6 @@
                 "out": "./lib/schemas/archiveAutomations.out.json"
             }
         },
-        "getAutomationsIdEmailsId": {
-            "main": "./lib/actions/getAutomationsIdEmailsId.js",
-            "title": "Get workflow email info",
-            "description": "Get information about an individual classic automation workflow email.",
-            "fields": {
-                "verbose": {
-                    "viewClass": "CheckBoxView",
-                    "label": "Debug this step (log more data)"
-                }
-            },
-            "metadata": {
-                "in": "./lib/schemas/getAutomationsIdEmailsId.in.json",
-                "out": "./lib/schemas/getAutomationsIdEmailsId.out.json"
-            }
-        },
-        "patchAutomationEmailWorkflowId": {
-            "main": "./lib/actions/patchAutomationEmailWorkflowId.js",
-            "title": "Update workflow email",
-            "description": "Update settings for a classic automation workflow email",
-            "fields": {
-                "verbose": {
-                    "viewClass": "CheckBoxView",
-                    "label": "Debug this step (log more data)"
-                }
-            },
-            "metadata": {
-                "in": "./lib/schemas/patchAutomationEmailWorkflowId.in.json",
-                "out": "./lib/schemas/patchAutomationEmailWorkflowId.out.json"
-            }
-        },
         "postAutomationsIdEmailsIdQueue": {
             "main": "./lib/actions/postAutomationsIdEmailsIdQueue.js",
             "title": "Add subscriber to workflow email",
@@ -1349,21 +644,6 @@
             "metadata": {
                 "in": "./lib/schemas/postAutomationsIdEmailsIdQueue.in.json",
                 "out": "./lib/schemas/postAutomationsIdEmailsIdQueue.out.json"
-            }
-        },
-        "getAutomationsIdEmailsIdQueueId": {
-            "main": "./lib/actions/getAutomationsIdEmailsIdQueueId.js",
-            "title": "Get automated email subscriber",
-            "description": "Get information about a specific subscriber in a classic automation email queue.",
-            "fields": {
-                "verbose": {
-                    "viewClass": "CheckBoxView",
-                    "label": "Debug this step (log more data)"
-                }
-            },
-            "metadata": {
-                "in": "./lib/schemas/getAutomationsIdEmailsIdQueueId.in.json",
-                "out": "./lib/schemas/getAutomationsIdEmailsIdQueueId.out.json"
             }
         },
         "postAutomationsIdEmailsIdActionsPause": {
@@ -1411,21 +691,6 @@
                 "out": "./lib/schemas/postAutomationsIdRemovedSubscribers.out.json"
             }
         },
-        "getAutomationsIdRemovedSubscribersId": {
-            "main": "./lib/actions/getAutomationsIdRemovedSubscribersId.js",
-            "title": "Get subscriber removed from workflow",
-            "description": "Get information about a specific subscriber who was removed from a classic automation workflow.",
-            "fields": {
-                "verbose": {
-                    "viewClass": "CheckBoxView",
-                    "label": "Debug this step (log more data)"
-                }
-            },
-            "metadata": {
-                "in": "./lib/schemas/getAutomationsIdRemovedSubscribersId.in.json",
-                "out": "./lib/schemas/getAutomationsIdRemovedSubscribersId.out.json"
-            }
-        },
         "postBatches": {
             "main": "./lib/actions/postBatches.js",
             "title": "Start batch operation",
@@ -1439,21 +704,6 @@
             "metadata": {
                 "in": "./lib/schemas/postBatches.in.json",
                 "out": "./lib/schemas/postBatches.out.json"
-            }
-        },
-        "getBatchesId": {
-            "main": "./lib/actions/getBatchesId.js",
-            "title": "Get batch operation status",
-            "description": "Get the status of a batch request.",
-            "fields": {
-                "verbose": {
-                    "viewClass": "CheckBoxView",
-                    "label": "Debug this step (log more data)"
-                }
-            },
-            "metadata": {
-                "in": "./lib/schemas/getBatchesId.in.json",
-                "out": "./lib/schemas/getBatchesId.out.json"
             }
         },
         "postBatchWebhooks": {
@@ -1516,36 +766,6 @@
                 "out": "./lib/schemas/postTemplateFolders.out.json"
             }
         },
-        "getTemplateFoldersId": {
-            "main": "./lib/actions/getTemplateFoldersId.js",
-            "title": "Get template folder",
-            "description": "Get information about a specific folder used to organize templates.",
-            "fields": {
-                "verbose": {
-                    "viewClass": "CheckBoxView",
-                    "label": "Debug this step (log more data)"
-                }
-            },
-            "metadata": {
-                "in": "./lib/schemas/getTemplateFoldersId.in.json",
-                "out": "./lib/schemas/getTemplateFoldersId.out.json"
-            }
-        },
-        "patchTemplateFoldersId": {
-            "main": "./lib/actions/patchTemplateFoldersId.js",
-            "title": "Update template folder",
-            "description": "Update a specific folder used to organize templates.",
-            "fields": {
-                "verbose": {
-                    "viewClass": "CheckBoxView",
-                    "label": "Debug this step (log more data)"
-                }
-            },
-            "metadata": {
-                "in": "./lib/schemas/patchTemplateFoldersId.in.json",
-                "out": "./lib/schemas/patchTemplateFoldersId.out.json"
-            }
-        },
         "postCampaignFolders": {
             "main": "./lib/actions/postCampaignFolders.js",
             "title": "Add campaign folder",
@@ -1559,36 +779,6 @@
             "metadata": {
                 "in": "./lib/schemas/postCampaignFolders.in.json",
                 "out": "./lib/schemas/postCampaignFolders.out.json"
-            }
-        },
-        "getCampaignFoldersId": {
-            "main": "./lib/actions/getCampaignFoldersId.js",
-            "title": "Get campaign folder",
-            "description": "Get information about a specific folder used to organize campaigns.",
-            "fields": {
-                "verbose": {
-                    "viewClass": "CheckBoxView",
-                    "label": "Debug this step (log more data)"
-                }
-            },
-            "metadata": {
-                "in": "./lib/schemas/getCampaignFoldersId.in.json",
-                "out": "./lib/schemas/getCampaignFoldersId.out.json"
-            }
-        },
-        "patchCampaignFoldersId": {
-            "main": "./lib/actions/patchCampaignFoldersId.js",
-            "title": "Update campaign folder",
-            "description": "Update a specific folder used to organize campaigns.",
-            "fields": {
-                "verbose": {
-                    "viewClass": "CheckBoxView",
-                    "label": "Debug this step (log more data)"
-                }
-            },
-            "metadata": {
-                "in": "./lib/schemas/patchCampaignFoldersId.in.json",
-                "out": "./lib/schemas/patchCampaignFoldersId.out.json"
             }
         },
         "postCampaigns": {
@@ -1606,36 +796,6 @@
                 "out": "./lib/schemas/postCampaigns.out.json"
             }
         },
-        "getCampaignsId": {
-            "main": "./lib/actions/getCampaignsId.js",
-            "title": "Get campaign info",
-            "description": "Get information about a specific campaign.",
-            "fields": {
-                "verbose": {
-                    "viewClass": "CheckBoxView",
-                    "label": "Debug this step (log more data)"
-                }
-            },
-            "metadata": {
-                "in": "./lib/schemas/getCampaignsId.in.json",
-                "out": "./lib/schemas/getCampaignsId.out.json"
-            }
-        },
-        "patchCampaignsId": {
-            "main": "./lib/actions/patchCampaignsId.js",
-            "title": "Update campaign settings",
-            "description": "Update some or all of the settings for a specific campaign.",
-            "fields": {
-                "verbose": {
-                    "viewClass": "CheckBoxView",
-                    "label": "Debug this step (log more data)"
-                }
-            },
-            "metadata": {
-                "in": "./lib/schemas/patchCampaignsId.in.json",
-                "out": "./lib/schemas/patchCampaignsId.out.json"
-            }
-        },
         "postCampaignsIdActionsCancelSend": {
             "main": "./lib/actions/postCampaignsIdActionsCancelSend.js",
             "title": "Cancel campaign",
@@ -1649,66 +809,6 @@
             "metadata": {
                 "in": "./lib/schemas/postCampaignsIdActionsCancelSend.in.json",
                 "out": "./lib/schemas/postCampaignsIdActionsCancelSend.out.json"
-            }
-        },
-        "postCampaignsIdActionsReplicate": {
-            "main": "./lib/actions/postCampaignsIdActionsReplicate.js",
-            "title": "Replicate campaign",
-            "description": "Replicate a campaign in saved or send status.",
-            "fields": {
-                "verbose": {
-                    "viewClass": "CheckBoxView",
-                    "label": "Debug this step (log more data)"
-                }
-            },
-            "metadata": {
-                "in": "./lib/schemas/postCampaignsIdActionsReplicate.in.json",
-                "out": "./lib/schemas/postCampaignsIdActionsReplicate.out.json"
-            }
-        },
-        "postCampaignsIdActionsSend": {
-            "main": "./lib/actions/postCampaignsIdActionsSend.js",
-            "title": "Send campaign",
-            "description": "Send a Mailchimp campaign. For RSS Campaigns, the campaign will send according to its schedule.",
-            "fields": {
-                "verbose": {
-                    "viewClass": "CheckBoxView",
-                    "label": "Debug this step (log more data)"
-                }
-            },
-            "metadata": {
-                "in": "./lib/schemas/postCampaignsIdActionsSend.in.json",
-                "out": "./lib/schemas/postCampaignsIdActionsSend.out.json"
-            }
-        },
-        "postCampaignsIdActionsSchedule": {
-            "main": "./lib/actions/postCampaignsIdActionsSchedule.js",
-            "title": "Schedule campaign",
-            "description": "Schedule a campaign for delivery.",
-            "fields": {
-                "verbose": {
-                    "viewClass": "CheckBoxView",
-                    "label": "Debug this step (log more data)"
-                }
-            },
-            "metadata": {
-                "in": "./lib/schemas/postCampaignsIdActionsSchedule.in.json",
-                "out": "./lib/schemas/postCampaignsIdActionsSchedule.out.json"
-            }
-        },
-        "postCampaignsIdActionsUnschedule": {
-            "main": "./lib/actions/postCampaignsIdActionsUnschedule.js",
-            "title": "Unschedule campaign",
-            "description": "Unschedule a scheduled campaign that hasn't started sending.",
-            "fields": {
-                "verbose": {
-                    "viewClass": "CheckBoxView",
-                    "label": "Debug this step (log more data)"
-                }
-            },
-            "metadata": {
-                "in": "./lib/schemas/postCampaignsIdActionsUnschedule.in.json",
-                "out": "./lib/schemas/postCampaignsIdActionsUnschedule.out.json"
             }
         },
         "postCampaignsIdActionsTest": {
@@ -1771,21 +871,6 @@
                 "out": "./lib/schemas/postCampaignsIdActionsCreateResend.out.json"
             }
         },
-        "putCampaignsIdContent": {
-            "main": "./lib/actions/putCampaignsIdContent.js",
-            "title": "Set campaign content",
-            "description": "Set the content for a campaign.",
-            "fields": {
-                "verbose": {
-                    "viewClass": "CheckBoxView",
-                    "label": "Debug this step (log more data)"
-                }
-            },
-            "metadata": {
-                "in": "./lib/schemas/putCampaignsIdContent.in.json",
-                "out": "./lib/schemas/putCampaignsIdContent.out.json"
-            }
-        },
         "postCampaignsIdFeedback": {
             "main": "./lib/actions/postCampaignsIdFeedback.js",
             "title": "Add campaign feedback",
@@ -1799,36 +884,6 @@
             "metadata": {
                 "in": "./lib/schemas/postCampaignsIdFeedback.in.json",
                 "out": "./lib/schemas/postCampaignsIdFeedback.out.json"
-            }
-        },
-        "getCampaignsIdFeedbackId": {
-            "main": "./lib/actions/getCampaignsIdFeedbackId.js",
-            "title": "Get campaign feedback message",
-            "description": "Get a specific feedback message from a campaign.",
-            "fields": {
-                "verbose": {
-                    "viewClass": "CheckBoxView",
-                    "label": "Debug this step (log more data)"
-                }
-            },
-            "metadata": {
-                "in": "./lib/schemas/getCampaignsIdFeedbackId.in.json",
-                "out": "./lib/schemas/getCampaignsIdFeedbackId.out.json"
-            }
-        },
-        "patchCampaignsIdFeedbackId": {
-            "main": "./lib/actions/patchCampaignsIdFeedbackId.js",
-            "title": "Update campaign feedback message",
-            "description": "Update a specific feedback message for a campaign.",
-            "fields": {
-                "verbose": {
-                    "viewClass": "CheckBoxView",
-                    "label": "Debug this step (log more data)"
-                }
-            },
-            "metadata": {
-                "in": "./lib/schemas/patchCampaignsIdFeedbackId.in.json",
-                "out": "./lib/schemas/patchCampaignsIdFeedbackId.out.json"
             }
         },
         "postConnectedSites": {
@@ -1846,21 +901,6 @@
                 "out": "./lib/schemas/postConnectedSites.out.json"
             }
         },
-        "getConnectedSitesId": {
-            "main": "./lib/actions/getConnectedSitesId.js",
-            "title": "Get connected site",
-            "description": "Get information about a specific connected site.",
-            "fields": {
-                "verbose": {
-                    "viewClass": "CheckBoxView",
-                    "label": "Debug this step (log more data)"
-                }
-            },
-            "metadata": {
-                "in": "./lib/schemas/getConnectedSitesId.in.json",
-                "out": "./lib/schemas/getConnectedSitesId.out.json"
-            }
-        },
         "postConnectedSitesIdActionsVerifyScriptInstallation": {
             "main": "./lib/actions/postConnectedSitesIdActionsVerifyScriptInstallation.js",
             "title": "Verify connected site script",
@@ -1876,21 +916,6 @@
                 "out": "./lib/schemas/postConnectedSitesIdActionsVerifyScriptInstallation.out.json"
             }
         },
-        "getConversationsId": {
-            "main": "./lib/actions/getConversationsId.js",
-            "title": "Get conversation",
-            "description": "Get details about an individual conversation.",
-            "fields": {
-                "verbose": {
-                    "viewClass": "CheckBoxView",
-                    "label": "Debug this step (log more data)"
-                }
-            },
-            "metadata": {
-                "in": "./lib/schemas/getConversationsId.in.json",
-                "out": "./lib/schemas/getConversationsId.out.json"
-            }
-        },
         "postConversationsIdMessages": {
             "main": "./lib/actions/postConversationsIdMessages.js",
             "title": "Post message",
@@ -1904,21 +929,6 @@
             "metadata": {
                 "in": "./lib/schemas/postConversationsIdMessages.in.json",
                 "out": "./lib/schemas/postConversationsIdMessages.out.json"
-            }
-        },
-        "getConversationsIdMessagesId": {
-            "main": "./lib/actions/getConversationsIdMessagesId.js",
-            "title": "Get message",
-            "description": "Get an individual message in a conversation.",
-            "fields": {
-                "verbose": {
-                    "viewClass": "CheckBoxView",
-                    "label": "Debug this step (log more data)"
-                }
-            },
-            "metadata": {
-                "in": "./lib/schemas/getConversationsIdMessagesId.in.json",
-                "out": "./lib/schemas/getConversationsIdMessagesId.out.json"
             }
         },
         "postCustomerJourneysJourneysIdStepsIdActionsTrigger": {
@@ -1951,36 +961,6 @@
                 "out": "./lib/schemas/postFileManagerFiles.out.json"
             }
         },
-        "getFileManagerFilesId": {
-            "main": "./lib/actions/getFileManagerFilesId.js",
-            "title": "Get file",
-            "description": "Get information about a specific file in the File Manager.",
-            "fields": {
-                "verbose": {
-                    "viewClass": "CheckBoxView",
-                    "label": "Debug this step (log more data)"
-                }
-            },
-            "metadata": {
-                "in": "./lib/schemas/getFileManagerFilesId.in.json",
-                "out": "./lib/schemas/getFileManagerFilesId.out.json"
-            }
-        },
-        "patchFileManagerFilesId": {
-            "main": "./lib/actions/patchFileManagerFilesId.js",
-            "title": "Update file",
-            "description": "Update a file in the File Manager.",
-            "fields": {
-                "verbose": {
-                    "viewClass": "CheckBoxView",
-                    "label": "Debug this step (log more data)"
-                }
-            },
-            "metadata": {
-                "in": "./lib/schemas/patchFileManagerFilesId.in.json",
-                "out": "./lib/schemas/patchFileManagerFilesId.out.json"
-            }
-        },
         "postFileManagerFolders": {
             "main": "./lib/actions/postFileManagerFolders.js",
             "title": "Add folder",
@@ -1994,36 +974,6 @@
             "metadata": {
                 "in": "./lib/schemas/postFileManagerFolders.in.json",
                 "out": "./lib/schemas/postFileManagerFolders.out.json"
-            }
-        },
-        "getFileManagerFoldersId": {
-            "main": "./lib/actions/getFileManagerFoldersId.js",
-            "title": "Get folder",
-            "description": "Get information about a specific folder in the File Manager.",
-            "fields": {
-                "verbose": {
-                    "viewClass": "CheckBoxView",
-                    "label": "Debug this step (log more data)"
-                }
-            },
-            "metadata": {
-                "in": "./lib/schemas/getFileManagerFoldersId.in.json",
-                "out": "./lib/schemas/getFileManagerFoldersId.out.json"
-            }
-        },
-        "patchFileManagerFoldersId": {
-            "main": "./lib/actions/patchFileManagerFoldersId.js",
-            "title": "Update folder",
-            "description": "Update a specific File Manager folder.",
-            "fields": {
-                "verbose": {
-                    "viewClass": "CheckBoxView",
-                    "label": "Debug this step (log more data)"
-                }
-            },
-            "metadata": {
-                "in": "./lib/schemas/patchFileManagerFoldersId.in.json",
-                "out": "./lib/schemas/patchFileManagerFoldersId.out.json"
             }
         },
         "postLists": {
@@ -2041,36 +991,6 @@
                 "out": "./lib/schemas/postLists.out.json"
             }
         },
-        "getListsId": {
-            "main": "./lib/actions/getListsId.js",
-            "title": "Get list info",
-            "description": "Get information about a specific list in your Mailchimp account. ",
-            "fields": {
-                "verbose": {
-                    "viewClass": "CheckBoxView",
-                    "label": "Debug this step (log more data)"
-                }
-            },
-            "metadata": {
-                "in": "./lib/schemas/getListsId.in.json",
-                "out": "./lib/schemas/getListsId.out.json"
-            }
-        },
-        "patchListsId": {
-            "main": "./lib/actions/patchListsId.js",
-            "title": "Update lists",
-            "description": "Update the settings for a specific list.",
-            "fields": {
-                "verbose": {
-                    "viewClass": "CheckBoxView",
-                    "label": "Debug this step (log more data)"
-                }
-            },
-            "metadata": {
-                "in": "./lib/schemas/patchListsId.in.json",
-                "out": "./lib/schemas/patchListsId.out.json"
-            }
-        },
         "postListsId": {
             "main": "./lib/actions/postListsId.js",
             "title": "Batch subscribe or unsubscribe",
@@ -2084,36 +1004,6 @@
             "metadata": {
                 "in": "./lib/schemas/postListsId.in.json",
                 "out": "./lib/schemas/postListsId.out.json"
-            }
-        },
-        "getListsIdAbuseReportsId": {
-            "main": "./lib/actions/getListsIdAbuseReportsId.js",
-            "title": "Get abuse report",
-            "description": "Get details about a specific abuse report.",
-            "fields": {
-                "verbose": {
-                    "viewClass": "CheckBoxView",
-                    "label": "Debug this step (log more data)"
-                }
-            },
-            "metadata": {
-                "in": "./lib/schemas/getListsIdAbuseReportsId.in.json",
-                "out": "./lib/schemas/getListsIdAbuseReportsId.out.json"
-            }
-        },
-        "getListsIdGrowthHistoryId": {
-            "main": "./lib/actions/getListsIdGrowthHistoryId.js",
-            "title": "Get growth history by month",
-            "description": "Get a summary of a specific list's growth activity for a specific month and year.",
-            "fields": {
-                "verbose": {
-                    "viewClass": "CheckBoxView",
-                    "label": "Debug this step (log more data)"
-                }
-            },
-            "metadata": {
-                "in": "./lib/schemas/getListsIdGrowthHistoryId.in.json",
-                "out": "./lib/schemas/getListsIdGrowthHistoryId.out.json"
             }
         },
         "postListsIdInterestCategories": {
@@ -2176,36 +1066,6 @@
                 "out": "./lib/schemas/postListsIdInterestCategoriesIdInterests.out.json"
             }
         },
-        "getListsIdInterestCategoriesIdInterestsId": {
-            "main": "./lib/actions/getListsIdInterestCategoriesIdInterestsId.js",
-            "title": "Get interest in category",
-            "description": "Get interests or 'group names' for a specific category.",
-            "fields": {
-                "verbose": {
-                    "viewClass": "CheckBoxView",
-                    "label": "Debug this step (log more data)"
-                }
-            },
-            "metadata": {
-                "in": "./lib/schemas/getListsIdInterestCategoriesIdInterestsId.in.json",
-                "out": "./lib/schemas/getListsIdInterestCategoriesIdInterestsId.out.json"
-            }
-        },
-        "patchListsIdInterestCategoriesIdInterestsId": {
-            "main": "./lib/actions/patchListsIdInterestCategoriesIdInterestsId.js",
-            "title": "Update interest in category",
-            "description": "Update interests or 'group names' for a specific category.",
-            "fields": {
-                "verbose": {
-                    "viewClass": "CheckBoxView",
-                    "label": "Debug this step (log more data)"
-                }
-            },
-            "metadata": {
-                "in": "./lib/schemas/patchListsIdInterestCategoriesIdInterestsId.in.json",
-                "out": "./lib/schemas/patchListsIdInterestCategoriesIdInterestsId.out.json"
-            }
-        },
         "postListsIdSegments": {
             "main": "./lib/actions/postListsIdSegments.js",
             "title": "Add segment",
@@ -2219,21 +1079,6 @@
             "metadata": {
                 "in": "./lib/schemas/postListsIdSegments.in.json",
                 "out": "./lib/schemas/postListsIdSegments.out.json"
-            }
-        },
-        "getListsIdSegmentsId": {
-            "main": "./lib/actions/getListsIdSegmentsId.js",
-            "title": "Get segment info",
-            "description": "Get information about a specific segment.",
-            "fields": {
-                "verbose": {
-                    "viewClass": "CheckBoxView",
-                    "label": "Debug this step (log more data)"
-                }
-            },
-            "metadata": {
-                "in": "./lib/schemas/getListsIdSegmentsId.in.json",
-                "out": "./lib/schemas/getListsIdSegmentsId.out.json"
             }
         },
         "patchListsIdSegmentsId": {
@@ -2294,21 +1139,6 @@
             "metadata": {
                 "in": "./lib/schemas/postListsIdMembers.in.json",
                 "out": "./lib/schemas/postListsIdMembers.out.json"
-            }
-        },
-        "getListsIdMembersId": {
-            "main": "./lib/actions/getListsIdMembersId.js",
-            "title": "Get member info",
-            "description": "Get information about a specific list member, including a currently subscribed, unsubscribed, or bounced member.",
-            "fields": {
-                "verbose": {
-                    "viewClass": "CheckBoxView",
-                    "label": "Debug this step (log more data)"
-                }
-            },
-            "metadata": {
-                "in": "./lib/schemas/getListsIdMembersId.in.json",
-                "out": "./lib/schemas/getListsIdMembersId.out.json"
             }
         },
         "putListsIdMembersId": {
@@ -2491,36 +1321,6 @@
                 "out": "./lib/schemas/postListsIdWebhooks.out.json"
             }
         },
-        "getListsIdWebhooksId": {
-            "main": "./lib/actions/getListsIdWebhooksId.js",
-            "title": "Get webhook info",
-            "description": "Get information about a specific webhook.",
-            "fields": {
-                "verbose": {
-                    "viewClass": "CheckBoxView",
-                    "label": "Debug this step (log more data)"
-                }
-            },
-            "metadata": {
-                "in": "./lib/schemas/getListsIdWebhooksId.in.json",
-                "out": "./lib/schemas/getListsIdWebhooksId.out.json"
-            }
-        },
-        "patchListsIdWebhooksId": {
-            "main": "./lib/actions/patchListsIdWebhooksId.js",
-            "title": "Update webhook",
-            "description": "Update the settings for an existing webhook.",
-            "fields": {
-                "verbose": {
-                    "viewClass": "CheckBoxView",
-                    "label": "Debug this step (log more data)"
-                }
-            },
-            "metadata": {
-                "in": "./lib/schemas/patchListsIdWebhooksId.in.json",
-                "out": "./lib/schemas/patchListsIdWebhooksId.out.json"
-            }
-        },
         "postListsIdSignupForms": {
             "main": "./lib/actions/postListsIdSignupForms.js",
             "title": "Customize signup form",
@@ -2549,36 +1349,6 @@
             "metadata": {
                 "in": "./lib/schemas/postAllLandingPages.in.json",
                 "out": "./lib/schemas/postAllLandingPages.out.json"
-            }
-        },
-        "getLandingPageId": {
-            "main": "./lib/actions/getLandingPageId.js",
-            "title": "Get landing page info",
-            "description": "Get information about a specific page.",
-            "fields": {
-                "verbose": {
-                    "viewClass": "CheckBoxView",
-                    "label": "Debug this step (log more data)"
-                }
-            },
-            "metadata": {
-                "in": "./lib/schemas/getLandingPageId.in.json",
-                "out": "./lib/schemas/getLandingPageId.out.json"
-            }
-        },
-        "patchLandingPageId": {
-            "main": "./lib/actions/patchLandingPageId.js",
-            "title": "Update landing page",
-            "description": "Update a landing page.",
-            "fields": {
-                "verbose": {
-                    "viewClass": "CheckBoxView",
-                    "label": "Debug this step (log more data)"
-                }
-            },
-            "metadata": {
-                "in": "./lib/schemas/patchLandingPageId.in.json",
-                "out": "./lib/schemas/patchLandingPageId.out.json"
             }
         },
         "postLandingPageIdActionsPublish": {
@@ -2611,126 +1381,6 @@
                 "out": "./lib/schemas/postLandingPageIdActionsUnpublish.out.json"
             }
         },
-        "getReportsId": {
-            "main": "./lib/actions/getReportsId.js",
-            "title": "Get campaign report",
-            "description": "Get report details for a specific sent campaign.",
-            "fields": {
-                "verbose": {
-                    "viewClass": "CheckBoxView",
-                    "label": "Debug this step (log more data)"
-                }
-            },
-            "metadata": {
-                "in": "./lib/schemas/getReportsId.in.json",
-                "out": "./lib/schemas/getReportsId.out.json"
-            }
-        },
-        "getReportsIdAbuseReportsIdId": {
-            "main": "./lib/actions/getReportsIdAbuseReportsIdId.js",
-            "title": "Get abuse report",
-            "description": "Get information about a specific abuse report for a campaign.",
-            "fields": {
-                "verbose": {
-                    "viewClass": "CheckBoxView",
-                    "label": "Debug this step (log more data)"
-                }
-            },
-            "metadata": {
-                "in": "./lib/schemas/getReportsIdAbuseReportsIdId.in.json",
-                "out": "./lib/schemas/getReportsIdAbuseReportsIdId.out.json"
-            }
-        },
-        "getReportsIdClickDetailsId": {
-            "main": "./lib/actions/getReportsIdClickDetailsId.js",
-            "title": "Get campaign link details",
-            "description": "Get click details for a specific link in a campaign.",
-            "fields": {
-                "verbose": {
-                    "viewClass": "CheckBoxView",
-                    "label": "Debug this step (log more data)"
-                }
-            },
-            "metadata": {
-                "in": "./lib/schemas/getReportsIdClickDetailsId.in.json",
-                "out": "./lib/schemas/getReportsIdClickDetailsId.out.json"
-            }
-        },
-        "getReportsIdClickDetailsIdMembersId": {
-            "main": "./lib/actions/getReportsIdClickDetailsIdMembersId.js",
-            "title": "Get clicked link subscriber",
-            "description": "Get information about a specific subscriber who clicked a link in a specific campaign.",
-            "fields": {
-                "verbose": {
-                    "viewClass": "CheckBoxView",
-                    "label": "Debug this step (log more data)"
-                }
-            },
-            "metadata": {
-                "in": "./lib/schemas/getReportsIdClickDetailsIdMembersId.in.json",
-                "out": "./lib/schemas/getReportsIdClickDetailsIdMembersId.out.json"
-            }
-        },
-        "getReportsIdOpenDetailsIdMembersId": {
-            "main": "./lib/actions/getReportsIdOpenDetailsIdMembersId.js",
-            "title": "Get opened campaign subscriber",
-            "description": "Get information about a specific subscriber who opened a campaign.",
-            "fields": {
-                "verbose": {
-                    "viewClass": "CheckBoxView",
-                    "label": "Debug this step (log more data)"
-                }
-            },
-            "metadata": {
-                "in": "./lib/schemas/getReportsIdOpenDetailsIdMembersId.in.json",
-                "out": "./lib/schemas/getReportsIdOpenDetailsIdMembersId.out.json"
-            }
-        },
-        "getReportsIdEmailActivityId": {
-            "main": "./lib/actions/getReportsIdEmailActivityId.js",
-            "title": "Get subscriber email activity",
-            "description": "Get a specific list member's activity in a campaign including opens, clicks, and bounces.",
-            "fields": {
-                "verbose": {
-                    "viewClass": "CheckBoxView",
-                    "label": "Debug this step (log more data)"
-                }
-            },
-            "metadata": {
-                "in": "./lib/schemas/getReportsIdEmailActivityId.in.json",
-                "out": "./lib/schemas/getReportsIdEmailActivityId.out.json"
-            }
-        },
-        "getReportsIdSentToId": {
-            "main": "./lib/actions/getReportsIdSentToId.js",
-            "title": "Get campaign recipient info",
-            "description": "Get information about a specific campaign recipient.",
-            "fields": {
-                "verbose": {
-                    "viewClass": "CheckBoxView",
-                    "label": "Debug this step (log more data)"
-                }
-            },
-            "metadata": {
-                "in": "./lib/schemas/getReportsIdSentToId.in.json",
-                "out": "./lib/schemas/getReportsIdSentToId.out.json"
-            }
-        },
-        "getReportsIdUnsubscribedId": {
-            "main": "./lib/actions/getReportsIdUnsubscribedId.js",
-            "title": "Get unsubscribed member",
-            "description": "Get information about a specific list member who unsubscribed from a campaign.",
-            "fields": {
-                "verbose": {
-                    "viewClass": "CheckBoxView",
-                    "label": "Debug this step (log more data)"
-                }
-            },
-            "metadata": {
-                "in": "./lib/schemas/getReportsIdUnsubscribedId.in.json",
-                "out": "./lib/schemas/getReportsIdUnsubscribedId.out.json"
-            }
-        },
         "postTemplates": {
             "main": "./lib/actions/postTemplates.js",
             "title": "Add template",
@@ -2746,36 +1396,6 @@
                 "out": "./lib/schemas/postTemplates.out.json"
             }
         },
-        "getTemplatesId": {
-            "main": "./lib/actions/getTemplatesId.js",
-            "title": "Get template info",
-            "description": "Get information about a specific template.",
-            "fields": {
-                "verbose": {
-                    "viewClass": "CheckBoxView",
-                    "label": "Debug this step (log more data)"
-                }
-            },
-            "metadata": {
-                "in": "./lib/schemas/getTemplatesId.in.json",
-                "out": "./lib/schemas/getTemplatesId.out.json"
-            }
-        },
-        "patchTemplatesId": {
-            "main": "./lib/actions/patchTemplatesId.js",
-            "title": "Update template",
-            "description": "Update the name, HTML, or `folder_id` of an existing template.",
-            "fields": {
-                "verbose": {
-                    "viewClass": "CheckBoxView",
-                    "label": "Debug this step (log more data)"
-                }
-            },
-            "metadata": {
-                "in": "./lib/schemas/patchTemplatesId.in.json",
-                "out": "./lib/schemas/patchTemplatesId.out.json"
-            }
-        },
         "postEcommerceStores": {
             "main": "./lib/actions/postEcommerceStores.js",
             "title": "Add store",
@@ -2789,126 +1409,6 @@
             "metadata": {
                 "in": "./lib/schemas/postEcommerceStores.in.json",
                 "out": "./lib/schemas/postEcommerceStores.out.json"
-            }
-        },
-        "getEcommerceStoresId": {
-            "main": "./lib/actions/getEcommerceStoresId.js",
-            "title": "Get store info",
-            "description": "Get information about a specific store.",
-            "fields": {
-                "verbose": {
-                    "viewClass": "CheckBoxView",
-                    "label": "Debug this step (log more data)"
-                }
-            },
-            "metadata": {
-                "in": "./lib/schemas/getEcommerceStoresId.in.json",
-                "out": "./lib/schemas/getEcommerceStoresId.out.json"
-            }
-        },
-        "patchEcommerceStoresId": {
-            "main": "./lib/actions/patchEcommerceStoresId.js",
-            "title": "Update store",
-            "description": "Update a store.",
-            "fields": {
-                "verbose": {
-                    "viewClass": "CheckBoxView",
-                    "label": "Debug this step (log more data)"
-                }
-            },
-            "metadata": {
-                "in": "./lib/schemas/patchEcommerceStoresId.in.json",
-                "out": "./lib/schemas/patchEcommerceStoresId.out.json"
-            }
-        },
-        "postEcommerceStoresIdCarts": {
-            "main": "./lib/actions/postEcommerceStoresIdCarts.js",
-            "title": "Add cart",
-            "description": "Add a new cart to a store.",
-            "fields": {
-                "verbose": {
-                    "viewClass": "CheckBoxView",
-                    "label": "Debug this step (log more data)"
-                }
-            },
-            "metadata": {
-                "in": "./lib/schemas/postEcommerceStoresIdCarts.in.json",
-                "out": "./lib/schemas/postEcommerceStoresIdCarts.out.json"
-            }
-        },
-        "getEcommerceStoresIdCartsId": {
-            "main": "./lib/actions/getEcommerceStoresIdCartsId.js",
-            "title": "Get cart info",
-            "description": "Get information about a specific cart.",
-            "fields": {
-                "verbose": {
-                    "viewClass": "CheckBoxView",
-                    "label": "Debug this step (log more data)"
-                }
-            },
-            "metadata": {
-                "in": "./lib/schemas/getEcommerceStoresIdCartsId.in.json",
-                "out": "./lib/schemas/getEcommerceStoresIdCartsId.out.json"
-            }
-        },
-        "patchEcommerceStoresIdCartsId": {
-            "main": "./lib/actions/patchEcommerceStoresIdCartsId.js",
-            "title": "Update cart",
-            "description": "Update a specific cart.",
-            "fields": {
-                "verbose": {
-                    "viewClass": "CheckBoxView",
-                    "label": "Debug this step (log more data)"
-                }
-            },
-            "metadata": {
-                "in": "./lib/schemas/patchEcommerceStoresIdCartsId.in.json",
-                "out": "./lib/schemas/patchEcommerceStoresIdCartsId.out.json"
-            }
-        },
-        "postEcommerceStoresIdCartsIdLines": {
-            "main": "./lib/actions/postEcommerceStoresIdCartsIdLines.js",
-            "title": "Add cart line item",
-            "description": "Add a new line item to an existing cart.",
-            "fields": {
-                "verbose": {
-                    "viewClass": "CheckBoxView",
-                    "label": "Debug this step (log more data)"
-                }
-            },
-            "metadata": {
-                "in": "./lib/schemas/postEcommerceStoresIdCartsIdLines.in.json",
-                "out": "./lib/schemas/postEcommerceStoresIdCartsIdLines.out.json"
-            }
-        },
-        "getEcommerceStoresIdCartsIdLinesId": {
-            "main": "./lib/actions/getEcommerceStoresIdCartsIdLinesId.js",
-            "title": "Get cart line item",
-            "description": "Get information about a specific cart line item.",
-            "fields": {
-                "verbose": {
-                    "viewClass": "CheckBoxView",
-                    "label": "Debug this step (log more data)"
-                }
-            },
-            "metadata": {
-                "in": "./lib/schemas/getEcommerceStoresIdCartsIdLinesId.in.json",
-                "out": "./lib/schemas/getEcommerceStoresIdCartsIdLinesId.out.json"
-            }
-        },
-        "patchEcommerceStoresIdCartsIdLinesId": {
-            "main": "./lib/actions/patchEcommerceStoresIdCartsIdLinesId.js",
-            "title": "Update cart line item",
-            "description": "Update a specific cart line item.",
-            "fields": {
-                "verbose": {
-                    "viewClass": "CheckBoxView",
-                    "label": "Debug this step (log more data)"
-                }
-            },
-            "metadata": {
-                "in": "./lib/schemas/patchEcommerceStoresIdCartsIdLinesId.in.json",
-                "out": "./lib/schemas/patchEcommerceStoresIdCartsIdLinesId.out.json"
             }
         },
         "postEcommerceStoresIdCustomers": {
