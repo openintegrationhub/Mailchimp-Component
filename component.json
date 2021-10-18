@@ -1249,7 +1249,7 @@
         "getAutomationsId": {
             "main": "./lib/actions/getAutomationsId.js",
             "title": "Get automation info",
-            "description": "Get a summary of an individual classic automation workflow's settings and content. The `trigger_settings` object returns information for the first email in the workflow.",
+            "description": "Get a summary of an individual classic automation workflow's settings and content. ",
             "fields": {
                 "verbose": {
                     "viewClass": "CheckBoxView",
@@ -1294,7 +1294,7 @@
         "archiveAutomations": {
             "main": "./lib/actions/archiveAutomations.js",
             "title": "Archive automation",
-            "description": "Archiving will permanently end your automation and keep the report data. You'll be able to replicate your archived automation, but you can't restart it.",
+            "description": "Archiving will permanently end your automation and keep the report data. ",
             "fields": {
                 "verbose": {
                     "viewClass": "CheckBoxView",
@@ -1324,7 +1324,7 @@
         "deleteAutomationsIdEmailsId": {
             "main": "./lib/actions/deleteAutomationsIdEmailsId.js",
             "title": "Delete workflow email",
-            "description": "Removes an individual classic automation workflow email. Emails from certain workflow types, including the Abandoned Cart Email (abandonedCart) and Product Retargeting Email (abandonedBrowse) Workflows, cannot be deleted.",
+            "description": "Removes an individual classic automation workflow email. ",
             "fields": {
                 "verbose": {
                     "viewClass": "CheckBoxView",
@@ -1354,7 +1354,7 @@
         "postAutomationsIdEmailsIdQueue": {
             "main": "./lib/actions/postAutomationsIdEmailsIdQueue.js",
             "title": "Add subscriber to workflow email",
-            "description": "Manually add a subscriber to a workflow, bypassing the default trigger settings. You can also use this endpoint to trigger a series of automated emails in an API 3.0 workflow type.",
+            "description": "Manually add a subscriber to a workflow, bypassing the default trigger settings. ",
             "fields": {
                 "verbose": {
                     "viewClass": "CheckBoxView",
@@ -1414,7 +1414,7 @@
         "postAutomationsIdRemovedSubscribers": {
             "main": "./lib/actions/postAutomationsIdRemovedSubscribers.js",
             "title": "Remove subscriber from workflow",
-            "description": "Remove a subscriber from a specific classic automation workflow. You can remove a subscriber at any point in an automation workflow, regardless of how many emails they've been sent from that workflow. Once they're removed, they can never be added back to the same workflow.",
+            "description": "Remove a subscriber from a specific classic automation workflow. ",
             "fields": {
                 "verbose": {
                     "viewClass": "CheckBoxView",
@@ -1474,7 +1474,7 @@
         "deleteBatchesId": {
             "main": "./lib/actions/deleteBatchesId.js",
             "title": "Delete batch request",
-            "description": "Stops a batch request from running. Since only one batch request is run at a time, this can be used to cancel a long running request. The results of any completed operations will not be available after this call.",
+            "description": "Stops a batch request from running. Since only one batch request is run at a time, this can be used to cancel a long running request.",
             "fields": {
                 "verbose": {
                     "viewClass": "CheckBoxView",
@@ -2044,7 +2044,7 @@
         "postCustomerJourneysJourneysIdStepsIdActionsTrigger": {
             "main": "./lib/actions/postCustomerJourneysJourneysIdStepsIdActionsTrigger.js",
             "title": "Customer Journeys API trigger for a contact",
-            "description": "A step trigger in a Customer Journey. To use it, create a starting point or step from the Customer Journey builder in the app using the Customer Journeys API condition. We'll provide a url during the process that includes the {journey_id} and {step_id}. You'll then be able to use this endpoint to trigger the condition for the posted contact.",
+            "description": "A step trigger in a Customer Journey. To use it, create a starting point or step from the Customer Journey builder in the app using the Customer Journeys API condition.",
             "fields": {
                 "verbose": {
                     "viewClass": "CheckBoxView",
@@ -2224,7 +2224,7 @@
         "deleteListsId": {
             "main": "./lib/actions/deleteListsId.js",
             "title": "Delete list",
-            "description": "Delete a list from your Mailchimp account. If you delete a list, you'll lose the list history--including subscriber activity, unsubscribes, complaints, and bounces. You'll also lose subscribers' email addresses, unless you exported and backed up your list.",
+            "description": "Delete a list from your Mailchimp account. If you delete a list, you'll lose the list history--including subscriber activity, unsubscribes, complaints, and bounces. ",
             "fields": {
                 "verbose": {
                     "viewClass": "CheckBoxView",
