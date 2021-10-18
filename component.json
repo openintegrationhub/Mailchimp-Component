@@ -1321,21 +1321,6 @@
                 "out": "./lib/schemas/getAutomationsIdEmailsId.out.json"
             }
         },
-        "deleteAutomationsIdEmailsId": {
-            "main": "./lib/actions/deleteAutomationsIdEmailsId.js",
-            "title": "Delete workflow email",
-            "description": "Removes an individual classic automation workflow email. ",
-            "fields": {
-                "verbose": {
-                    "viewClass": "CheckBoxView",
-                    "label": "Debug this step (log more data)"
-                }
-            },
-            "metadata": {
-                "in": "./lib/schemas/deleteAutomationsIdEmailsId.in.json",
-                "out": "./lib/schemas/deleteAutomationsIdEmailsId.out.json"
-            }
-        },
         "patchAutomationEmailWorkflowId": {
             "main": "./lib/actions/patchAutomationEmailWorkflowId.js",
             "title": "Update workflow email",
@@ -1471,21 +1456,6 @@
                 "out": "./lib/schemas/getBatchesId.out.json"
             }
         },
-        "deleteBatchesId": {
-            "main": "./lib/actions/deleteBatchesId.js",
-            "title": "Delete batch request",
-            "description": "Stops a batch request from running. Since only one batch request is run at a time, this can be used to cancel a long running request.",
-            "fields": {
-                "verbose": {
-                    "viewClass": "CheckBoxView",
-                    "label": "Debug this step (log more data)"
-                }
-            },
-            "metadata": {
-                "in": "./lib/schemas/deleteBatchesId.in.json",
-                "out": "./lib/schemas/deleteBatchesId.out.json"
-            }
-        },
         "postBatchWebhooks": {
             "main": "./lib/actions/postBatchWebhooks.js",
             "title": "Add batch webhook",
@@ -1529,21 +1499,6 @@
             "metadata": {
                 "in": "./lib/schemas/patchBatchWebhooks.in.json",
                 "out": "./lib/schemas/patchBatchWebhooks.out.json"
-            }
-        },
-        "deleteBatchWebhookId": {
-            "main": "./lib/actions/deleteBatchWebhookId.js",
-            "title": "Delete batch webhook",
-            "description": "Remove a batch webhook. Webhooks will no longer be sent to the given URL.",
-            "fields": {
-                "verbose": {
-                    "viewClass": "CheckBoxView",
-                    "label": "Debug this step (log more data)"
-                }
-            },
-            "metadata": {
-                "in": "./lib/schemas/deleteBatchWebhookId.in.json",
-                "out": "./lib/schemas/deleteBatchWebhookId.out.json"
             }
         },
         "postTemplateFolders": {
@@ -1591,21 +1546,6 @@
                 "out": "./lib/schemas/patchTemplateFoldersId.out.json"
             }
         },
-        "deleteTemplateFoldersId": {
-            "main": "./lib/actions/deleteTemplateFoldersId.js",
-            "title": "Delete template folder",
-            "description": "Delete a specific template folder, and mark all the templates in the folder as 'unfiled'.",
-            "fields": {
-                "verbose": {
-                    "viewClass": "CheckBoxView",
-                    "label": "Debug this step (log more data)"
-                }
-            },
-            "metadata": {
-                "in": "./lib/schemas/deleteTemplateFoldersId.in.json",
-                "out": "./lib/schemas/deleteTemplateFoldersId.out.json"
-            }
-        },
         "postCampaignFolders": {
             "main": "./lib/actions/postCampaignFolders.js",
             "title": "Add campaign folder",
@@ -1651,21 +1591,6 @@
                 "out": "./lib/schemas/patchCampaignFoldersId.out.json"
             }
         },
-        "deleteCampaignFoldersId": {
-            "main": "./lib/actions/deleteCampaignFoldersId.js",
-            "title": "Delete campaign folder",
-            "description": "Delete a specific campaign folder, and mark all the campaigns in the folder as 'unfiled'.",
-            "fields": {
-                "verbose": {
-                    "viewClass": "CheckBoxView",
-                    "label": "Debug this step (log more data)"
-                }
-            },
-            "metadata": {
-                "in": "./lib/schemas/deleteCampaignFoldersId.in.json",
-                "out": "./lib/schemas/deleteCampaignFoldersId.out.json"
-            }
-        },
         "postCampaigns": {
             "main": "./lib/actions/postCampaigns.js",
             "title": "Add campaign",
@@ -1709,21 +1634,6 @@
             "metadata": {
                 "in": "./lib/schemas/patchCampaignsId.in.json",
                 "out": "./lib/schemas/patchCampaignsId.out.json"
-            }
-        },
-        "deleteCampaignsId": {
-            "main": "./lib/actions/deleteCampaignsId.js",
-            "title": "Delete campaign",
-            "description": "Remove a campaign from your Mailchimp account.",
-            "fields": {
-                "verbose": {
-                    "viewClass": "CheckBoxView",
-                    "label": "Debug this step (log more data)"
-                }
-            },
-            "metadata": {
-                "in": "./lib/schemas/deleteCampaignsId.in.json",
-                "out": "./lib/schemas/deleteCampaignsId.out.json"
             }
         },
         "postCampaignsIdActionsCancelSend": {
@@ -1921,21 +1831,6 @@
                 "out": "./lib/schemas/patchCampaignsIdFeedbackId.out.json"
             }
         },
-        "deleteCampaignsIdFeedbackId": {
-            "main": "./lib/actions/deleteCampaignsIdFeedbackId.js",
-            "title": "Delete campaign feedback message",
-            "description": "Remove a specific feedback message for a campaign.",
-            "fields": {
-                "verbose": {
-                    "viewClass": "CheckBoxView",
-                    "label": "Debug this step (log more data)"
-                }
-            },
-            "metadata": {
-                "in": "./lib/schemas/deleteCampaignsIdFeedbackId.in.json",
-                "out": "./lib/schemas/deleteCampaignsIdFeedbackId.out.json"
-            }
-        },
         "postConnectedSites": {
             "main": "./lib/actions/postConnectedSites.js",
             "title": "Add connected site",
@@ -1964,21 +1859,6 @@
             "metadata": {
                 "in": "./lib/schemas/getConnectedSitesId.in.json",
                 "out": "./lib/schemas/getConnectedSitesId.out.json"
-            }
-        },
-        "deleteConnectedSitesId": {
-            "main": "./lib/actions/deleteConnectedSitesId.js",
-            "title": "Delete connected site",
-            "description": "Remove a connected site from your Mailchimp account.",
-            "fields": {
-                "verbose": {
-                    "viewClass": "CheckBoxView",
-                    "label": "Debug this step (log more data)"
-                }
-            },
-            "metadata": {
-                "in": "./lib/schemas/deleteConnectedSitesId.in.json",
-                "out": "./lib/schemas/deleteConnectedSitesId.out.json"
             }
         },
         "postConnectedSitesIdActionsVerifyScriptInstallation": {
@@ -2101,21 +1981,6 @@
                 "out": "./lib/schemas/patchFileManagerFilesId.out.json"
             }
         },
-        "deleteFileManagerFilesId": {
-            "main": "./lib/actions/deleteFileManagerFilesId.js",
-            "title": "Delete file",
-            "description": "Remove a specific file from the File Manager.",
-            "fields": {
-                "verbose": {
-                    "viewClass": "CheckBoxView",
-                    "label": "Debug this step (log more data)"
-                }
-            },
-            "metadata": {
-                "in": "./lib/schemas/deleteFileManagerFilesId.in.json",
-                "out": "./lib/schemas/deleteFileManagerFilesId.out.json"
-            }
-        },
         "postFileManagerFolders": {
             "main": "./lib/actions/postFileManagerFolders.js",
             "title": "Add folder",
@@ -2161,21 +2026,6 @@
                 "out": "./lib/schemas/patchFileManagerFoldersId.out.json"
             }
         },
-        "deleteFileManagerFoldersId": {
-            "main": "./lib/actions/deleteFileManagerFoldersId.js",
-            "title": "Delete folder",
-            "description": "Delete a specific folder in the File Manager.",
-            "fields": {
-                "verbose": {
-                    "viewClass": "CheckBoxView",
-                    "label": "Debug this step (log more data)"
-                }
-            },
-            "metadata": {
-                "in": "./lib/schemas/deleteFileManagerFoldersId.in.json",
-                "out": "./lib/schemas/deleteFileManagerFoldersId.out.json"
-            }
-        },
         "postLists": {
             "main": "./lib/actions/postLists.js",
             "title": "Add list",
@@ -2219,21 +2069,6 @@
             "metadata": {
                 "in": "./lib/schemas/patchListsId.in.json",
                 "out": "./lib/schemas/patchListsId.out.json"
-            }
-        },
-        "deleteListsId": {
-            "main": "./lib/actions/deleteListsId.js",
-            "title": "Delete list",
-            "description": "Delete a list from your Mailchimp account. ",
-            "fields": {
-                "verbose": {
-                    "viewClass": "CheckBoxView",
-                    "label": "Debug this step (log more data)"
-                }
-            },
-            "metadata": {
-                "in": "./lib/schemas/deleteListsId.in.json",
-                "out": "./lib/schemas/deleteListsId.out.json"
             }
         },
         "postListsId": {
@@ -2326,21 +2161,6 @@
                 "out": "./lib/schemas/patchListsIdInterestCategoriesId.out.json"
             }
         },
-        "deleteListsIdInterestCategoriesId": {
-            "main": "./lib/actions/deleteListsIdInterestCategoriesId.js",
-            "title": "Delete interest category",
-            "description": "Delete a specific interest category.",
-            "fields": {
-                "verbose": {
-                    "viewClass": "CheckBoxView",
-                    "label": "Debug this step (log more data)"
-                }
-            },
-            "metadata": {
-                "in": "./lib/schemas/deleteListsIdInterestCategoriesId.in.json",
-                "out": "./lib/schemas/deleteListsIdInterestCategoriesId.out.json"
-            }
-        },
         "postListsIdInterestCategoriesIdInterests": {
             "main": "./lib/actions/postListsIdInterestCategoriesIdInterests.js",
             "title": "Add interest in category",
@@ -2386,21 +2206,6 @@
                 "out": "./lib/schemas/patchListsIdInterestCategoriesIdInterestsId.out.json"
             }
         },
-        "deleteListsIdInterestCategoriesIdInterestsId": {
-            "main": "./lib/actions/deleteListsIdInterestCategoriesIdInterestsId.js",
-            "title": "Delete interest in category",
-            "description": "Delete interests or group names in a specific category.",
-            "fields": {
-                "verbose": {
-                    "viewClass": "CheckBoxView",
-                    "label": "Debug this step (log more data)"
-                }
-            },
-            "metadata": {
-                "in": "./lib/schemas/deleteListsIdInterestCategoriesIdInterestsId.in.json",
-                "out": "./lib/schemas/deleteListsIdInterestCategoriesIdInterestsId.out.json"
-            }
-        },
         "postListsIdSegments": {
             "main": "./lib/actions/postListsIdSegments.js",
             "title": "Add segment",
@@ -2429,21 +2234,6 @@
             "metadata": {
                 "in": "./lib/schemas/getListsIdSegmentsId.in.json",
                 "out": "./lib/schemas/getListsIdSegmentsId.out.json"
-            }
-        },
-        "deleteListsIdSegmentsId": {
-            "main": "./lib/actions/deleteListsIdSegmentsId.js",
-            "title": "Delete segment",
-            "description": "Delete a specific segment in a list.",
-            "fields": {
-                "verbose": {
-                    "viewClass": "CheckBoxView",
-                    "label": "Debug this step (log more data)"
-                }
-            },
-            "metadata": {
-                "in": "./lib/schemas/deleteListsIdSegmentsId.in.json",
-                "out": "./lib/schemas/deleteListsIdSegmentsId.out.json"
             }
         },
         "patchListsIdSegmentsId": {
@@ -2489,21 +2279,6 @@
             "metadata": {
                 "in": "./lib/schemas/postListsIdSegmentsIdMembers.in.json",
                 "out": "./lib/schemas/postListsIdSegmentsIdMembers.out.json"
-            }
-        },
-        "deleteListsIdSegmentsIdMembersId": {
-            "main": "./lib/actions/deleteListsIdSegmentsIdMembersId.js",
-            "title": "Remove list member from segment",
-            "description": "Remove a member from the specified static segment.",
-            "fields": {
-                "verbose": {
-                    "viewClass": "CheckBoxView",
-                    "label": "Debug this step (log more data)"
-                }
-            },
-            "metadata": {
-                "in": "./lib/schemas/deleteListsIdSegmentsIdMembersId.in.json",
-                "out": "./lib/schemas/deleteListsIdSegmentsIdMembersId.out.json"
             }
         },
         "postListsIdMembers": {
@@ -2564,21 +2339,6 @@
             "metadata": {
                 "in": "./lib/schemas/patchListsIdMembersId.in.json",
                 "out": "./lib/schemas/patchListsIdMembersId.out.json"
-            }
-        },
-        "deleteListsIdMembersId": {
-            "main": "./lib/actions/deleteListsIdMembersId.js",
-            "title": "Archive list member",
-            "description": "Archive a list member. To permanently delete, use the delete-permanent action.",
-            "fields": {
-                "verbose": {
-                    "viewClass": "CheckBoxView",
-                    "label": "Debug this step (log more data)"
-                }
-            },
-            "metadata": {
-                "in": "./lib/schemas/deleteListsIdMembersId.in.json",
-                "out": "./lib/schemas/deleteListsIdMembersId.out.json"
             }
         },
         "postListMemberTags": {
@@ -2656,21 +2416,6 @@
                 "out": "./lib/schemas/patchListsIdMembersIdNotesId.out.json"
             }
         },
-        "deleteListsIdMembersIdNotesId": {
-            "main": "./lib/actions/deleteListsIdMembersIdNotesId.js",
-            "title": "Delete note",
-            "description": "Delete a specific note for a specific list member.",
-            "fields": {
-                "verbose": {
-                    "viewClass": "CheckBoxView",
-                    "label": "Debug this step (log more data)"
-                }
-            },
-            "metadata": {
-                "in": "./lib/schemas/deleteListsIdMembersIdNotesId.in.json",
-                "out": "./lib/schemas/deleteListsIdMembersIdNotesId.out.json"
-            }
-        },
         "postListsIdMembersHashActionsDeletePermanent": {
             "main": "./lib/actions/postListsIdMembersHashActionsDeletePermanent.js",
             "title": "Delete list member",
@@ -2731,21 +2476,6 @@
                 "out": "./lib/schemas/patchListsIdMergeFieldsId.out.json"
             }
         },
-        "deleteListsIdMergeFieldsId": {
-            "main": "./lib/actions/deleteListsIdMergeFieldsId.js",
-            "title": "Delete merge field",
-            "description": "Delete a specific merge field in a list.",
-            "fields": {
-                "verbose": {
-                    "viewClass": "CheckBoxView",
-                    "label": "Debug this step (log more data)"
-                }
-            },
-            "metadata": {
-                "in": "./lib/schemas/deleteListsIdMergeFieldsId.in.json",
-                "out": "./lib/schemas/deleteListsIdMergeFieldsId.out.json"
-            }
-        },
         "postListsIdWebhooks": {
             "main": "./lib/actions/postListsIdWebhooks.js",
             "title": "Add webhook",
@@ -2774,21 +2504,6 @@
             "metadata": {
                 "in": "./lib/schemas/getListsIdWebhooksId.in.json",
                 "out": "./lib/schemas/getListsIdWebhooksId.out.json"
-            }
-        },
-        "deleteListsIdWebhooksId": {
-            "main": "./lib/actions/deleteListsIdWebhooksId.js",
-            "title": "Delete webhook",
-            "description": "Delete a specific webhook in a list.",
-            "fields": {
-                "verbose": {
-                    "viewClass": "CheckBoxView",
-                    "label": "Debug this step (log more data)"
-                }
-            },
-            "metadata": {
-                "in": "./lib/schemas/deleteListsIdWebhooksId.in.json",
-                "out": "./lib/schemas/deleteListsIdWebhooksId.out.json"
             }
         },
         "patchListsIdWebhooksId": {
@@ -2864,21 +2579,6 @@
             "metadata": {
                 "in": "./lib/schemas/patchLandingPageId.in.json",
                 "out": "./lib/schemas/patchLandingPageId.out.json"
-            }
-        },
-        "deleteLandingPageId": {
-            "main": "./lib/actions/deleteLandingPageId.js",
-            "title": "Delete landing page",
-            "description": "Delete a landing page.",
-            "fields": {
-                "verbose": {
-                    "viewClass": "CheckBoxView",
-                    "label": "Debug this step (log more data)"
-                }
-            },
-            "metadata": {
-                "in": "./lib/schemas/deleteLandingPageId.in.json",
-                "out": "./lib/schemas/deleteLandingPageId.out.json"
             }
         },
         "postLandingPageIdActionsPublish": {
@@ -3076,21 +2776,6 @@
                 "out": "./lib/schemas/patchTemplatesId.out.json"
             }
         },
-        "deleteTemplatesId": {
-            "main": "./lib/actions/deleteTemplatesId.js",
-            "title": "Delete template",
-            "description": "Delete a specific template.",
-            "fields": {
-                "verbose": {
-                    "viewClass": "CheckBoxView",
-                    "label": "Debug this step (log more data)"
-                }
-            },
-            "metadata": {
-                "in": "./lib/schemas/deleteTemplatesId.in.json",
-                "out": "./lib/schemas/deleteTemplatesId.out.json"
-            }
-        },
         "postEcommerceStores": {
             "main": "./lib/actions/postEcommerceStores.js",
             "title": "Add store",
@@ -3134,21 +2819,6 @@
             "metadata": {
                 "in": "./lib/schemas/patchEcommerceStoresId.in.json",
                 "out": "./lib/schemas/patchEcommerceStoresId.out.json"
-            }
-        },
-        "deleteEcommerceStoresId": {
-            "main": "./lib/actions/deleteEcommerceStoresId.js",
-            "title": "Delete store",
-            "description": "Delete a store. Deleting a store will also delete any associated subresources, including Customers, Orders, Products, and Carts.",
-            "fields": {
-                "verbose": {
-                    "viewClass": "CheckBoxView",
-                    "label": "Debug this step (log more data)"
-                }
-            },
-            "metadata": {
-                "in": "./lib/schemas/deleteEcommerceStoresId.in.json",
-                "out": "./lib/schemas/deleteEcommerceStoresId.out.json"
             }
         },
         "postEcommerceStoresIdCarts": {
@@ -3196,21 +2866,6 @@
                 "out": "./lib/schemas/patchEcommerceStoresIdCartsId.out.json"
             }
         },
-        "deleteEcommerceStoresIdCartsId": {
-            "main": "./lib/actions/deleteEcommerceStoresIdCartsId.js",
-            "title": "Delete cart",
-            "description": "Delete a cart.",
-            "fields": {
-                "verbose": {
-                    "viewClass": "CheckBoxView",
-                    "label": "Debug this step (log more data)"
-                }
-            },
-            "metadata": {
-                "in": "./lib/schemas/deleteEcommerceStoresIdCartsId.in.json",
-                "out": "./lib/schemas/deleteEcommerceStoresIdCartsId.out.json"
-            }
-        },
         "postEcommerceStoresIdCartsIdLines": {
             "main": "./lib/actions/postEcommerceStoresIdCartsIdLines.js",
             "title": "Add cart line item",
@@ -3254,21 +2909,6 @@
             "metadata": {
                 "in": "./lib/schemas/patchEcommerceStoresIdCartsIdLinesId.in.json",
                 "out": "./lib/schemas/patchEcommerceStoresIdCartsIdLinesId.out.json"
-            }
-        },
-        "deleteEcommerceStoresIdCartsLinesId": {
-            "main": "./lib/actions/deleteEcommerceStoresIdCartsLinesId.js",
-            "title": "Delete cart line item",
-            "description": "Delete a specific cart line item.",
-            "fields": {
-                "verbose": {
-                    "viewClass": "CheckBoxView",
-                    "label": "Debug this step (log more data)"
-                }
-            },
-            "metadata": {
-                "in": "./lib/schemas/deleteEcommerceStoresIdCartsLinesId.in.json",
-                "out": "./lib/schemas/deleteEcommerceStoresIdCartsLinesId.out.json"
             }
         },
         "postEcommerceStoresIdCustomers": {
@@ -3331,21 +2971,6 @@
                 "out": "./lib/schemas/patchEcommerceStoresIdCustomersId.out.json"
             }
         },
-        "deleteEcommerceStoresIdCustomersId": {
-            "main": "./lib/actions/deleteEcommerceStoresIdCustomersId.js",
-            "title": "Delete customer",
-            "description": "Delete a customer from a store.",
-            "fields": {
-                "verbose": {
-                    "viewClass": "CheckBoxView",
-                    "label": "Debug this step (log more data)"
-                }
-            },
-            "metadata": {
-                "in": "./lib/schemas/deleteEcommerceStoresIdCustomersId.in.json",
-                "out": "./lib/schemas/deleteEcommerceStoresIdCustomersId.out.json"
-            }
-        },
         "postEcommerceStoresIdPromorules": {
             "main": "./lib/actions/postEcommerceStoresIdPromorules.js",
             "title": "Add promo rule",
@@ -3389,21 +3014,6 @@
             "metadata": {
                 "in": "./lib/schemas/patchEcommerceStoresIdPromorulesId.in.json",
                 "out": "./lib/schemas/patchEcommerceStoresIdPromorulesId.out.json"
-            }
-        },
-        "deleteEcommerceStoresIdPromorulesId": {
-            "main": "./lib/actions/deleteEcommerceStoresIdPromorulesId.js",
-            "title": "Delete promo rule",
-            "description": "Delete a promo rule from a store.",
-            "fields": {
-                "verbose": {
-                    "viewClass": "CheckBoxView",
-                    "label": "Debug this step (log more data)"
-                }
-            },
-            "metadata": {
-                "in": "./lib/schemas/deleteEcommerceStoresIdPromorulesId.in.json",
-                "out": "./lib/schemas/deleteEcommerceStoresIdPromorulesId.out.json"
             }
         },
         "postEcommerceStoresIdPromocodes": {
@@ -3451,21 +3061,6 @@
                 "out": "./lib/schemas/patchEcommerceStoresIdPromocodesId.out.json"
             }
         },
-        "deleteEcommerceStoresIdPromocodesId": {
-            "main": "./lib/actions/deleteEcommerceStoresIdPromocodesId.js",
-            "title": "Delete promo code",
-            "description": "Delete a promo code from a store.",
-            "fields": {
-                "verbose": {
-                    "viewClass": "CheckBoxView",
-                    "label": "Debug this step (log more data)"
-                }
-            },
-            "metadata": {
-                "in": "./lib/schemas/deleteEcommerceStoresIdPromocodesId.in.json",
-                "out": "./lib/schemas/deleteEcommerceStoresIdPromocodesId.out.json"
-            }
-        },
         "postEcommerceStoresIdOrders": {
             "main": "./lib/actions/postEcommerceStoresIdOrders.js",
             "title": "Add order",
@@ -3509,21 +3104,6 @@
             "metadata": {
                 "in": "./lib/schemas/patchEcommerceStoresIdOrdersId.in.json",
                 "out": "./lib/schemas/patchEcommerceStoresIdOrdersId.out.json"
-            }
-        },
-        "deleteEcommerceStoresIdOrdersId": {
-            "main": "./lib/actions/deleteEcommerceStoresIdOrdersId.js",
-            "title": "Delete order",
-            "description": "Delete an order.",
-            "fields": {
-                "verbose": {
-                    "viewClass": "CheckBoxView",
-                    "label": "Debug this step (log more data)"
-                }
-            },
-            "metadata": {
-                "in": "./lib/schemas/deleteEcommerceStoresIdOrdersId.in.json",
-                "out": "./lib/schemas/deleteEcommerceStoresIdOrdersId.out.json"
             }
         },
         "postEcommerceStoresIdOrdersIdLines": {
@@ -3571,21 +3151,6 @@
                 "out": "./lib/schemas/patchEcommerceStoresIdOrdersIdLinesId.out.json"
             }
         },
-        "deleteEcommerceStoresIdOrdersIdLinesId": {
-            "main": "./lib/actions/deleteEcommerceStoresIdOrdersIdLinesId.js",
-            "title": "Delete order line item",
-            "description": "Delete a specific order line item.",
-            "fields": {
-                "verbose": {
-                    "viewClass": "CheckBoxView",
-                    "label": "Debug this step (log more data)"
-                }
-            },
-            "metadata": {
-                "in": "./lib/schemas/deleteEcommerceStoresIdOrdersIdLinesId.in.json",
-                "out": "./lib/schemas/deleteEcommerceStoresIdOrdersIdLinesId.out.json"
-            }
-        },
         "postEcommerceStoresIdProducts": {
             "main": "./lib/actions/postEcommerceStoresIdProducts.js",
             "title": "Add product",
@@ -3629,21 +3194,6 @@
             "metadata": {
                 "in": "./lib/schemas/patchEcommerceStoresIdProductsId.in.json",
                 "out": "./lib/schemas/patchEcommerceStoresIdProductsId.out.json"
-            }
-        },
-        "deleteEcommerceStoresIdProductsId": {
-            "main": "./lib/actions/deleteEcommerceStoresIdProductsId.js",
-            "title": "Delete product",
-            "description": "Delete a product.",
-            "fields": {
-                "verbose": {
-                    "viewClass": "CheckBoxView",
-                    "label": "Debug this step (log more data)"
-                }
-            },
-            "metadata": {
-                "in": "./lib/schemas/deleteEcommerceStoresIdProductsId.in.json",
-                "out": "./lib/schemas/deleteEcommerceStoresIdProductsId.out.json"
             }
         },
         "postEcommerceStoresIdProductsIdVariants": {
@@ -3706,21 +3256,6 @@
                 "out": "./lib/schemas/patchEcommerceStoresIdProductsIdVariantsId.out.json"
             }
         },
-        "deleteEcommerceStoresIdProductsIdVariantsId": {
-            "main": "./lib/actions/deleteEcommerceStoresIdProductsIdVariantsId.js",
-            "title": "Delete product variant",
-            "description": "Delete a product variant.",
-            "fields": {
-                "verbose": {
-                    "viewClass": "CheckBoxView",
-                    "label": "Debug this step (log more data)"
-                }
-            },
-            "metadata": {
-                "in": "./lib/schemas/deleteEcommerceStoresIdProductsIdVariantsId.in.json",
-                "out": "./lib/schemas/deleteEcommerceStoresIdProductsIdVariantsId.out.json"
-            }
-        },
         "postEcommerceStoresIdProductsIdImages": {
             "main": "./lib/actions/postEcommerceStoresIdProductsIdImages.js",
             "title": "Add product image",
@@ -3764,21 +3299,6 @@
             "metadata": {
                 "in": "./lib/schemas/patchEcommerceStoresIdProductsIdImagesId.in.json",
                 "out": "./lib/schemas/patchEcommerceStoresIdProductsIdImagesId.out.json"
-            }
-        },
-        "deleteEcommerceStoresIdProductsIdImagesId": {
-            "main": "./lib/actions/deleteEcommerceStoresIdProductsIdImagesId.js",
-            "title": "Delete product image",
-            "description": "Delete a product image.",
-            "fields": {
-                "verbose": {
-                    "viewClass": "CheckBoxView",
-                    "label": "Debug this step (log more data)"
-                }
-            },
-            "metadata": {
-                "in": "./lib/schemas/deleteEcommerceStoresIdProductsIdImagesId.in.json",
-                "out": "./lib/schemas/deleteEcommerceStoresIdProductsIdImagesId.out.json"
             }
         },
         "getFacebookAdsId": {
@@ -3839,21 +3359,6 @@
             "metadata": {
                 "in": "./lib/schemas/getVerifiedDomain.in.json",
                 "out": "./lib/schemas/getVerifiedDomain.out.json"
-            }
-        },
-        "deleteVerifiedDomain": {
-            "main": "./lib/actions/deleteVerifiedDomain.js",
-            "title": "Delete domain",
-            "description": "Delete a verified domain from the account.",
-            "fields": {
-                "verbose": {
-                    "viewClass": "CheckBoxView",
-                    "label": "Debug this step (log more data)"
-                }
-            },
-            "metadata": {
-                "in": "./lib/schemas/deleteVerifiedDomain.in.json",
-                "out": "./lib/schemas/deleteVerifiedDomain.out.json"
             }
         },
         "verifyDomain": {
