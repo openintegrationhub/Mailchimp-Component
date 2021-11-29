@@ -1036,21 +1036,6 @@
                 "out": "./lib/schemas/getListsIdInterestCategoriesId.out.json"
             }
         },
-        "patchListsIdInterestCategoriesId": {
-            "main": "./lib/actions/patchListsIdInterestCategoriesId.js",
-            "title": "Update interest category",
-            "description": "Update a specific interest category.",
-            "fields": {
-                "verbose": {
-                    "viewClass": "CheckBoxView",
-                    "label": "Debug this step (log more data)"
-                }
-            },
-            "metadata": {
-                "in": "./lib/schemas/patchListsIdInterestCategoriesId.in.json",
-                "out": "./lib/schemas/patchListsIdInterestCategoriesId.out.json"
-            }
-        },
         "postListsIdInterestCategoriesIdInterests": {
             "main": "./lib/actions/postListsIdInterestCategoriesIdInterests.js",
             "title": "Add interest in category",
@@ -1079,21 +1064,6 @@
             "metadata": {
                 "in": "./lib/schemas/postListsIdSegments.in.json",
                 "out": "./lib/schemas/postListsIdSegments.out.json"
-            }
-        },
-        "patchListsIdSegmentsId": {
-            "main": "./lib/actions/patchListsIdSegmentsId.js",
-            "title": "Update segment",
-            "description": "Update a specific segment in a list.",
-            "fields": {
-                "verbose": {
-                    "viewClass": "CheckBoxView",
-                    "label": "Debug this step (log more data)"
-                }
-            },
-            "metadata": {
-                "in": "./lib/schemas/patchListsIdSegmentsId.in.json",
-                "out": "./lib/schemas/patchListsIdSegmentsId.out.json"
             }
         },
         "postListsIdSegmentsId": {
@@ -1139,36 +1109,6 @@
             "metadata": {
                 "in": "./lib/schemas/postListsIdMembers.in.json",
                 "out": "./lib/schemas/postListsIdMembers.out.json"
-            }
-        },
-        "putListsIdMembersId": {
-            "main": "./lib/actions/putListsIdMembersId.js",
-            "title": "Add or update list member",
-            "description": "Add or update a list member.",
-            "fields": {
-                "verbose": {
-                    "viewClass": "CheckBoxView",
-                    "label": "Debug this step (log more data)"
-                }
-            },
-            "metadata": {
-                "in": "./lib/schemas/putListsIdMembersId.in.json",
-                "out": "./lib/schemas/putListsIdMembersId.out.json"
-            }
-        },
-        "patchListsIdMembersId": {
-            "main": "./lib/actions/patchListsIdMembersId.js",
-            "title": "Update list member",
-            "description": "Update information for a specific list member.",
-            "fields": {
-                "verbose": {
-                    "viewClass": "CheckBoxView",
-                    "label": "Debug this step (log more data)"
-                }
-            },
-            "metadata": {
-                "in": "./lib/schemas/patchListsIdMembersId.in.json",
-                "out": "./lib/schemas/patchListsIdMembersId.out.json"
             }
         },
         "postListMemberTags": {
