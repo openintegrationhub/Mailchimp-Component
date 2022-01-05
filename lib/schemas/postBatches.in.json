@@ -27,7 +27,8 @@
                                     "GET",
                                     "POST",
                                     "PUT",
-                                    "PATCH"
+                                    "PATCH",
+                                    "DELETE"
                                 ],
                                 "example": "POST"
                             },

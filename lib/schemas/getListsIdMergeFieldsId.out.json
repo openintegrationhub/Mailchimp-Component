@@ -9,18 +9,31 @@
         },
         "tag": {
             "type": "string",
-            "title": "Merge Field Tag",
-            "description": "The tag used in Mailchimp campaigns and for the /members endpoint."
+            "title": "Merge Tag",
+            "description": "The merge tag used for Mailchimp campaigns and [adding contact information](https://mailchimp.com/developer/marketing/docs/merge-fields/#add-merge-data-to-contacts)."
         },
         "name": {
             "type": "string",
             "title": "Merge Field Name",
-            "description": "The name of the merge field."
+            "description": "The name of the merge field (audience field)."
         },
         "type": {
             "type": "string",
             "title": "Merge Field Type",
-            "description": "The type for the merge field.",
+            "description": "The [type](https://mailchimp.com/developer/marketing/docs/merge-fields/#structure) for the merge field.",
+            "enum": [
+                "text",
+                "number",
+                "address",
+                "phone",
+                "date",
+                "url",
+                "imageurl",
+                "radio",
+                "dropdown",
+                "birthday",
+                "zip"
+            ],
             "readOnly": true
         },
         "required": {
@@ -66,7 +79,7 @@
                 "choices": {
                     "type": "array",
                     "title": "Choices",
-                    "description": "In a radio or dropdown non-group field, the available options for members to pick from.",
+                    "description": "In a radio or dropdown non-group field, the available options for contacts to pick from.",
                     "items": {
                         "type": "string"
                     },
@@ -92,7 +105,7 @@
         "list_id": {
             "type": "string",
             "title": "List ID",
-            "description": "A string that identifies this merge field collections' list.",
+            "description": "The ID that identifies this merge field's audience'.",
             "readOnly": true
         },
         "_links": {

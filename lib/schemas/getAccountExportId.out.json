@@ -1,56 +1,32 @@
 {
     "type": "object",
     "properties": {
-        "id": {
-            "type": "string",
-            "title": "ID",
-            "description": "A string that uniquely identifies this message",
-            "readOnly": true
-        },
-        "conversation_id": {
-            "type": "string",
-            "title": "Conversation ID",
-            "description": "A string that identifies this message's conversation",
-            "readOnly": true
-        },
-        "list_id": {
+        "export_id": {
             "type": "integer",
-            "title": "Campaign ID",
-            "description": "The unique identifier of the list for this conversation.",
-            "readOnly": true
+            "title": "Export ID",
+            "description": "The ID for the export."
         },
-        "from_label": {
+        "started": {
             "type": "string",
-            "title": "From Label",
-            "description": "A label representing the sender of this message",
-            "readOnly": true
-        },
-        "from_email": {
-            "type": "string",
-            "title": "From Email",
-            "description": "A label representing the email of the sender of this message"
-        },
-        "subject": {
-            "type": "string",
-            "title": "Subject",
-            "description": "The subject of this message"
-        },
-        "message": {
-            "type": "string",
-            "title": "Message",
-            "description": "The plain-text content of the message"
-        },
-        "read": {
-            "type": "boolean",
-            "title": "Read",
-            "description": "Whether this message has been marked as read"
-        },
-        "timestamp": {
-            "type": "string",
-            "title": "Timestamp",
-            "description": "The date and time the message was either sent or received in ISO 8601 format.",
             "format": "date-time",
-            "readOnly": true
+            "title": "Start Time",
+            "description": "Start time for the export."
+        },
+        "finished": {
+            "type": "string",
+            "format": "date-time",
+            "title": "Finish Time",
+            "description": "If finished, the finish time for the export."
+        },
+        "size_in_bytes": {
+            "type": "integer",
+            "title": "Export Size",
+            "description": "The size of the uncompressed export in bytes."
+        },
+        "download_url": {
+            "type": "string",
+            "title": "Download URL",
+            "description": "If the export is finished, the download URL for an export. URLs are only valid for 90 days after the export completes."
         },
         "_links": {
             "title": "Links",

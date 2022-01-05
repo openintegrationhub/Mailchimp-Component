@@ -18,6 +18,12 @@
             "description": "An identifier for the address across all of Mailchimp.",
             "readOnly": true
         },
+        "contact_id": {
+            "type": "string",
+            "title": "Contact ID",
+            "description": "As Mailchimp evolves beyond email, you may eventually have contacts without email addresses. While the `id` is the MD5 hash of their email address, this `contact_id` is agnostic of contact’s inclusion of an email address.",
+            "readOnly": true
+        },
         "full_name": {
             "type": "string",
             "title": "Full Name",
@@ -53,12 +59,17 @@
             "title": "Unsubscribe Reason",
             "description": "A subscriber's reason for unsubscribing."
         },
+        "consents_to_one_to_one_messaging": {
+            "type": "boolean",
+            "title": "Messaging Consent",
+            "description": "Indicates whether a contact consents to 1:1 messaging.",
+            "readOnly": true
+        },
         "merge_fields": {
             "type": "object",
-            "title": "Member Merge Var",
-            "description": "An individual merge var and value for a member.",
+            "title": "Merge Fields",
+            "description": "A dictionary of merge fields where the keys are the merge tags. See the [Merge Fields documentation](https://mailchimp.com/developer/marketing/docs/merge-fields/#structure) for more about the structure.",
             "additionalProperties": {
-                "type": "string",
                 "description": "This object's keys are merge tags (like FNAME). It's values are the values to be added to the merge field."
             }
         },

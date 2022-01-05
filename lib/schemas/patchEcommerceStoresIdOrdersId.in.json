@@ -428,6 +428,21 @@
                             "example": "839488a60b"
                         }
                     }
+                },
+                "tracking_number": {
+                    "type": "string",
+                    "title": "Tracking number",
+                    "description": "The tracking number associated with the order."
+                },
+                "tracking_carrier": {
+                    "type": "string",
+                    "title": "Tracking carrier",
+                    "description": "The tracking carrier associated with the order."
+                },
+                "tracking_url": {
+                    "type": "string",
+                    "title": "Tracking URL",
+                    "description": "The tracking URL associated with the order."
                 }
             }
         }

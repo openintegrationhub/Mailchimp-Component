@@ -54,6 +54,16 @@
             "type": "string",
             "title": "Campaign Status",
             "description": "The current status of the campaign.",
+            "enum": [
+                "save",
+                "paused",
+                "schedule",
+                "sending",
+                "sent",
+                "canceled",
+                "canceling",
+                "archived"
+            ],
             "readOnly": true
         },
         "emails_sent": {
@@ -154,13 +164,13 @@
                         "conditions": {
                             "type": "array",
                             "title": "Segment Type",
-                            "description": "Segment match conditions.",
+                            "description": "Segment match conditions. There are multiple possible types, see the [condition types documentation](https://mailchimp.com/developer/marketing/docs/alternative-schemas/#segment-condition-schemas).",
                             "items": {
                                 "oneOf": [
                                     {
                                         "type": "object",
                                         "title": "Aim Segment",
-                                        "description": "An individual segment condition",
+                                        "description": "Segment by interaction with a specific campaign.",
                                         "properties": {
                                             "condition_type": {
                                                 "type": "string",
@@ -175,7 +185,7 @@
                                                     "aim"
                                                 ],
                                                 "title": "Segment Field",
-                                                "description": "Used for segmenting subscribers who have/have not interacted with a specific campaign(s).",
+                                                "description": "Segment by interaction with a specific campaign.",
                                                 "example": "aim"
                                             },
                                             "op": {
@@ -203,7 +213,7 @@
                                     {
                                         "type": "object",
                                         "title": "Automation Segment",
-                                        "description": "An individual segment condition",
+                                        "description": "Segment by interaction with an Automation workflow.",
                                         "required": [
                                             "field",
                                             "op",
@@ -223,7 +233,7 @@
                                                     "automation"
                                                 ],
                                                 "title": "Segment Field",
-                                                "description": "Used for segmenting subscribers who have/have not interacted with an Automation workflow.",
+                                                "description": "Segment by interaction with an Automation workflow.",
                                                 "example": "automation"
                                             },
                                             "op": {
@@ -249,7 +259,7 @@
                                     {
                                         "type": "object",
                                         "title": "Poll Activity Segment",
-                                        "description": "An individual segment condition",
+                                        "description": "Segment by poll activity.",
                                         "required": [
                                             "field",
                                             "op",
@@ -269,7 +279,7 @@
                                                     "poll"
                                                 ],
                                                 "title": "Segment Field",
-                                                "description": "Used for segmenting by Mandrill activity.",
+                                                "description": "Segment by poll activity.",
                                                 "example": "poll"
                                             },
                                             "op": {
@@ -293,7 +303,7 @@
                                     {
                                         "type": "object",
                                         "title": "Conversation Segment",
-                                        "description": "An individual segment condition",
+                                        "description": "Segment by interaction with a campaign via Conversations.",
                                         "required": [
                                             "field",
                                             "op",
@@ -313,7 +323,7 @@
                                                     "conversation"
                                                 ],
                                                 "title": "Segment Field",
-                                                "description": "Used for segmenting subscribers who have/have not interacted with a campaign via 'Converstaions'.",
+                                                "description": "Segment by interaction with a campaign via Conversations.",
                                                 "example": "conversation"
                                             },
                                             "op": {
@@ -337,7 +347,7 @@
                                     {
                                         "type": "object",
                                         "title": "Date Segment",
-                                        "description": "An individual segment condition",
+                                        "description": "Segment by a specific date field.",
                                         "required": [
                                             "field",
                                             "op",
@@ -395,7 +405,7 @@
                                     {
                                         "type": "object",
                                         "title": "Email Client Segment",
-                                        "description": "An individual segment condition",
+                                        "description": "Segment by use of a particular email client.",
                                         "required": [
                                             "field",
                                             "op",
@@ -415,7 +425,7 @@
                                                     "email_client"
                                                 ],
                                                 "title": "Segment Field",
-                                                "description": "Used for segmenting subscribers who have/have not interacted with a specific campaign(s).",
+                                                "description": "Segment by use of a particular email client.",
                                                 "example": "email_client"
                                             },
                                             "op": {
@@ -425,7 +435,7 @@
                                                     "client_not"
                                                 ],
                                                 "title": "Segment Operator",
-                                                "description": "The status of the member with regard to their campaign interaction. One of the following: opened, clicked, was sent, didn't open, didn't click, or was not sent.",
+                                                "description": "The operation to determine whether we select clients that match the value, or clients that do not match the value.",
                                                 "example": "client_is"
                                             },
                                             "value": {
@@ -439,7 +449,7 @@
                                     {
                                         "type": "object",
                                         "title": "Language Segment",
-                                        "description": "An individual segment condition",
+                                        "description": "Segment by language.",
                                         "required": [
                                             "field",
                                             "op",
@@ -483,7 +493,7 @@
                                     {
                                         "type": "object",
                                         "title": "Member Rating Segment",
-                                        "description": "An individual segment condition",
+                                        "description": "Segment by member rating.",
                                         "required": [
                                             "field",
                                             "op",
@@ -503,7 +513,7 @@
                                                     "rating"
                                                 ],
                                                 "title": "Segment Field",
-                                                "description": "Used for segmenting by member rating.",
+                                                "description": "Segment by member rating.",
                                                 "example": "rating"
                                             },
                                             "op": {
@@ -529,7 +539,7 @@
                                     {
                                         "type": "object",
                                         "title": "Signup Source Segment",
-                                        "description": "An individual segment condition",
+                                        "description": "Segment by signup source.",
                                         "required": [
                                             "field",
                                             "condition_type",
@@ -573,7 +583,7 @@
                                     {
                                         "type": "object",
                                         "title": "Survey Monkey Segment",
-                                        "description": "An individual segment condition",
+                                        "description": "Segment by interaction with a SurveyMonkey survey.",
                                         "required": [
                                             "field",
                                             "op",
@@ -593,7 +603,7 @@
                                                     "survey_monkey"
                                                 ],
                                                 "title": "Segment Field",
-                                                "description": "Used for segmenting subscribers who have/have not interacted with a survey monkey survey.",
+                                                "description": "Segment by interaction with a SurveyMonkey survey.",
                                                 "example": "survey_monkey"
                                             },
                                             "op": {
@@ -619,7 +629,7 @@
                                     {
                                         "type": "object",
                                         "title": "VIP Segment",
-                                        "description": "An individual segment condition",
+                                        "description": "Segment by VIP status.",
                                         "required": [
                                             "field",
                                             "op"
@@ -638,7 +648,7 @@
                                                     "gmonkey"
                                                 ],
                                                 "title": "Segment Field",
-                                                "description": "Segmenting based off of a subscriber's VIP status.",
+                                                "description": "Segment by VIP status.",
                                                 "example": "gmonkey"
                                             },
                                             "op": {
@@ -656,7 +666,7 @@
                                     {
                                         "type": "object",
                                         "title": "Interests Segment",
-                                        "description": "An individual segment condition",
+                                        "description": "Segment by an interest group merge field.",
                                         "properties": {
                                             "condition_type": {
                                                 "type": "string",
@@ -700,7 +710,7 @@
                                     {
                                         "type": "object",
                                         "title": "Ecommerce Category Segment",
-                                        "description": "An individual segment condition",
+                                        "description": "Segment by purchases in specific items or categories.",
                                         "properties": {
                                             "condition_type": {
                                                 "type": "string",
@@ -716,7 +726,7 @@
                                                     "ecomm_prod"
                                                 ],
                                                 "title": "Segment Field",
-                                                "description": "Used for segmenting subscribers who have/have not purchased specific items or categories.",
+                                                "description": "Segment by purchases in specific items or categories.",
                                                 "example": "ecomm_cat"
                                             },
                                             "op": {
@@ -744,7 +754,7 @@
                                     {
                                         "type": "object",
                                         "title": "Ecommerce Number Segment",
-                                        "description": "An individual segment condition",
+                                        "description": "Segment by average spent total, number of orders, total number of products purchased, or average number of products per order.",
                                         "required": [
                                             "field",
                                             "op",
@@ -767,7 +777,7 @@
                                                     "ecomm_avg_ord"
                                                 ],
                                                 "title": "Segment Field",
-                                                "description": "Used for segmenting members have an average spent total, a total number of orders, total number of products purchased, or average number of products per order.",
+                                                "description": "Segment by average spent total, number of orders, total number of products purchased, or average number of products per order.",
                                                 "example": "ecomm_orders"
                                             },
                                             "op": {
@@ -793,7 +803,7 @@
                                     {
                                         "type": "object",
                                         "title": "Ecommerce Purchased Segment",
-                                        "description": "An individual segment condition",
+                                        "description": "Segment by whether someone has purchased anything.",
                                         "properties": {
                                             "condition_type": {
                                                 "type": "string",
@@ -808,7 +818,7 @@
                                                     "ecomm_purchased"
                                                 ],
                                                 "title": "Segment Field",
-                                                "description": "Used for segmenting members who have/have not purchased anything.",
+                                                "description": "Segment by whether someone has purchased anything.",
                                                 "example": "ecomm_purchased"
                                             },
                                             "op": {
@@ -826,7 +836,7 @@
                                     {
                                         "type": "object",
                                         "title": "Ecommerce Spent Segment",
-                                        "description": "An individual segment condition",
+                                        "description": "Segment by amount spent on a single order or across all orders.",
                                         "properties": {
                                             "condition_type": {
                                                 "type": "string",
@@ -842,7 +852,7 @@
                                                     "ecomm_spent_all"
                                                 ],
                                                 "title": "Segment Field",
-                                                "description": "Used for segmenting members who have spent a specific amount on a single order or over their lifetime.",
+                                                "description": "Segment by amount spent on a single order or across all orders.",
                                                 "example": "ecomm_spent_one"
                                             },
                                             "op": {
@@ -866,7 +876,7 @@
                                     {
                                         "type": "object",
                                         "title": "Ecommerce Purchased Store Segment",
-                                        "description": "An individual segment condition",
+                                        "description": "Segment by purchases from a specific store.",
                                         "properties": {
                                             "condition_type": {
                                                 "type": "string",
@@ -881,7 +891,7 @@
                                                     "ecomm_store"
                                                 ],
                                                 "title": "Segment Field",
-                                                "description": "Used for segmenting members have purchased from a specific store.",
+                                                "description": "Segment by purchases from a specific store.",
                                                 "example": "ecomm_store"
                                             },
                                             "op": {
@@ -905,7 +915,7 @@
                                     {
                                         "type": "object",
                                         "title": "Goal Activity Segment",
-                                        "description": "An individual segment condition",
+                                        "description": "Segment by Goal activity.",
                                         "required": [
                                             "field",
                                             "op",
@@ -925,7 +935,7 @@
                                                     "goal"
                                                 ],
                                                 "title": "Segment Field",
-                                                "description": "Segmenting based off of a subscriber's Goal activity.",
+                                                "description": "Segment by Goal activity.",
                                                 "example": "goal"
                                             },
                                             "op": {
@@ -952,7 +962,7 @@
                                     {
                                         "type": "object",
                                         "title": "Goal Timestamp Segment",
-                                        "description": "An individual segment condition",
+                                        "description": "Segment by most recent interaction with a website.",
                                         "required": [
                                             "field",
                                             "op",
@@ -972,7 +982,7 @@
                                                     "goal_last_visited"
                                                 ],
                                                 "title": "Segment Field",
-                                                "description": "Segmenting based off of a subscriber's last interaction with a website.",
+                                                "description": "Segment by most recent interaction with a website.",
                                                 "example": "goal_last_visited"
                                             },
                                             "op": {
@@ -997,7 +1007,7 @@
                                     {
                                         "type": "object",
                                         "title": "Similar Subscribers Segment Member Segment",
-                                        "description": "An individual segment condition",
+                                        "description": "Segment by similar subscribers.",
                                         "required": [
                                             "field",
                                             "op",
@@ -1017,7 +1027,7 @@
                                                     "fuzzy_segment"
                                                 ],
                                                 "title": "Segment Field",
-                                                "description": "Used for segmenting by Mandrill activity.",
+                                                "description": "Segment by similar subscribers.",
                                                 "example": "fuzzy_segment"
                                             },
                                             "op": {
@@ -1041,7 +1051,7 @@
                                     {
                                         "type": "object",
                                         "title": "Static Segment Member Segment",
-                                        "description": "An individual segment condition",
+                                        "description": "Segment by a given static segment.",
                                         "required": [
                                             "field",
                                             "op",
@@ -1061,7 +1071,7 @@
                                                     "static_segment"
                                                 ],
                                                 "title": "Segment Field",
-                                                "description": "Used for segmenting by Mandrill activity.",
+                                                "description": "Segment by a given static segment.",
                                                 "example": "static_segment"
                                             },
                                             "op": {
@@ -1085,7 +1095,7 @@
                                     {
                                         "type": "object",
                                         "title": "Location-Based Segment",
-                                        "description": "An individual segment condition",
+                                        "description": "Segment by a specific country or US state.",
                                         "required": [
                                             "field",
                                             "op",
@@ -1131,7 +1141,7 @@
                                     {
                                         "type": "object",
                                         "title": "Geolocation Segment",
-                                        "description": "An individual segment condition",
+                                        "description": "Segment by a specific geographic region.",
                                         "required": [
                                             "field",
                                             "op",
@@ -1196,7 +1206,7 @@
                                     {
                                         "type": "object",
                                         "title": "US Zip Code Segment",
-                                        "description": "An individual segment condition",
+                                        "description": "Segment by a specific US ZIP code.",
                                         "required": [
                                             "field",
                                             "op",
@@ -1246,7 +1256,7 @@
                                     {
                                         "type": "object",
                                         "title": "Unknown Location-Based Segment",
-                                        "description": "An individual segment condition",
+                                        "description": "Segment members whose location information is unknown.",
                                         "required": [
                                             "field",
                                             "op"
@@ -1274,7 +1284,7 @@
                                                     "ipgeounknown"
                                                 ],
                                                 "title": "Segment Operator",
-                                                "description": "Segment members for which locaiton information is unknown.",
+                                                "description": "Segment members for which location information is unknown.",
                                                 "example": "ipgeounknown"
                                             }
                                         }
@@ -1282,7 +1292,7 @@
                                     {
                                         "type": "object",
                                         "title": "Zip Code Location-Based Segment",
-                                        "description": "An individual segment condition",
+                                        "description": "Segment by a specific US ZIP code.",
                                         "required": [
                                             "field",
                                             "op",
@@ -1326,7 +1336,7 @@
                                     {
                                         "type": "object",
                                         "title": "Social Profiles Age Segment",
-                                        "description": "An individual segment condition",
+                                        "description": "Segment by age ranges in Social Profiles data.",
                                         "required": [
                                             "field",
                                             "op",
@@ -1346,7 +1356,7 @@
                                                     "social_age"
                                                 ],
                                                 "title": "Segment Field",
-                                                "description": "Used for segmenting members based age ranges in Social Profiles data.",
+                                                "description": "Segment by age ranges in Social Profiles data.",
                                                 "example": "social_age"
                                             },
                                             "op": {
@@ -1376,7 +1386,7 @@
                                     {
                                         "type": "object",
                                         "title": "Social Profiles Gender Segment",
-                                        "description": "An individual segment condition",
+                                        "description": "Segment by listed gender in Social Profiles data.",
                                         "required": [
                                             "field",
                                             "op",
@@ -1396,7 +1406,7 @@
                                                     "social_gender"
                                                 ],
                                                 "title": "Segment Field",
-                                                "description": "Used for segmenting members based on listed gender in Social Profiles data.",
+                                                "description": "Segment by listed gender in Social Profiles data.",
                                                 "example": "social_gender"
                                             },
                                             "op": {
@@ -1424,7 +1434,7 @@
                                     {
                                         "type": "object",
                                         "title": "Social Profiles Influence Segment",
-                                        "description": "An individual segment condition",
+                                        "description": "Segment by influence rating in Social Profiles data.",
                                         "required": [
                                             "field",
                                             "op",
@@ -1444,7 +1454,7 @@
                                                     "social_influence"
                                                 ],
                                                 "title": "Segment Field",
-                                                "description": "Used for segmenting members based on influence rating in Social Profiles data.",
+                                                "description": "Segment by influence rating in Social Profiles data.",
                                                 "example": "social_influence"
                                             },
                                             "op": {
@@ -1470,7 +1480,7 @@
                                     {
                                         "type": "object",
                                         "title": "Social Profiles Social Network Segment",
-                                        "description": "An individual segment condition",
+                                        "description": "Segment by social network in Social Profiles data.",
                                         "required": [
                                             "field",
                                             "op",
@@ -1490,7 +1500,7 @@
                                                     "social_network"
                                                 ],
                                                 "title": "Segment Field",
-                                                "description": "Used for segmenting members based on social network in Social Profiles data.",
+                                                "description": "Segment by social network in Social Profiles data.",
                                                 "example": "social_network"
                                             },
                                             "op": {
@@ -1527,7 +1537,7 @@
                                     {
                                         "type": "object",
                                         "title": "Social Profiles Social Network Follow Segment",
-                                        "description": "An individual segment condition",
+                                        "description": "Segment by social network in Social Profiles data.",
                                         "required": [
                                             "field",
                                             "op",
@@ -1547,7 +1557,7 @@
                                                     "social_network"
                                                 ],
                                                 "title": "Segment Field",
-                                                "description": "Used for segmenting members based on social network in Social Profiles data.",
+                                                "description": "Segment by social network in Social Profiles data.",
                                                 "example": "social_network"
                                             },
                                             "op": {
@@ -1574,7 +1584,7 @@
                                     {
                                         "type": "object",
                                         "title": "Address Merge Field Segment",
-                                        "description": "An individual segment condition",
+                                        "description": "Segment by an address-type merge field.",
                                         "required": [
                                             "field",
                                             "op"
@@ -1616,7 +1626,7 @@
                                     {
                                         "type": "object",
                                         "title": "Address/Zip Merge Field Segment",
-                                        "description": "An individual segment condition",
+                                        "description": "Segment by an address-type merge field within a given distance.",
                                         "required": [
                                             "field",
                                             "op",
@@ -1663,7 +1673,7 @@
                                     {
                                         "type": "object",
                                         "title": "Birthday Merge Field Segment",
-                                        "description": "An individual segment condition",
+                                        "description": "Segment by a contact's birthday.",
                                         "required": [
                                             "field",
                                             "op"
@@ -1705,7 +1715,7 @@
                                     {
                                         "type": "object",
                                         "title": "Date Merge Field Segment",
-                                        "description": "An individual segment condition",
+                                        "description": "Segment by a given date merge field.",
                                         "required": [
                                             "field",
                                             "op"
@@ -1793,7 +1803,7 @@
                                     {
                                         "type": "object",
                                         "title": "Text or Number Merge Field Segment",
-                                        "description": "An individual segment condition",
+                                        "description": "Segment by a given text or number merge field.",
                                         "required": [
                                             "field",
                                             "op"
@@ -1841,7 +1851,7 @@
                                     {
                                         "type": "object",
                                         "title": "Email Segment",
-                                        "description": "An individual segment condition",
+                                        "description": "Segment by email address.",
                                         "required": [
                                             "field",
                                             "op"
@@ -1890,7 +1900,7 @@
                                     {
                                         "type": "object",
                                         "title": "Predicted Gender Segment",
-                                        "description": "An individual segment condition",
+                                        "description": "Segment by predicted gender.",
                                         "required": [
                                             "field",
                                             "op",
@@ -1910,7 +1920,7 @@
                                                     "predicted_gender"
                                                 ],
                                                 "title": "Segment Field",
-                                                "description": "Used for segmenting members based on predicted gender."
+                                                "description": "Segment by predicted gender."
                                             },
                                             "op": {
                                                 "type": "string",
@@ -1937,7 +1947,7 @@
                                     {
                                         "type": "object",
                                         "title": "Predicted Age Segment",
-                                        "description": "An individual segment condition",
+                                        "description": "Segment by predicted age.",
                                         "required": [
                                             "field",
                                             "op",
@@ -1957,7 +1967,7 @@
                                                     "predicted_age_range"
                                                 ],
                                                 "title": "Segment Field",
-                                                "description": "Used for segmenting members based on predicted age"
+                                                "description": "Segment by predicted age."
                                             },
                                             "op": {
                                                 "type": "string",
@@ -1987,7 +1997,7 @@
                                     {
                                         "type": "object",
                                         "title": "New Subscribers Prebuilt Segment",
-                                        "description": "An individual segment condition",
+                                        "description": "Segment by when people subscribed.",
                                         "properties": {
                                             "condition_type": {
                                                 "type": "string",
@@ -2002,7 +2012,7 @@
                                                     "timestamp_opt"
                                                 ],
                                                 "title": "Segment Field",
-                                                "description": "Used for segmenting subscribers who have subscribed within a given time frame."
+                                                "description": "Segment by when people subscribed."
                                             },
                                             "op": {
                                                 "type": "string",
@@ -2068,7 +2078,7 @@
                 "to_name": {
                     "type": "string",
                     "title": "To Name",
-                    "description": "The campaign's custom 'To' name. Typically the first name [merge field](https://mailchimp.com/help/getting-started-with-merge-tags/)."
+                    "description": "The campaign's custom 'To' name. Typically the first name [audience field](https://mailchimp.com/help/getting-started-with-merge-tags/)."
                 },
                 "folder_id": {
                     "type": "string",

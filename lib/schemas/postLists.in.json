@@ -132,15 +132,6 @@
                     "title": "Email Type Option",
                     "description": "Whether the list supports [multiple formats for emails](https://mailchimp.com/help/change-audience-name-defaults/). When set to `true`, subscribers can choose whether they want to receive HTML or plain-text emails. When set to `false`, subscribers will receive HTML emails, with a plain-text alternative backup."
                 },
-                "visibility": {
-                    "type": "string",
-                    "title": "Visibility",
-                    "enum": [
-                        "pub",
-                        "prv"
-                    ],
-                    "description": "Whether this list is public or private"
-                },
                 "double_optin": {
                     "type": "boolean",
                     "title": "Double Opt In",
