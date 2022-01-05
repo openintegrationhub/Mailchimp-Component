@@ -1,6 +1,17 @@
 {
     "type": "object",
     "properties": {
+        "count": {
+            "required": false,
+            "type": "integer",
+            "maximum": 1000,
+            "default": 10
+        },
+        "offset": {
+            "required": false,
+            "type": "integer",
+            "default": 0
+        },
         "fields": {
             "required": false,
             "type": "array",

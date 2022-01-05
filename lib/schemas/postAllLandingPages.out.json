@@ -36,6 +36,11 @@
             "type": "string",
             "title": "Landing Page status",
             "description": "The status of this landing page.",
+            "enum": [
+                "published",
+                "unpublished",
+                "draft"
+            ],
             "readOnly": true
         },
         "list_id": {

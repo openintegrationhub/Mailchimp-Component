@@ -165,7 +165,7 @@
                             "pub",
                             "prv"
                         ],
-                        "description": "Whether this list is public or private."
+                        "description": "Legacy - visibility settings are no longer used"
                     },
                     "double_optin": {
                         "type": "boolean",
@@ -258,8 +258,8 @@
                             },
                             "merge_field_count": {
                                 "type": "integer",
-                                "title": "Merge Var Count",
-                                "description": "The number of merge vars for this list (not EMAIL, which is required).",
+                                "title": "Merge Field Count",
+                                "description": "The number of merge fields ([audience field](https://mailchimp.com/help/getting-started-with-merge-tags/)) for this list (doesn't include EMAIL).",
                                 "readOnly": true
                             },
                             "avg_sub_rate": {

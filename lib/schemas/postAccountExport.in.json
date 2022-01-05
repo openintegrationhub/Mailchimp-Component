@@ -1,0 +1,39 @@
+{
+    "type": "object",
+    "properties": {
+        "requestBody": {
+            "type": "object",
+            "title": "Create an account export",
+            "description": "Creates an account export with the given parameters.",
+            "required": [
+                "include_stages"
+            ],
+            "properties": {
+                "include_stages": {
+                    "type": "array",
+                    "title": "Include Stages",
+                    "description": "The stages of an account export to include.",
+                    "example": "[\"audiences\", \"gallery_files\"]",
+                    "items": {
+                        "type": "string",
+                        "enum": [
+                            "audiences",
+                            "campaigns",
+                            "events",
+                            "gallery_files",
+                            "reports",
+                            "templates"
+                        ]
+                    }
+                },
+                "since_timestamp": {
+                    "type": "string",
+                    "title": "Since Timestamp",
+                    "format": "date-time",
+                    "description": "An ISO 8601 date that will limit the export to only records created after a given time. For instance, the reports stage will contain any campaign sent after the given timestamp. Audiences, however, are excluded from this limit.",
+                    "example": "2021-08-23T14:15:09Z"
+                }
+            }
+        }
+    }
+}

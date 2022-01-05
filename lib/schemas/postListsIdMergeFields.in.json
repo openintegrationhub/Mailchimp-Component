@@ -8,7 +8,7 @@
         "requestBody": {
             "type": "object",
             "title": "Merge Field",
-            "description": "A merge field (formerly merge vars) for a specific list. These correspond to merge fields in Mailchimp's lists and subscriber profiles.",
+            "description": "A [merge field](https://mailchimp.com/developer/marketing/docs/merge-fields/) for an audience.",
             "required": [
                 "name",
                 "type"
@@ -16,18 +16,18 @@
             "properties": {
                 "tag": {
                     "type": "string",
-                    "title": "Merge Field Tag",
-                    "description": "The tag used in Mailchimp campaigns and for the /members endpoint."
+                    "title": "Merge Tag",
+                    "description": "The merge tag used for Mailchimp campaigns and [adding contact information](https://mailchimp.com/developer/marketing/docs/merge-fields/#add-merge-data-to-contacts)."
                 },
                 "name": {
                     "type": "string",
                     "title": "Merge Field Name",
-                    "description": "The name of the merge field."
+                    "description": "The name of the merge field (audience field)."
                 },
                 "type": {
                     "type": "string",
                     "title": "Merge Field Type",
-                    "description": "The type for the merge field.",
+                    "description": "The [type](https://mailchimp.com/developer/marketing/docs/merge-fields/#structure) for the merge field.",
                     "enum": [
                         "text",
                         "number",
@@ -45,7 +45,7 @@
                 "required": {
                     "type": "boolean",
                     "title": "Required",
-                    "description": "The boolean value if the merge field is required."
+                    "description": "Whether the merge field is required to import a contact."
                 },
                 "default_value": {
                     "type": "string",
@@ -88,7 +88,7 @@
                         "choices": {
                             "type": "array",
                             "title": "Choices",
-                            "description": "In a radio or dropdown non-group field, the available options for members to pick from.",
+                            "description": "In a radio or dropdown non-group field, the available options for contacts to pick from.",
                             "items": {
                                 "type": "string"
                             },

@@ -85,6 +85,17 @@
             "description": "The URL used for [template sharing](https://mailchimp.com/help/share-a-template/).",
             "readOnly": true
         },
+        "content_type": {
+            "type": "string",
+            "title": "Content Type",
+            "description": "How the template's content is put together.",
+            "enum": [
+                "template",
+                "multichannel",
+                "html"
+            ],
+            "readOnly": true
+        },
         "_links": {
             "title": "Links",
             "description": "A list of link types and descriptions for the API schema documents.",
