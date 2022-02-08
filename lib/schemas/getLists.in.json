@@ -64,6 +64,10 @@
         "has_ecommerce_store": {
             "required": false,
             "type": "boolean"
+        },
+        "include_total_contacts": {
+            "required": false,
+            "type": "boolean"
         }
     }
 }

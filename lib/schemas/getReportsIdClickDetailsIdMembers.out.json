@@ -1,5 +1,7 @@
 {
     "type": "object",
+    "title": "Click Detail Members",
+    "description": "A collection of members who clicked on a specific link within a campaign.",
     "properties": {
         "members": {
             "type": "array",
@@ -22,9 +24,8 @@
                     },
                     "merge_fields": {
                         "type": "object",
-                        "title": "Member Merge Var",
-                        "description": "An individual merge var and value for a member.",
-                        "readOnly": true,
+                        "title": "Merge Fields",
+                        "description": "A dictionary of merge fields where the keys are the merge tags. See the [Merge Fields documentation](https://mailchimp.com/developer/marketing/docs/merge-fields/#structure) for more about the structure.",
                         "additionalProperties": {
                             "description": "This object's keys are merge tags (like FNAME). It's values are the values to be added to the merge field."
                         }

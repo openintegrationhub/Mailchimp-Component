@@ -1,10 +1,13 @@
 {
     "type": "object",
+    "title": "Member Activity Events",
+    "description": "The member activity events for a given member.",
+    "x-hidden": false,
     "properties": {
         "activity": {
             "type": "array",
             "title": "Activity",
-            "description": "An array of objects, each representing a contact's event.",
+            "description": "An array of objects, each representing a contact event. There are multiple possible types, see the [activity schema documentation](https://mailchimp.com/developer/marketing/docs/alternative-schemas/#activity-schemas).",
             "readOnly": true,
             "items": {
                 "oneOf": [

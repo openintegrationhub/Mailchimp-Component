@@ -1,5 +1,7 @@
 {
     "type": "object",
+    "title": "Promo Rules",
+    "description": "A collection of the store's promo rules.",
     "properties": {
         "store_id": {
             "type": "string",

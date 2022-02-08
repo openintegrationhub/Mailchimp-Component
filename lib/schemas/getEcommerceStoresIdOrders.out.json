@@ -1,5 +1,7 @@
 {
     "type": "object",
+    "title": "Orders",
+    "description": "A collection of orders in a store.",
     "properties": {
         "store_id": {
             "type": "string",
@@ -628,6 +630,21 @@
                                 "readOnly": true
                             }
                         }
+                    },
+                    "tracking_number": {
+                        "type": "string",
+                        "title": "Tracking number",
+                        "description": "The tracking number associated with the order."
+                    },
+                    "tracking_carrier": {
+                        "type": "string",
+                        "title": "Tracking carrier",
+                        "description": "The tracking carrier associated with the order."
+                    },
+                    "tracking_url": {
+                        "type": "string",
+                        "title": "Tracking URL",
+                        "description": "The tracking URL associated with the order."
                     },
                     "_links": {
                         "title": "Links",

@@ -1,5 +1,7 @@
 {
     "type": "object",
+    "title": "Collection of Conversation Messages",
+    "description": "Messages from a specific conversation.",
     "properties": {
         "conversation_messages": {
             "type": "array",
@@ -22,8 +24,8 @@
                     },
                     "list_id": {
                         "type": "integer",
-                        "title": "Campaign ID",
-                        "description": "The unique identifier of the list for this conversation.",
+                        "title": "List ID",
+                        "description": "The list's web ID",
                         "readOnly": true
                     },
                     "from_label": {

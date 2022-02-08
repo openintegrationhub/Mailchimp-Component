@@ -1,5 +1,7 @@
 {
     "type": "object",
+    "title": "Landing Page Report",
+    "description": "A summary of an individual landing page's settings and content.",
     "properties": {
         "id": {
             "type": "string",

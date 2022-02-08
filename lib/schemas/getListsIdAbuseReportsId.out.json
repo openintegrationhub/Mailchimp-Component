@@ -1,5 +1,7 @@
 {
     "type": "object",
+    "title": "Abuse Complaint",
+    "description": "Details of abuse complaints for a specific list. An abuse complaint occurs when your recipient clicks to 'report spam' in their email program.",
     "properties": {
         "id": {
             "type": "integer",
@@ -33,9 +35,8 @@
         },
         "merge_fields": {
             "type": "object",
-            "title": "Member Merge Var",
-            "description": "An individual merge var and value for a member.",
-            "readOnly": true,
+            "title": "Merge Fields",
+            "description": "A dictionary of merge fields where the keys are the merge tags. See the [Merge Fields documentation](https://mailchimp.com/developer/marketing/docs/merge-fields/#structure) for more about the structure.",
             "additionalProperties": {
                 "description": "This object's keys are merge tags (like FNAME). It's values are the values to be added to the merge field."
             }

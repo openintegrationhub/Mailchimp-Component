@@ -1,5 +1,7 @@
 {
     "type": "object",
+    "title": "Interest Groupings",
+    "description": "Information about this list's interest categories.",
     "properties": {
         "list_id": {
             "type": "string",

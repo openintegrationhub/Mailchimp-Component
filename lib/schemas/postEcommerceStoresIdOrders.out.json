@@ -1,5 +1,7 @@
 {
     "type": "object",
+    "title": "E-commerce Order",
+    "description": "Information about a specific order.",
     "properties": {
         "id": {
             "type": "string",
@@ -614,6 +616,21 @@
                     "readOnly": true
                 }
             }
+        },
+        "tracking_number": {
+            "type": "string",
+            "title": "Tracking number",
+            "description": "The tracking number associated with the order."
+        },
+        "tracking_carrier": {
+            "type": "string",
+            "title": "Tracking carrier",
+            "description": "The tracking carrier associated with the order."
+        },
+        "tracking_url": {
+            "type": "string",
+            "title": "Tracking URL",
+            "description": "The tracking URL associated with the order."
         },
         "_links": {
             "title": "Links",

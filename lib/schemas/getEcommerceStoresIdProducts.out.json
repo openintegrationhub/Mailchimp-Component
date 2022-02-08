@@ -1,5 +1,7 @@
 {
     "type": "object",
+    "title": "Products",
+    "description": "A collection of a store's products.",
     "properties": {
         "store_id": {
             "type": "string",

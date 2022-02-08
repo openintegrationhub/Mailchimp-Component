@@ -1,5 +1,7 @@
 {
     "type": "object",
+    "title": "Conversation Message",
+    "description": "An individual message in a conversation. Conversation tracking is a feature available to paid accounts that lets you view replies to your campaigns in your Mailchimp account.",
     "properties": {
         "id": {
             "type": "string",
@@ -15,8 +17,8 @@
         },
         "list_id": {
             "type": "integer",
-            "title": "Campaign ID",
-            "description": "The unique identifier of the list for this conversation.",
+            "title": "List ID",
+            "description": "The list's web ID",
             "readOnly": true
         },
         "from_label": {

@@ -1,5 +1,6 @@
 {
     "type": "object",
+    "description": "An array of Chimp Chatter messages. There's a maximum of 200 messages present for an account.",
     "properties": {
         "chimp_chatter": {
             "type": "array",

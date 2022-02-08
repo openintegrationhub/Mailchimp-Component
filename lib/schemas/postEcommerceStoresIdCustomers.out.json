@@ -1,5 +1,7 @@
 {
     "type": "object",
+    "title": "E-commerce Customer",
+    "description": "Information about a specific customer.",
     "properties": {
         "id": {
             "type": "string",

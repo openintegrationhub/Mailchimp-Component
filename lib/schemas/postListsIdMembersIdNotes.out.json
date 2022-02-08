@@ -1,5 +1,7 @@
 {
     "type": "object",
+    "title": "Member Notes",
+    "description": "A specific note for a specific member.",
     "properties": {
         "id": {
             "type": "integer",

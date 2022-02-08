@@ -1,5 +1,7 @@
 {
     "type": "object",
+    "title": "Campaign Reports",
+    "description": "A list of reports containing campaigns marked as Sent.",
     "properties": {
         "reports": {
             "type": "array",
