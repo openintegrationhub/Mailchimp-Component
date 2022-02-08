@@ -1,5 +1,7 @@
 {
     "type": "object",
+    "title": "File Manager",
+    "description": "A list of available images and files stored in the File Manager for the account.",
     "properties": {
         "files": {
             "type": "array",

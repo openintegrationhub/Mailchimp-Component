@@ -1,5 +1,7 @@
 {
     "type": "object",
+    "title": "Template Default Content",
+    "description": "Default content for a template.",
     "properties": {
         "sections": {
             "type": "object",

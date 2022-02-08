@@ -1,5 +1,7 @@
 {
     "type": "object",
+    "title": "Open Detail Report",
+    "description": "A detailed report of any campaign emails that were opened by a list member.",
     "properties": {
         "members": {
             "type": "array",

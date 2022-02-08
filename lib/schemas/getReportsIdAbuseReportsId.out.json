@@ -1,5 +1,7 @@
 {
     "type": "object",
+    "title": "Abuse Complaints",
+    "description": "A list of abuse complaints for a specific list.",
     "properties": {
         "abuse_reports": {
             "type": "array",

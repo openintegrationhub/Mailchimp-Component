@@ -1,5 +1,7 @@
 {
     "type": "object",
+    "title": "Collection of Conversation Messages",
+    "description": "Messages from a specific conversation.",
     "properties": {
         "conversation_messages": {
             "type": "array",

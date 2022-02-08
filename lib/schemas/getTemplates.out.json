@@ -1,5 +1,7 @@
 {
     "type": "object",
+    "title": "Templates",
+    "description": "A list an account's available templates.",
     "properties": {
         "templates": {
             "type": "array",

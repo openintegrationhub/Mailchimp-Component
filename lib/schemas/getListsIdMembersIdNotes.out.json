@@ -1,5 +1,7 @@
 {
     "type": "object",
+    "title": "Collection of Notes",
+    "description": "The last 10 notes for a specific list member, based on date created.",
     "properties": {
         "notes": {
             "type": "array",

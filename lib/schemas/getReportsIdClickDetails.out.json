@@ -1,5 +1,7 @@
 {
     "type": "object",
+    "title": "Click Detail Report",
+    "description": "A list of URLs and unique IDs included in HTML and plain-text versions of a campaign.",
     "properties": {
         "urls_clicked": {
             "type": "array",

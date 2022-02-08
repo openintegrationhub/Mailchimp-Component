@@ -1,5 +1,7 @@
 {
     "type": "object",
+    "title": "List Members",
+    "description": "Individuals who are currently or have been previously subscribed to this list, including members who have bounced or unsubscribed.",
     "properties": {
         "id": {
             "type": "string",
@@ -222,6 +224,12 @@
                     "type": "string",
                     "title": "Timezone",
                     "description": "The timezone for the location.",
+                    "readOnly": true
+                },
+                "region": {
+                    "type": "string",
+                    "title": "Region",
+                    "description": "The region for the location.",
                     "readOnly": true
                 }
             }

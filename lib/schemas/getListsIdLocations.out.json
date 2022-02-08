@@ -1,5 +1,7 @@
 {
     "type": "object",
+    "title": "List Locations",
+    "description": "A summary of List's locations.",
     "properties": {
         "locations": {
             "type": "array",

@@ -1,5 +1,7 @@
 {
     "type": "object",
+    "title": "Open Activity",
+    "description": "A list of a member's opens activity in a specific campaign.",
     "properties": {
         "campaign_id": {
             "type": "string",

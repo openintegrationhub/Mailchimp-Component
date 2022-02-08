@@ -1,5 +1,6 @@
 {
     "type": "object",
+    "description": "A collection of landing pages.",
     "properties": {
         "landing_pages": {
             "type": "array",

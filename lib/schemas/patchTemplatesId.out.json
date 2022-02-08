@@ -1,5 +1,7 @@
 {
     "type": "object",
+    "title": "Template Instance",
+    "description": "Information about a specific template.",
     "properties": {
         "id": {
             "type": "integer",
