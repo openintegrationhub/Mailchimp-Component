@@ -1,5 +1,7 @@
 {
     "type": "object",
+    "title": "Click Detail Member",
+    "description": "A subscriber who clicked a specific URL in a specific campaign.",
     "properties": {
         "email_id": {
             "type": "string",

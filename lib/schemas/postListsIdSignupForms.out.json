@@ -1,5 +1,7 @@
 {
     "type": "object",
+    "title": "Signup Form",
+    "description": "List signup form.",
     "properties": {
         "header": {
             "type": "object",

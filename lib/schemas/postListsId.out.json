@@ -1,5 +1,7 @@
 {
     "type": "object",
+    "title": "Batch update List members",
+    "description": "Batch update list members.",
     "properties": {
         "new_members": {
             "type": "array",

@@ -1,5 +1,6 @@
 {
     "type": "object",
+    "description": "An automation workflow",
     "properties": {
         "workflow_id": {
             "type": "string",

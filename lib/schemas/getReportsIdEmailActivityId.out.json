@@ -1,5 +1,7 @@
 {
     "type": "object",
+    "title": "Email Activity",
+    "description": "A list of a member's subscriber activity in a specific campaign, including opens, clicks, and bounces.",
     "properties": {
         "campaign_id": {
             "type": "string",

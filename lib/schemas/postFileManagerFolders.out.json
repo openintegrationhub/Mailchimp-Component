@@ -1,5 +1,7 @@
 {
     "type": "object",
+    "title": "Gallery Folder",
+    "description": "An individual folder listed in the File Manager.",
     "properties": {
         "id": {
             "type": "integer",

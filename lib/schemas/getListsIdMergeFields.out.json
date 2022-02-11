@@ -1,5 +1,7 @@
 {
     "type": "object",
+    "title": "Collection of Merge Fields",
+    "description": "The [merge fields](https://mailchimp.com/developer/marketing/docs/merge-fields/) for an audience.",
     "properties": {
         "merge_fields": {
             "type": "array",

@@ -1,5 +1,7 @@
 {
     "type": "object",
+    "title": "Batch Webhooks",
+    "description": "Manage webhooks for batch requests.",
     "properties": {
         "webhooks": {
             "type": "array",

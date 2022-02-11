@@ -1,5 +1,7 @@
 {
     "type": "object",
+    "title": "Subscriber Lists",
+    "description": "A collection of subscriber lists for this account. Lists contain subscribers who have opted-in to receive correspondence from you or your organization.",
     "properties": {
         "lists": {
             "type": "array",
@@ -449,5 +451,8 @@
             },
             "readOnly": true
         }
-    }
+    },
+    "required": [
+        "lists"
+    ]
 }

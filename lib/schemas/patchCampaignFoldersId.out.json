@@ -1,5 +1,7 @@
 {
     "type": "object",
+    "title": "Campaign Folder",
+    "description": "A folder used to organize campaigns.",
     "properties": {
         "name": {
             "type": "string",

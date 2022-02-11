@@ -1,5 +1,7 @@
 {
     "type": "object",
+    "title": "Member Activity Events",
+    "description": "The last 50 member events for a list.",
     "properties": {
         "activity": {
             "type": "array",

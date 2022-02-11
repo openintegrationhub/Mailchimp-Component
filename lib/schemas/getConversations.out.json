@@ -1,5 +1,7 @@
 {
     "type": "object",
+    "title": "Tracked Conversations",
+    "description": "A collection of this account's tracked conversations.",
     "properties": {
         "conversations": {
             "type": "array",

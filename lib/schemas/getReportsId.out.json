@@ -1,5 +1,7 @@
 {
     "type": "object",
+    "title": "Campaign Report",
+    "description": "Report details about a sent campaign.",
     "properties": {
         "id": {
             "type": "string",

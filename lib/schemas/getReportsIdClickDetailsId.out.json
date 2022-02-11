@@ -1,5 +1,7 @@
 {
     "type": "object",
+    "title": "Click Detail Report",
+    "description": "A report of links clicked in a specific campaign.",
     "properties": {
         "id": {
             "type": "string",
