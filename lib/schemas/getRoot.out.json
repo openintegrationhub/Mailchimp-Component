@@ -1,5 +1,7 @@
 {
     "type": "object",
+    "title": "API Root",
+    "description": "The API root resource links to all other resources available in the API.",
     "properties": {
         "account_id": {
             "type": "string",

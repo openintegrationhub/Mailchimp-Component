@@ -1,5 +1,7 @@
 {
     "type": "object",
+    "title": "Campaigns",
+    "description": "Campaigns and Snippets found for given search term.",
     "properties": {
         "results": {
             "type": "array",

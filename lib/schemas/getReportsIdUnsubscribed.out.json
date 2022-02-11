@@ -1,5 +1,7 @@
 {
     "type": "object",
+    "title": "Unsubscribes",
+    "description": "A list of members who have unsubscribed from a specific campaign.",
     "properties": {
         "unsubscribes": {
             "type": "array",

@@ -1,5 +1,7 @@
 {
     "type": "object",
+    "title": "Subscriber in Automation Queue",
+    "description": "Information about subscribers in an Automation email queue.",
     "properties": {
         "id": {
             "type": "string",

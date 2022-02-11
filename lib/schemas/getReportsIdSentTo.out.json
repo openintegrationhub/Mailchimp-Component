@@ -1,5 +1,7 @@
 {
     "type": "object",
+    "title": "Sent-To",
+    "description": "A list of subscribers who were sent a specific campaign.",
     "properties": {
         "sent_to": {
             "type": "array",

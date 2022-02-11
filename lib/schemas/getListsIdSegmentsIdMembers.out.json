@@ -1,5 +1,7 @@
 {
     "type": "object",
+    "title": "Segment Members",
+    "description": "View members in a specific list segment.",
     "properties": {
         "members": {
             "type": "array",

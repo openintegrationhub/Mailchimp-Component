@@ -1,5 +1,7 @@
 {
     "type": "object",
+    "title": "Ecommerce Product Images",
+    "description": "A collection of a product's images.",
     "properties": {
         "store_id": {
             "type": "string",

@@ -1,5 +1,7 @@
 {
     "type": "object",
+    "title": "Merge Field",
+    "description": "A [merge field](https://mailchimp.com/developer/marketing/docs/merge-fields/) for an audience.",
     "properties": {
         "merge_id": {
             "type": "integer",

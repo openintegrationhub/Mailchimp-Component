@@ -1,5 +1,7 @@
 {
     "type": "object",
+    "title": "Template Folder",
+    "description": "A folder used to organize templates.",
     "properties": {
         "name": {
             "type": "string",

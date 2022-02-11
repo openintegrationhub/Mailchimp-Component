@@ -1,5 +1,8 @@
 {
     "type": "object",
+    "title": "Member Activity Events",
+    "description": "The member activity events for a given member.",
+    "x-hidden": false,
     "properties": {
         "activity": {
             "type": "array",

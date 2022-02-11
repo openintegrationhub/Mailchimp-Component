@@ -1,5 +1,7 @@
 {
     "type": "object",
+    "title": "Interest",
+    "description": "Assign subscribers to interests to group them together. Interests are referred to as 'group names' in the Mailchimp application.",
     "properties": {
         "category_id": {
             "type": "string",

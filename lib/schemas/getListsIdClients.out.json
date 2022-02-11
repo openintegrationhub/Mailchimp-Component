@@ -1,5 +1,7 @@
 {
     "type": "object",
+    "title": "Email Clients",
+    "description": "The top email clients based on user-agent strings.",
     "properties": {
         "clients": {
             "type": "array",

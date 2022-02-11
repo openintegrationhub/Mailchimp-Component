@@ -1,5 +1,7 @@
 {
     "type": "object",
+    "title": "Collection of Events",
+    "description": "A collection of events for a given contact",
     "properties": {
         "events": {
             "type": "array",

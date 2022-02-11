@@ -1,5 +1,7 @@
 {
     "type": "object",
+    "title": "Subscriber List",
+    "description": "Information about a specific list.",
     "properties": {
         "id": {
             "type": "string",

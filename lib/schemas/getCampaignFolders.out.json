@@ -1,5 +1,7 @@
 {
     "type": "object",
+    "title": "Campaign Folders",
+    "description": "A list of campaign folders",
     "properties": {
         "folders": {
             "type": "array",
