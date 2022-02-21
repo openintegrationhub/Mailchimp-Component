@@ -1,5 +1,7 @@
 {
     "type": "object",
+    "title": "Batch",
+    "description": "The status of a batch request",
     "properties": {
         "id": {
             "type": "string",

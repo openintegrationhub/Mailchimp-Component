@@ -1,5 +1,7 @@
 {
     "type": "object",
+    "title": "Ecommerce Product Variants",
+    "description": "A collection of a product's variants.",
     "properties": {
         "store_id": {
             "type": "string",

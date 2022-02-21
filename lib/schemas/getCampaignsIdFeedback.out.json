@@ -1,5 +1,7 @@
 {
     "type": "object",
+    "title": "Campaign Reports",
+    "description": "A summary of the comment feedback for a specific campaign.",
     "properties": {
         "feedback": {
             "type": "array",

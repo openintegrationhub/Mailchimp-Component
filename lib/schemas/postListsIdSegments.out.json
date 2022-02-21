@@ -1,5 +1,7 @@
 {
     "type": "object",
+    "title": "List",
+    "description": "Information about a specific segment.",
     "properties": {
         "id": {
             "type": "integer",

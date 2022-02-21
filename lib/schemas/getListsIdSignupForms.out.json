@@ -1,5 +1,7 @@
 {
     "type": "object",
+    "title": "List Signup Forms",
+    "description": "List Signup Forms.",
     "properties": {
         "signup_forms": {
             "type": "array",

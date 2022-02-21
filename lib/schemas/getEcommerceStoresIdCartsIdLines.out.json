@@ -1,5 +1,7 @@
 {
     "type": "object",
+    "title": "Cart Lines",
+    "description": "A collection of a cart's line items.",
     "properties": {
         "store_id": {
             "type": "string",

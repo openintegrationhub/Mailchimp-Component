@@ -1,5 +1,7 @@
 {
     "type": "object",
+    "title": "List Members",
+    "description": "Manage members of a specific Mailchimp list, including currently subscribed, unsubscribed, and bounced members.",
     "properties": {
         "members": {
             "type": "array",
@@ -229,6 +231,12 @@
                                 "type": "string",
                                 "title": "Timezone",
                                 "description": "The timezone for the location.",
+                                "readOnly": true
+                            },
+                            "region": {
+                                "type": "string",
+                                "title": "Region",
+                                "description": "The region for the location.",
                                 "readOnly": true
                             }
                         }

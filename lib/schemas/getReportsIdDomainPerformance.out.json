@@ -1,5 +1,7 @@
 {
     "type": "object",
+    "title": "Domain Performance",
+    "description": "Statistics for the top-performing email domains in a campaign.",
     "properties": {
         "domains": {
             "type": "array",
