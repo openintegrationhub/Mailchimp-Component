@@ -121,6 +121,11 @@
                         }
                     }
                 },
+                "sync_tags": {
+                    "type": "boolean",
+                    "title": "Sync Tags",
+                    "description": "Whether this batch operation will replace all existing tags with tags in request."
+                },
                 "update_existing": {
                     "type": "boolean",
                     "title": "Update Existing Members",

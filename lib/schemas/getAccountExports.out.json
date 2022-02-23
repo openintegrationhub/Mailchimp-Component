@@ -1,5 +1,6 @@
 {
     "type": "object",
+    "description": "An array of objects, each representing an account export.",
     "properties": {
         "exports": {
             "title": "Account Exports",

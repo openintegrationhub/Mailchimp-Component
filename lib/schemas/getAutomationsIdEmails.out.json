@@ -1,5 +1,7 @@
 {
     "type": "object",
+    "title": "Automation Emails",
+    "description": "A summary of the emails in an Automation workflow.",
     "properties": {
         "emails": {
             "type": "array",

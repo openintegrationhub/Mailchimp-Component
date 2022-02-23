@@ -1,5 +1,7 @@
 {
     "type": "object",
+    "title": "Gallery File",
+    "description": "An individual file listed in the File Manager.",
     "properties": {
         "id": {
             "type": "integer",

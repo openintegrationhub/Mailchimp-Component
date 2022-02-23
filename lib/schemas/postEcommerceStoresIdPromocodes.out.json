@@ -1,5 +1,7 @@
 {
     "type": "object",
+    "title": "E-commerce Promo Code",
+    "description": "Information about an Ecommerce Store's specific Promo Code",
     "properties": {
         "id": {
             "type": "string",

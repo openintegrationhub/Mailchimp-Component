@@ -1,5 +1,7 @@
 {
     "type": "object",
+    "title": "Growth History",
+    "description": "A month-by-month summary of a specific list's growth activity.",
     "properties": {
         "history": {
             "type": "array",

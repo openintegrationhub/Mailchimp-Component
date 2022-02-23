@@ -1,5 +1,7 @@
 {
     "type": "object",
+    "title": "E-commerce Store",
+    "description": "An individual store in an account.",
     "properties": {
         "id": {
             "type": "string",

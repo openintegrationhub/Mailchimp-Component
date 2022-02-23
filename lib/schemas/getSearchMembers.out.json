@@ -1,5 +1,7 @@
 {
     "type": "object",
+    "title": "Members",
+    "description": "Members found for given search term",
     "properties": {
         "exact_matches": {
             "type": "object",
@@ -234,6 +236,12 @@
                                         "type": "string",
                                         "title": "Timezone",
                                         "description": "The timezone for the location.",
+                                        "readOnly": true
+                                    },
+                                    "region": {
+                                        "type": "string",
+                                        "title": "Region",
+                                        "description": "The region for the location.",
                                         "readOnly": true
                                     }
                                 }
@@ -637,6 +645,12 @@
                                         "type": "string",
                                         "title": "Timezone",
                                         "description": "The timezone for the location.",
+                                        "readOnly": true
+                                    },
+                                    "region": {
+                                        "type": "string",
+                                        "title": "Region",
+                                        "description": "The region for the location.",
                                         "readOnly": true
                                     }
                                 }

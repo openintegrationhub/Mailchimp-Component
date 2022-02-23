@@ -1,5 +1,7 @@
 {
     "type": "object",
+    "title": "Campaign Advice Report",
+    "description": "A list of feedback based on a campaign's statistics.",
     "properties": {
         "advice": {
             "type": "array",
