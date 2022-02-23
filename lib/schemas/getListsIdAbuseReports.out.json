@@ -1,5 +1,7 @@
 {
     "type": "object",
+    "title": "Abuse Complaints",
+    "description": "A collection of abuse complaints for a specific list. An abuse complaint occurs when your recipient clicks to 'report spam' in their email program.",
     "properties": {
         "abuse_reports": {
             "type": "array",

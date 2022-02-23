@@ -1,14 +1,15 @@
 {
-    "version": "3.0.43",
+    "version": "3.0.55",
     "main": "component.json",
     "dependencies": {
         "@openintegrationhub/ferryman": "2.0.1",
-        "swagger-client": "^3.8.22"
+        "swagger-client": "^3.8.22",
+        "dayjs": "^1.10.7"
     },
     "devDependencies": {
-        "eslint": "7.26.0",
-        "eslint-config-airbnb-base": "13.1.0",
-        "eslint-plugin-import": "2.14.0",
+        "eslint": "8.8.0",
+        "eslint-config-airbnb-base": "15.0.0",
+        "eslint-plugin-import": "2.25.4",
         "eslint-plugin-jest": "22.1.0",
         "eslint-plugin-json": "1.4.0",
         "eslint-plugin-mocha": "5.2.0"
@@ -17,7 +18,7 @@
         "name": "Open Integration Hub"
     },
     "license": "Apache-2.0",
-    "name": "mailchimp-newcomp",
+    "name": "mailchimp-component",
     "scripts": {
         "start": "node ./node_modules/@openintegrationhub/ferryman/runGlobal.js",
         "pretest": "eslint lib test --ext .js --ext .json --fix",

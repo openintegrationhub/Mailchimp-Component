@@ -1,5 +1,7 @@
 {
     "type": "object",
+    "title": "Collection of Segments",
+    "description": "A list of available segments.",
     "properties": {
         "segments": {
             "type": "array",

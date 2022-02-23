@@ -1,5 +1,7 @@
 {
     "type": "object",
+    "title": "Subscriber Removed from Automation Workflow",
+    "description": "A summary of a subscriber removed from an Automation workflow.",
     "properties": {
         "id": {
             "type": "string",

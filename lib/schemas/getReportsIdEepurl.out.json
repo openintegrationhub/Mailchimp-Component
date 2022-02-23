@@ -1,5 +1,7 @@
 {
     "type": "object",
+    "title": "Eepurl Activity",
+    "description": "A summary of social activity for the campaign, tracked by EepURL.",
     "properties": {
         "twitter": {
             "type": "object",

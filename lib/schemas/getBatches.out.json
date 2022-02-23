@@ -1,5 +1,7 @@
 {
     "type": "object",
+    "title": "Batch Operations",
+    "description": "A summary of batch requests that have been made.",
     "properties": {
         "batches": {
             "type": "array",

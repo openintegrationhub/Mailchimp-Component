@@ -1,5 +1,6 @@
 {
     "type": "object",
+    "description": "An authorized app.",
     "properties": {
         "id": {
             "type": "integer",

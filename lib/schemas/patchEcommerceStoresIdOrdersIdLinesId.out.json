@@ -1,5 +1,7 @@
 {
     "type": "object",
+    "title": "E-commerce Order Line Item",
+    "description": "Information about a specific order line.",
     "properties": {
         "id": {
             "type": "string",

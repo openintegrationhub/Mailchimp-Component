@@ -1,5 +1,7 @@
 {
     "type": "object",
+    "title": "Campaign Feedback",
+    "description": "A specific feedback message from a specific campaign.",
     "properties": {
         "feedback_id": {
             "type": "integer",

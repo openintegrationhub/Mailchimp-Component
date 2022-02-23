@@ -1,5 +1,7 @@
 {
     "type": "object",
+    "title": "Promo Codes",
+    "description": "A collection of the store's promo codes.",
     "properties": {
         "store_id": {
             "type": "string",

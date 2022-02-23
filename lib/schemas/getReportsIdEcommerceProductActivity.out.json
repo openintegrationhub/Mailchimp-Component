@@ -1,5 +1,6 @@
 {
     "type": "object",
+    "description": "A collection of ecommerce products.",
     "properties": {
         "products": {
             "type": "array",

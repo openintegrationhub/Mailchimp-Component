@@ -1,5 +1,7 @@
 {
     "type": "object",
+    "title": "Template Folders",
+    "description": "A list of template folders",
     "properties": {
         "folders": {
             "type": "array",

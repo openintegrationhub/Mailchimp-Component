@@ -1,5 +1,7 @@
 {
     "type": "object",
+    "title": "Orders",
+    "description": "A collection of orders in an account.",
     "properties": {
         "orders": {
             "type": "array",
