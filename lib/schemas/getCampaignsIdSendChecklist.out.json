@@ -1,43 +1,98 @@
 {
     "type": "object",
+    "title": "Send Checklist",
+    "description": "The send checklist for the campaign.",
     "properties": {
-        "rel": {
-            "type": "string",
-            "title": "Rel",
-            "description": "As with an HTML 'rel' attribute, this describes the type of link.",
-            "readOnly": true
+        "is_ready": {
+            "type": "boolean",
+            "title": "Ready?",
+            "description": "Whether the campaign is ready to send."
         },
-        "href": {
-            "type": "string",
-            "title": "Href",
-            "description": "This property contains a fully-qualified URL that can be called to retrieve the linked resource or perform the linked action.",
-            "readOnly": true
+        "items": {
+            "type": "array",
+            "title": "Items",
+            "description": "A list of feedback items to review before sending your campaign.",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "type": {
+                        "type": "string",
+                        "title": "Type",
+                        "description": "The item type.",
+                        "enum": [
+                            "success",
+                            "warning",
+                            "error"
+                        ]
+                    },
+                    "id": {
+                        "type": "integer",
+                        "title": "ID",
+                        "description": "The ID for the specific item."
+                    },
+                    "heading": {
+                        "type": "string",
+                        "title": "Heading",
+                        "description": "The heading for the specific item."
+                    },
+                    "details": {
+                        "type": "string",
+                        "title": "Details",
+                        "description": "Details about the specific feedback item."
+                    }
+                }
+            }
         },
-        "method": {
-            "type": "string",
-            "title": "Method",
-            "description": "The HTTP method that should be used when accessing the URL defined in 'href'.",
-            "enum": [
-                "GET",
-                "POST",
-                "PUT",
-                "PATCH",
-                "DELETE",
-                "OPTIONS",
-                "HEAD"
-            ],
-            "readOnly": true
-        },
-        "targetSchema": {
-            "type": "string",
-            "title": "Target Schema",
-            "description": "For GETs, this is a URL representing the schema that the response should conform to.",
-            "readOnly": true
-        },
-        "schema": {
-            "type": "string",
-            "title": "Schema",
-            "description": "For HTTP methods that can receive bodies (POST and PUT), this is a URL representing the schema that the body should conform to.",
+        "_links": {
+            "title": "Links",
+            "description": "A list of link types and descriptions for the API schema documents.",
+            "type": "array",
+            "items": {
+                "type": "object",
+                "title": "Resource Link",
+                "description": "This object represents a link from the resource where it is found to another resource or action that may be performed.",
+                "properties": {
+                    "rel": {
+                        "type": "string",
+                        "title": "Rel",
+                        "description": "As with an HTML 'rel' attribute, this describes the type of link.",
+                        "readOnly": true
+                    },
+                    "href": {
+                        "type": "string",
+                        "title": "Href",
+                        "description": "This property contains a fully-qualified URL that can be called to retrieve the linked resource or perform the linked action.",
+                        "readOnly": true
+                    },
+                    "method": {
+                        "type": "string",
+                        "title": "Method",
+                        "description": "The HTTP method that should be used when accessing the URL defined in 'href'.",
+                        "enum": [
+                            "GET",
+                            "POST",
+                            "PUT",
+                            "PATCH",
+                            "DELETE",
+                            "OPTIONS",
+                            "HEAD"
+                        ],
+                        "readOnly": true
+                    },
+                    "targetSchema": {
+                        "type": "string",
+                        "title": "Target Schema",
+                        "description": "For GETs, this is a URL representing the schema that the response should conform to.",
+                        "readOnly": true
+                    },
+                    "schema": {
+                        "type": "string",
+                        "title": "Schema",
+                        "description": "For HTTP methods that can receive bodies (POST and PUT), this is a URL representing the schema that the body should conform to.",
+                        "readOnly": true
+                    }
+                }
+            },
             "readOnly": true
         }
     }

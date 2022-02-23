@@ -1,5 +1,7 @@
 {
     "type": "object",
+    "title": "Click Detail Members",
+    "description": "A collection of members who clicked on a specific link within a campaign.",
     "properties": {
         "members": {
             "type": "array",

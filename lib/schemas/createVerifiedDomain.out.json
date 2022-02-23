@@ -1,5 +1,7 @@
 {
     "type": "object",
+    "title": "Verified Domains",
+    "description": "The verified domains currently on the account.",
     "properties": {
         "domain": {
             "type": "string",

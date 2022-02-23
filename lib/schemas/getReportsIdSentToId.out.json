@@ -1,5 +1,7 @@
 {
     "type": "object",
+    "title": "Sent To",
+    "description": "A subscriber's status for a specific campaign.",
     "properties": {
         "email_id": {
             "type": "string",
