@@ -29,6 +29,11 @@
         }
     },
     "triggers": {
+        "lookup" : {
+            "main": "./lib/lookups/lookup.js",
+            "title": "Function to run a lookup",
+            "description": "Function to call an internal trigger or action"
+        },
         "getRoot": {
             "main": "./lib/triggers/trigger.js",
             "title": "List api root resources",
