@@ -1,5 +1,7 @@
 {
     "type": "object",
+    "title": "Open Locations",
+    "description": "Top open locations for a specific campaign.",
     "properties": {
         "locations": {
             "type": "array",

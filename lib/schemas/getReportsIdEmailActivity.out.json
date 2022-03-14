@@ -1,5 +1,7 @@
 {
     "type": "object",
+    "title": "Email Activity",
+    "description": "A list of member's subscriber activity in a specific campaign.",
     "properties": {
         "emails": {
             "type": "array",

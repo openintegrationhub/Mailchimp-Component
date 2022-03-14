@@ -1,5 +1,6 @@
 {
     "type": "object",
+    "description": "An account export.",
     "properties": {
         "export_id": {
             "type": "integer",

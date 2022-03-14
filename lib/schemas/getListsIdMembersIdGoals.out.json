@@ -1,5 +1,7 @@
 {
     "type": "object",
+    "title": "Collection of Member Activity Events",
+    "description": "The last 50 Goal events for a member on a specific list.",
     "properties": {
         "goals": {
             "type": "array",

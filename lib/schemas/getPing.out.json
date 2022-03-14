@@ -1,5 +1,7 @@
 {
     "type": "object",
+    "title": "API health status",
+    "description": "API health status.",
     "properties": {
         "health_status": {
             "type": "string",

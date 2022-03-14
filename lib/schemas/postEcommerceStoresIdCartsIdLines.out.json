@@ -1,5 +1,7 @@
 {
     "type": "object",
+    "title": "E-commerce Cart Line Item",
+    "description": "Information about a specific cart line item.",
     "properties": {
         "id": {
             "type": "string",

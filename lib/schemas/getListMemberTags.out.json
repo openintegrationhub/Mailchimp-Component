@@ -1,5 +1,7 @@
 {
     "type": "object",
+    "title": "Collection of Tags",
+    "description": "A list of tags assigned to a list member.",
     "properties": {
         "tags": {
             "type": "array",

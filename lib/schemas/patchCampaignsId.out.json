@@ -1,5 +1,7 @@
 {
     "type": "object",
+    "title": "Campaign",
+    "description": "A summary of an individual campaign's settings and content.",
     "properties": {
         "id": {
             "type": "string",

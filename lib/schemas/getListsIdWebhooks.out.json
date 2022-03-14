@@ -1,5 +1,7 @@
 {
     "type": "object",
+    "title": "List Webhooks",
+    "description": "Manage webhooks for a specific list.",
     "properties": {
         "webhooks": {
             "type": "array",

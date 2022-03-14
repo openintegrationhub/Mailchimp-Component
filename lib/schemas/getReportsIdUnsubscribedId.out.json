@@ -1,5 +1,7 @@
 {
     "type": "object",
+    "title": "Unsubscribes",
+    "description": "A member who unsubscribed from a specific campaign.",
     "properties": {
         "email_id": {
             "type": "string",

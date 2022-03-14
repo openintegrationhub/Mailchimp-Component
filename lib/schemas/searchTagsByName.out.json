@@ -1,5 +1,7 @@
 {
     "type": "object",
+    "title": "Tag search results",
+    "description": "A list of tags matching the input query.",
     "properties": {
         "tags": {
             "type": "array",

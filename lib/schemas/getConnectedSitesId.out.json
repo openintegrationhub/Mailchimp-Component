@@ -1,5 +1,7 @@
 {
     "type": "object",
+    "title": "Connected Site",
+    "description": "Information about a specific connected site.",
     "properties": {
         "foreign_id": {
             "type": "string",
