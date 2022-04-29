@@ -1,5 +1,7 @@
 {
     "type": "object",
+    "title": "Campaign Content",
+    "description": "The HTML and plain-text content for a campaign.",
     "properties": {
         "variate_contents": {
             "type": "array",

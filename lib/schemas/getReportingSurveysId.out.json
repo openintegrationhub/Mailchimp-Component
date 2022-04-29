@@ -1,0 +1,88 @@
+{
+    "type": "object",
+    "title": "Survey Report",
+    "description": "The report for a survey.",
+    "properties": {
+        "id": {
+            "type": "string",
+            "title": "Survey ID",
+            "description": "A string that uniquely identifies this survey.",
+            "readOnly": true,
+            "example": "040d2c2e1f0"
+        },
+        "web_id": {
+            "type": "integer",
+            "title": "Survey Web ID",
+            "description": "The ID used in the Mailchimp web application. View this survey report in your Mailchimp account at `https://{dc}.admin.mailchimp.com/lists/surveys/results?survey_id={web_id}`.",
+            "readOnly": true,
+            "example": 165
+        },
+        "list_id": {
+            "type": "string",
+            "title": "List ID",
+            "description": "The ID of the list connected to this survey.",
+            "readOnly": true
+        },
+        "list_name": {
+            "type": "string",
+            "title": "List Name",
+            "description": "The name of the list connected to this survey.",
+            "readOnly": true
+        },
+        "title": {
+            "type": "string",
+            "title": "Title",
+            "description": "The title of the survey.",
+            "readOnly": true,
+            "example": "New product ideas"
+        },
+        "url": {
+            "type": "string",
+            "title": "URL",
+            "description": "The URL for the survey.",
+            "readOnly": true
+        },
+        "status": {
+            "type": "string",
+            "title": "Status",
+            "description": "The survey's status.",
+            "readOnly": true,
+            "example": "published",
+            "enum": [
+                "published",
+                "unpublished"
+            ]
+        },
+        "published_at": {
+            "type": "string",
+            "format": "date-time",
+            "title": "Published At",
+            "description": "The date and time the survey was published in ISO 8601 format.",
+            "readOnly": true,
+            "example": "2017-08-04T11:09:01+00:00"
+        },
+        "created_at": {
+            "type": "string",
+            "format": "date-time",
+            "title": "Created At",
+            "description": "The date and time the survey was created in ISO 8601 format.",
+            "readOnly": true,
+            "example": "2017-08-04T11:09:01+00:00"
+        },
+        "updated_at": {
+            "type": "string",
+            "format": "date-time",
+            "title": "Updated At",
+            "description": "The date and time the survey was last updated in ISO 8601 format.",
+            "readOnly": true,
+            "example": "2017-08-04T11:09:01+00:00"
+        },
+        "total_responses": {
+            "type": "integer",
+            "title": "Total Responses",
+            "description": "The total number of responses to this survey.",
+            "readOnly": true,
+            "example": 810
+        }
+    }
+}

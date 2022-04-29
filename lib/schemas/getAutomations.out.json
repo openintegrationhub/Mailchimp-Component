@@ -1,5 +1,6 @@
 {
     "type": "object",
+    "description": "An array of objects, each representing an Automation workflow.",
     "properties": {
         "automations": {
             "type": "array",

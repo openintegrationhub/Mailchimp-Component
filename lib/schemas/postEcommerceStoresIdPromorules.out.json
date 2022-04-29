@@ -1,5 +1,7 @@
 {
     "type": "object",
+    "title": "E-commerce Promo Rule",
+    "description": "Information about an Ecommerce Store's specific Promo Rule",
     "properties": {
         "id": {
             "type": "string",

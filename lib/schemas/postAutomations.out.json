@@ -1,5 +1,7 @@
 {
     "type": "object",
+    "title": "Automation Workflow",
+    "description": "A summary of an individual Automation workflow's settings and content.",
     "properties": {
         "id": {
             "type": "string",

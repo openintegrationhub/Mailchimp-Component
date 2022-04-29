@@ -1,5 +1,7 @@
 {
     "type": "object",
+    "title": "Connected Sites",
+    "description": "A collection of connected sites in the account.",
     "properties": {
         "sites": {
             "type": "array",

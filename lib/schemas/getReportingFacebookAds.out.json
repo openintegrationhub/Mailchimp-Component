@@ -1,5 +1,6 @@
 {
     "type": "object",
+    "description": "A collection of Facebook ads.",
     "properties": {
         "facebook_ads": {
             "type": "array",

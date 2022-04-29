@@ -1,0 +1,122 @@
+{
+    "type": "object",
+    "title": "Survey Response",
+    "description": "A single survey response.",
+    "properties": {
+        "response_id": {
+            "type": "string",
+            "title": "Response ID",
+            "description": "The ID for the survey response.",
+            "readOnly": true
+        },
+        "submitted_at": {
+            "type": "string",
+            "format": "date-time",
+            "title": "Submitted At",
+            "description": "The date and time when the survey response was submitted in ISO 8601 format.",
+            "readOnly": true
+        },
+        "contact": {
+            "type": "object",
+            "title": "Contact",
+            "description": "Information about the contact.",
+            "readOnly": true,
+            "properties": {
+                "email_id": {
+                    "type": "string",
+                    "title": "Email ID",
+                    "description": "The MD5 hash of the lowercase version of the list member's email address.",
+                    "readOnly": true
+                },
+                "contact_id": {
+                    "type": "string",
+                    "title": "Contact ID",
+                    "description": "The ID of this contact.",
+                    "readOnly": true
+                },
+                "status": {
+                    "type": "string",
+                    "title": "Contact Status",
+                    "description": "The contact's current status.",
+                    "readOnly": true,
+                    "enum": [
+                        "Subscribed",
+                        "Unsubscribed",
+                        "Non-Subscribed",
+                        "Cleaned",
+                        "Archived"
+                    ]
+                },
+                "email": {
+                    "type": "string",
+                    "title": "Contact Email",
+                    "description": "The contact's email address.",
+                    "readOnly": true
+                },
+                "full_name": {
+                    "type": "string",
+                    "title": "Full Name",
+                    "description": "The contact's full name.",
+                    "readOnly": true
+                },
+                "consents_to_one_to_one_messaging": {
+                    "type": "boolean",
+                    "title": "Messaging Consent",
+                    "description": "Indicates whether a contact consents to 1:1 messaging.",
+                    "readOnly": true
+                },
+                "avatar_url": {
+                    "type": "string",
+                    "title": "Avatar URL",
+                    "description": "URL for the contact's avatar or profile image.",
+                    "readOnly": true
+                }
+            }
+        },
+        "is_new_contact": {
+            "type": "boolean",
+            "title": "Is New Contact",
+            "description": "If this contact was added to the Mailchimp audience via this survey.",
+            "readOnly": false
+        },
+        "results": {
+            "type": "array",
+            "title": "Results",
+            "description": "The survey questions and the answers to those questions.",
+            "items": {
+                "type": "object",
+                "title": "Response",
+                "description": "A single question and the response to that question.",
+                "properties": {
+                    "question_id": {
+                        "type": "string",
+                        "title": "Question ID",
+                        "description": "The unique ID for this question."
+                    },
+                    "question_type": {
+                        "type": "string",
+                        "title": "Question Type",
+                        "description": "The type of question this is.",
+                        "enum": [
+                            "pickOne",
+                            "pickMany",
+                            "range",
+                            "text",
+                            "email"
+                        ]
+                    },
+                    "query": {
+                        "type": "string",
+                        "title": "Question Query",
+                        "description": "The survey question."
+                    },
+                    "answer": {
+                        "type": "string",
+                        "title": "Answer",
+                        "description": "The answer to this survey question."
+                    }
+                }
+            }
+        }
+    }
+}

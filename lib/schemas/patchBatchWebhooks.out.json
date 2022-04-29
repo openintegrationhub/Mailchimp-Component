@@ -1,5 +1,7 @@
 {
     "type": "object",
+    "title": "Batch Webhook",
+    "description": "A webhook configured for batch status updates.",
     "properties": {
         "id": {
             "type": "string",

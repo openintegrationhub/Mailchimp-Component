@@ -1,5 +1,7 @@
 {
     "type": "object",
+    "title": "Batch add/remove List members to/from static segment",
+    "description": "Batch add/remove List members to/from static segment",
     "properties": {
         "members_added": {
             "type": "array",
