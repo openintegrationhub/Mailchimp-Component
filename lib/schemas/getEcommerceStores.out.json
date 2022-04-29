@@ -1,5 +1,7 @@
 {
     "type": "object",
+    "title": "E-commerce Stores",
+    "description": "A collection of stores in the account.",
     "properties": {
         "stores": {
             "type": "array",

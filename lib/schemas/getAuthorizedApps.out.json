@@ -1,5 +1,6 @@
 {
     "type": "object",
+    "description": "An array of objects, each representing an authorized application.",
     "properties": {
         "apps": {
             "title": "Authorized Applications",

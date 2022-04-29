@@ -1,0 +1,13 @@
+{
+    "type": "object",
+    "properties": {
+        "outreach_id": {
+            "required": true,
+            "type": "string"
+        },
+        "response_id": {
+            "required": true,
+            "type": "string"
+        }
+    }
+}

@@ -1,5 +1,6 @@
 {
     "type": "object",
+    "description": "An array of campaigns.",
     "properties": {
         "campaigns": {
             "type": "array",

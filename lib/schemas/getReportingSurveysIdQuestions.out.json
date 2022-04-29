@@ -1,0 +1,217 @@
+{
+    "type": "object",
+    "properties": {
+        "questions": {
+            "type": "array",
+            "title": "Question Reports",
+            "description": "An array of reports for each question on the survey.",
+            "items": {
+                "type": "object",
+                "title": "Survey Question Report",
+                "description": "The details of a survey question's report.",
+                "properties": {
+                    "id": {
+                        "type": "string",
+                        "title": "Survey Question ID",
+                        "description": "The ID of the survey question.",
+                        "readOnly": true
+                    },
+                    "survey_id": {
+                        "type": "string",
+                        "title": "Survey ID",
+                        "description": "The unique ID of the survey.",
+                        "readOnly": true
+                    },
+                    "query": {
+                        "type": "string",
+                        "title": "Query Text",
+                        "description": "The query of the survey question.",
+                        "readOnly": true
+                    },
+                    "type": {
+                        "type": "string",
+                        "title": "Response Type",
+                        "description": "The response type of the survey question.",
+                        "enum": [
+                            "pickOne",
+                            "pickMany",
+                            "range",
+                            "text",
+                            "email"
+                        ],
+                        "readOnly": true
+                    },
+                    "total_responses": {
+                        "type": "integer",
+                        "title": "Total Responses",
+                        "description": "The total number of responses to this question.",
+                        "readOnly": true,
+                        "example": 810
+                    },
+                    "is_required": {
+                        "type": "boolean",
+                        "title": "Is Required",
+                        "description": "Whether this survey question is required to answer.",
+                        "readOnly": true
+                    },
+                    "has_other": {
+                        "type": "boolean",
+                        "title": "Has Other Option",
+                        "description": "Whether this survey question has an 'other' option.",
+                        "readOnly": true
+                    },
+                    "other_label": {
+                        "type": "string",
+                        "title": "Other Option Label",
+                        "description": "Label used for the 'other' option of this survey question.",
+                        "readOnly": true
+                    },
+                    "average_rating": {
+                        "type": "number",
+                        "format": "float",
+                        "title": "Average Rating for a Range Question",
+                        "description": "The average rating for this range question.",
+                        "readOnly": true,
+                        "example": 2.5
+                    },
+                    "range_low_label": {
+                        "type": "string",
+                        "title": "Range Low Label",
+                        "description": "Label for the low end of the range.",
+                        "readOnly": true
+                    },
+                    "range_high_label": {
+                        "type": "string",
+                        "title": "Range High Label",
+                        "description": "Label for the high end of the range.",
+                        "readOnly": true
+                    },
+                    "placeholder_label": {
+                        "type": "string",
+                        "title": "Placeholder Label",
+                        "description": "Placeholder text for this survey question's answer box.",
+                        "readOnly": true
+                    },
+                    "subscribe_checkbox_enabled": {
+                        "type": "boolean",
+                        "title": "Is Subscribe Checkbox Enabled",
+                        "description": "Whether the subscribe checkbox is shown for this email question.",
+                        "readOnly": true
+                    },
+                    "subscribe_checkbox_label": {
+                        "type": "string",
+                        "title": "Subscribe Checkbox Label",
+                        "description": "Label used for the subscribe checkbox for this email question.",
+                        "readOnly": true
+                    },
+                    "options": {
+                        "type": "array",
+                        "title": "Options",
+                        "description": "The answer choices for this question.",
+                        "items": {
+                            "type": "object",
+                            "properties": {
+                                "label": {
+                                    "type": "string",
+                                    "title": "Option Label",
+                                    "description": "The label for this survey question option."
+                                },
+                                "id": {
+                                    "type": "string",
+                                    "title": "Option ID",
+                                    "description": "The ID for this survey question option."
+                                },
+                                "count": {
+                                    "type": "integer",
+                                    "title": "Response Count",
+                                    "description": "The count of responses that selected this survey question option."
+                                }
+                            }
+                        },
+                        "readOnly": true
+                    },
+                    "contact_counts": {
+                        "type": "object",
+                        "title": "Contact Counts",
+                        "description": "For email question types, how many are new, known, or unknown contacts.",
+                        "properties": {
+                            "known": {
+                                "type": "integer",
+                                "title": "Known Contacts Count",
+                                "description": "The number of known contacts that responded to this survey."
+                            },
+                            "unknown": {
+                                "type": "integer",
+                                "title": "Unknown Contacts Count",
+                                "description": "The number of unknown contacts that responded to this survey."
+                            },
+                            "new": {
+                                "type": "integer",
+                                "title": "New Contacts Count",
+                                "description": "The number of new contacts that responded to this survey."
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "total_items": {
+            "type": "integer",
+            "title": "Item Count",
+            "description": "The total number of items matching the query regardless of pagination.",
+            "readOnly": true
+        },
+        "_links": {
+            "title": "Links",
+            "description": "A list of link types and descriptions for the API schema documents.",
+            "type": "array",
+            "items": {
+                "type": "object",
+                "title": "Resource Link",
+                "description": "This object represents a link from the resource where it is found to another resource or action that may be performed.",
+                "properties": {
+                    "rel": {
+                        "type": "string",
+                        "title": "Rel",
+                        "description": "As with an HTML 'rel' attribute, this describes the type of link.",
+                        "readOnly": true
+                    },
+                    "href": {
+                        "type": "string",
+                        "title": "Href",
+                        "description": "This property contains a fully-qualified URL that can be called to retrieve the linked resource or perform the linked action.",
+                        "readOnly": true
+                    },
+                    "method": {
+                        "type": "string",
+                        "title": "Method",
+                        "description": "The HTTP method that should be used when accessing the URL defined in 'href'.",
+                        "enum": [
+                            "GET",
+                            "POST",
+                            "PUT",
+                            "PATCH",
+                            "DELETE",
+                            "OPTIONS",
+                            "HEAD"
+                        ],
+                        "readOnly": true
+                    },
+                    "targetSchema": {
+                        "type": "string",
+                        "title": "Target Schema",
+                        "description": "For GETs, this is a URL representing the schema that the response should conform to.",
+                        "readOnly": true
+                    },
+                    "schema": {
+                        "type": "string",
+                        "title": "Schema",
+                        "description": "For HTTP methods that can receive bodies (POST and PUT), this is a URL representing the schema that the body should conform to.",
+                        "readOnly": true
+                    }
+                }
+            },
+            "readOnly": true
+        }
+    }
+}

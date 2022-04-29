@@ -1,5 +1,7 @@
 {
     "type": "object",
+    "title": "Conversation",
+    "description": "Details about an individual conversation. Conversation tracking is a feature available to paid accounts that lets you view replies to your campaigns in your Mailchimp account.",
     "properties": {
         "id": {
             "type": "string",

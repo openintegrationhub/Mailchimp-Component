@@ -1,5 +1,7 @@
 {
     "type": "object",
+    "title": "Removed Subscribers",
+    "description": "A summary of the subscribers who were removed from an Automation workflow.",
     "properties": {
         "workflow_id": {
             "type": "string",

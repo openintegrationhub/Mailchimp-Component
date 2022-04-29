@@ -1,5 +1,7 @@
 {
     "type": "object",
+    "title": "Landing Page Content",
+    "description": "The HTML content for a landing page.",
     "properties": {
         "html": {
             "type": "string",

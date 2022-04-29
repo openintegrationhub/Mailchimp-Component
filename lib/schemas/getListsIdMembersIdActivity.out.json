@@ -1,5 +1,7 @@
 {
     "type": "object",
+    "title": "Member Activity Events",
+    "description": "The last 50 member events for a list.",
     "properties": {
         "activity": {
             "type": "array",
@@ -53,6 +55,12 @@
             "type": "string",
             "title": "Email Hash",
             "description": "The MD5 hash of the lowercase version of the list member's email address.",
+            "readOnly": true
+        },
+        "contact_id": {
+            "type": "string",
+            "title": "Contact ID",
+            "description": "As Mailchimp evolves beyond email, you may eventually have contacts without email addresses. While the `email_id` is the MD5 hash of their email address, this `contact_id` is agnostic of contact’s inclusion of an email address.",
             "readOnly": true
         },
         "list_id": {

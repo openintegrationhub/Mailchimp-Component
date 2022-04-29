@@ -1,5 +1,7 @@
 {
     "type": "object",
+    "title": "File Manager Folders",
+    "description": "A list of all folders in the File Manager.",
     "properties": {
         "folders": {
             "type": "array",
